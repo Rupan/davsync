@@ -30,10 +30,6 @@ fi
 ant clean
 ant release
 
-# sign and align APK
-#jarsigner -verbose ./bin/davsync-release-unsigned.apk release
-#zipalign -v 4 ./bin/davsync-release-unsigned.apk ./bin/davsync.apk
-
 if [ "${1}" == "push" ]
 then
   # push to device and wait for status messages
