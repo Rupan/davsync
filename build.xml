@@ -6,6 +6,10 @@
          Version Control Systems. -->
     <loadproperties srcFile="local.properties" />
 
+    <!-- The secure.properties file contains the location of & passwords to the
+         Java keystore files used to sign applications -->
+    <loadproperties srcFile="secure.properties" />
+
     <!-- The ant.properties file can be created by you. It is only edited by the
          'android' tool to add properties to it.
          This is the place to change some Ant specific build properties.
