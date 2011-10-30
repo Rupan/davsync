@@ -7,9 +7,12 @@ import android.widget.EditText;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.util.Log;
+import android.database.sqlite.SQLiteDatabase;
 
 public class davsync extends Activity
 {
+    private DAVSyncOpenHelper dsoh;
+    private SQLiteDatabase db_writer, db_reader;
 
     private EditText username, password, hostname, resource;
     private Button saveButton, clearButton, exitButton;
@@ -45,8 +48,10 @@ public class davsync extends Activity
     private final String TAG = "davsync";
     // save the server info to local storage
     private void save() {
-        Log.d(TAG, "Username = " + username.getText().toString());
         Log.d(TAG, "saving data...");
+        SQLiteDatabase db = dsoh.getWritableDatabase();
+        db.execSQL("INSERT INTO credentials VALUES('username','" + username.getText().toString() + "');");
+        db.close();
     }
     // clear the fields and delete local storage
     private void clear() {
@@ -79,5 +84,10 @@ public class davsync extends Activity
         password = (EditText)findViewById(R.id.password);
         hostname = (EditText)findViewById(R.id.hostname);
         resource = (EditText)findViewById(R.id.resource);
+
+        // access to permanent storage
+        //dsoh = new DAVSyncOpenHelper();
+        //dsoh.getWritableDatabase();
+        //dsoh.getReadableDatabase();
     }
 }
