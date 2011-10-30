@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1">
+    <TextView
+        android:text="Username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background" />
+    <TextView
+        android:text="Password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/password"
+        android:password="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background" />
+    <TextView
+        android:text="Hostname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/hostname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background" />
+    <TextView
+        android:text="Resource"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/resource"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_gravity="bottom|center"
+      android:layout_weight="1">
+      <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_blue"
+        style="@style/CoolButton"
+        android:text="Clear" />
+      <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CoolButton"
+        android:background="@drawable/btn_green"
+        android:text="Save" />
+  </LinearLayout>
+
+</LinearLayout>
