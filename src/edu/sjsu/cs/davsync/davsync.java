@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.util.Log;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.Cursor;
 
 public class davsync extends Activity
 {
@@ -51,6 +52,9 @@ public class davsync extends Activity
         Log.d(TAG, "saving data...");
         SQLiteDatabase db = dsoh.getWritableDatabase();
         db.execSQL("INSERT INTO credentials VALUES('username','" + username.getText().toString() + "');");
+        db.execSQL("INSERT INTO credentials VALUES('password','" + password.getText().toString() + "');");
+        db.execSQL("INSERT INTO credentials VALUES('hostname','" + hostname.getText().toString() + "');");
+        db.execSQL("INSERT INTO credentials VALUES('resource','" + resource.getText().toString() + "');");
         db.close();
     }
     // clear the fields and delete local storage
@@ -66,6 +70,8 @@ public class davsync extends Activity
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
+        SQLiteDatabase db;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
 
@@ -86,8 +92,10 @@ public class davsync extends Activity
         resource = (EditText)findViewById(R.id.resource);
 
         // access to permanent storage
-        //dsoh = new DAVSyncOpenHelper();
-        //dsoh.getWritableDatabase();
-        //dsoh.getReadableDatabase();
+        dsoh = new DAVSyncOpenHelper(this);
+        db = dsoh.getReadableDatabase();
+        //Cursor c = db.query(true, "");
+        db.close();
+        // dsoh.close();
     }
 }
