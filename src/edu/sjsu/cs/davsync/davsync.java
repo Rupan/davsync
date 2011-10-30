@@ -24,10 +24,13 @@ public class davsync extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
 
-        this.saveButton = (Button)this.findViewById(R.id.saveButton);
+        this.saveButton = (Button)this.findViewById(R.id.btnSave);
         this.saveButton.setOnClickListener(new ButtonListener());
 
-        this.clearButton = (Button)this.findViewById(R.id.clearButton);
+        this.clearButton = (Button)this.findViewById(R.id.btnClear);
+        this.clearButton.setOnClickListener(new ButtonListener());
+
+        this.clearButton = (Button)this.findViewById(R.id.btnExit);
         this.clearButton.setOnClickListener(new ButtonListener());
     }
 }

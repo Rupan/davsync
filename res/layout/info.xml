@@ -52,26 +52,12 @@
         android:background="@android:drawable/editbox_background" />
   </LinearLayout>
 
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:layout_gravity="bottom|center"
-      android:layout_weight="1">
-      <Button
-        android:id="@+id/clearButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_blue"
-        style="@style/CoolButton"
-        android:text="Clear" />
-      <Button
-        android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/CoolButton"
-        android:background="@drawable/btn_green"
-        android:text="Save" />
-  </LinearLayout>
+  <TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="*">
+    <TableRow android:layout_width="fill_parent">
+      <Button android:id="@+id/btnSave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_red" style="@style/CoolButton" android:text="Save" />
+      <Button android:id="@+id/btnClear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_green" style="@style/CoolButton" android:text="Clear" />
+      <Button android:id="@+id/btnExit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_blue" style="@style/CoolButton" android:text="Exit" />
+    </TableRow>
+  </TableLayout>
 
 </LinearLayout>
