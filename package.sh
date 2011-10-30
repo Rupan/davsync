@@ -2,9 +2,11 @@
 
 # This script should be run from the root of an Android project
 
-if [ ! -f ${HOME}/.keystore ]
+KEYSTORE='../android.keystore'
+
+if [ ! -f "${KEYSTORE}" ]
 then
-  keytool -genkey -v -alias release -keyalg RSA -keysize 4096 -validity 10000
+  keytool -genkey -v -alias release -keyalg RSA -keysize 4096 -validity 10000 -keystore ${KEYSTORE}
 fi
 
 if [ ! -f "local.properties" ]
@@ -29,12 +31,12 @@ ant clean
 ant release
 
 # sign and align APK
-jarsigner -verbose ./bin/davsync-release-unsigned.apk release
-zipalign -v 4 ./bin/davsync-release-unsigned.apk ./bin/davsync.apk
+#jarsigner -verbose ./bin/davsync-release-unsigned.apk release
+#zipalign -v 4 ./bin/davsync-release-unsigned.apk ./bin/davsync.apk
 
 if [ "${1}" == "push" ]
 then
   # push to device and wait for status messages
-  adb install -r ./bin/davsync.apk
+  adb install -r ./bin/davsync-release.apk
   adb logcat
 fi
