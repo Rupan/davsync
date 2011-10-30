@@ -16,7 +16,7 @@ public class davsync extends Activity
     private SQLiteDatabase db_writer, db_reader;
 
     private EditText username, password, hostname, resource;
-    private Button saveButton, clearButton, exitButton;
+    private Button saveButton, clearButton, testButton;
 
     private enum ButtonType {
         SAVE, CLEAR, TEST, EXIT
@@ -82,8 +82,8 @@ public class davsync extends Activity
         clearButton = (Button)this.findViewById(R.id.btnClear);
         clearButton.setOnClickListener(new ButtonListener(ButtonType.CLEAR));
 
-        exitButton = (Button)this.findViewById(R.id.btnExit);
-        exitButton.setOnClickListener(new ButtonListener(ButtonType.EXIT));
+        testButton = (Button)this.findViewById(R.id.btnTest);
+        testButton.setOnClickListener(new ButtonListener(ButtonType.TEST));
 
         // access to text fields
         username = (EditText)findViewById(R.id.username);

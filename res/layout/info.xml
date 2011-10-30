@@ -56,7 +56,7 @@
     <TableRow android:layout_width="fill_parent">
       <Button android:id="@+id/btnSave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_red" style="@style/CoolButton" android:text="Save" />
       <Button android:id="@+id/btnClear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_green" style="@style/CoolButton" android:text="Clear" />
-      <Button android:id="@+id/btnExit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_blue" style="@style/CoolButton" android:text="Exit" />
+      <Button android:id="@+id/btnTest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_yellow" style="@style/CoolButton" android:text="Test" />
     </TableRow>
   </TableLayout>
 
