@@ -43,12 +43,19 @@ public class davsync extends Activity {
 
     // read the state of all fields from memory and return a Profile object
     private Profile getCurrentProfile() {
-        return new Profile("a", "b", "c", "d");
+        Profile p;
+        p = new Profile(
+            field[0].getText().toString(),
+            field[1].getText().toString(),
+            field[2].getText().toString(),
+            field[3].getText().toString());
+        return p;
     }
 
     // removes any text from all fields
     private void clearTextFields() {
-
+        for(int i = 0; i < 4; i++)
+            field[i].setText("");
     }
 
     /** Called when the activity is first created. */
@@ -77,8 +84,6 @@ public class davsync extends Activity {
 	field[2].setText(p.getUsername());
 	field[3].setText(p.getPassword());
 
-        // field[0].getText().toString();
-        //dsoh = new DAVSyncOpenHelper(this);
         //Cursor c = db.query(true, "");
         //db.close();
         // dsoh.close();
