@@ -7,19 +7,15 @@ import android.widget.EditText;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.util.Log;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.Cursor;
 
-public class davsync extends Activity
-{
-    private DAVSyncOpenHelper dsoh;
-    private SQLiteDatabase db_writer, db_reader;
+public class davsync extends Activity {
 
-    private EditText username, password, hostname, resource;
-    private Button saveButton, clearButton, testButton;
+    private DSDatabase db;
+    private EditText[] field = new EditText[4]; // hostname, resource, username, password
+    private Button[] button = new Button[3]; // save, clear, test
 
     private enum ButtonType {
-        SAVE, CLEAR, TEST, EXIT
+        SAVE, CLEAR, TEST
     }
 
     private class ButtonListener implements OnClickListener {
@@ -32,70 +28,59 @@ public class davsync extends Activity
         public void onClick(View v) {
             switch( type ) {
             case SAVE:
-                save();
+                db.addProfile(getCurrentProfile());
                 break;
             case CLEAR:
-                clear();
+                db.delProfile(getCurrentProfile());
+                clearTextFields();
                 break;
             case TEST:
-                test();
+                //test();
                 break;
-            case EXIT:
-                finish();
             }
         }
     }
 
-    private final String TAG = "davsync";
-    // save the server info to local storage
-    private void save() {
-        Log.d(TAG, "saving data...");
-        SQLiteDatabase db = dsoh.getWritableDatabase();
-        db.execSQL("INSERT INTO credentials VALUES('username','" + username.getText().toString() + "');");
-        db.execSQL("INSERT INTO credentials VALUES('password','" + password.getText().toString() + "');");
-        db.execSQL("INSERT INTO credentials VALUES('hostname','" + hostname.getText().toString() + "');");
-        db.execSQL("INSERT INTO credentials VALUES('resource','" + resource.getText().toString() + "');");
-        db.close();
+    // read the state of all fields from memory and return a Profile object
+    private Profile getCurrentProfile() {
+        return new Profile("a", "b", "c", "d");
     }
-    // clear the fields and delete local storage
-    private void clear() {
-        Log.d(TAG, "wiping data...");
-    }
-    // connect to the server & test credentials
-    private void test() {
-        Log.d(TAG, "testing connection...");
+
+    // removes any text from all fields
+    private void clearTextFields() {
+
     }
 
     /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        SQLiteDatabase db;
-
+    @Override public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
+	db = new DSDatabase(this);
 
         // handle button events
-        saveButton = (Button)this.findViewById(R.id.btnSave);
-        saveButton.setOnClickListener(new ButtonListener(ButtonType.SAVE));
-
-        clearButton = (Button)this.findViewById(R.id.btnClear);
-        clearButton.setOnClickListener(new ButtonListener(ButtonType.CLEAR));
-
-        testButton = (Button)this.findViewById(R.id.btnTest);
-        testButton.setOnClickListener(new ButtonListener(ButtonType.TEST));
+        button[0] = (Button)this.findViewById(R.id.btnSave);
+        button[1] = (Button)this.findViewById(R.id.btnClear);
+        button[2] = (Button)this.findViewById(R.id.btnTest);
+        button[0].setOnClickListener(new ButtonListener(ButtonType.SAVE));
+        button[1].setOnClickListener(new ButtonListener(ButtonType.CLEAR));
+        button[2].setOnClickListener(new ButtonListener(ButtonType.TEST));
 
         // access to text fields
-        username = (EditText)findViewById(R.id.username);
-        password = (EditText)findViewById(R.id.password);
-        hostname = (EditText)findViewById(R.id.hostname);
-        resource = (EditText)findViewById(R.id.resource);
+        field[0] = (EditText)findViewById(R.id.hostname);
+        field[1] = (EditText)findViewById(R.id.resource);
+        field[2] = (EditText)findViewById(R.id.username);
+        field[3] = (EditText)findViewById(R.id.password);
 
-        // access to permanent storage
-        dsoh = new DAVSyncOpenHelper(this);
-        db = dsoh.getReadableDatabase();
+	Profile p = db.getProfile();
+	field[0].setText(p.getHostname());
+	field[1].setText(p.getResource());
+	field[2].setText(p.getUsername());
+	field[3].setText(p.getPassword());
+
+        // field[0].getText().toString();
+        //dsoh = new DAVSyncOpenHelper(this);
         //Cursor c = db.query(true, "");
-        db.close();
+        //db.close();
         // dsoh.close();
     }
 }
