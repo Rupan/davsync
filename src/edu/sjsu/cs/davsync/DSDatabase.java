@@ -69,9 +69,8 @@ public class DSDatabase {
 	public void delProfile(Profile p) {
 		Log.d(TAG, "removing profile...");
 		SQLiteDatabase db = dsoh.getWritableDatabase();
-		// yes, this is hackish...
-		db.execSQL("DROP TABLE dav_profiles;");
-		db.execSQL("CREATE TABLE dav_profiles ( hostname TEXT PRIMARY KEY, resource TEXT, username TEXT, password TEXT );");
+		// for now, just drop all rows from dav_profiles...
+		db.execSQL("DELETE FROM dav_profiles;");
 		db.close();
 	}
 
