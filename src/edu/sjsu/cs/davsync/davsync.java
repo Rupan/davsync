@@ -83,9 +83,5 @@ public class davsync extends Activity {
 	field[1].setText(p.getResource());
 	field[2].setText(p.getUsername());
 	field[3].setText(p.getPassword());
-
-        //Cursor c = db.query(true, "");
-        //db.close();
-        // dsoh.close();
     }
 }

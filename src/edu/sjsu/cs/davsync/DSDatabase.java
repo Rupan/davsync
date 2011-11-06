@@ -57,6 +57,7 @@ public class DSDatabase {
 		if( c.getCount() == 0 ) {
 			p = new Profile("", "", "", "");
 		} else {
+			c.moveToFirst();
 			p = new Profile(c.getString(0), c.getString(1), c.getString(2), c.getString(3));
 		}
 		c.close();
