@@ -1,0 +1,39 @@
+The app crashes with the following log when attempting a WebDAV connection.
+I suspect that something in Apache httpcomponents client or core is not compatible with Android...
+
+I/dalvikvm( 1387): Could not find method org.apache.http.impl.client.AbstractHttpClient.setRedirectStrategy, referenced from method com.googlecode.sardine.impl.SardineImpl.init
+W/dalvikvm( 1387): VFY: unable to resolve virtual method 3100: Lorg/apache/http/impl/client/AbstractHttpClient;.setRedirectStrategy (Lorg/apache/http/client/RedirectStrategy;)V
+D/dalvikvm( 1387): VFY: replacing opcode 0x6e at 0x0009
+D/dalvikvm( 1387): VFY: dead code 0x000c-000f in Lcom/googlecode/sardine/impl/SardineImpl;.init (Lorg/apache/http/impl/client/AbstractHttpClient;Ljava/lang/String;Ljava/lang/String;)V
+I/dalvikvm( 1387): Could not find method org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager.<init>, referenced from method com.googlecode.sardine.impl.SardineImpl.createDefaultConnectionManager
+W/dalvikvm( 1387): VFY: unable to resolve direct method 3509: Lorg/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager;.<init> (Lorg/apache/http/conn/scheme/SchemeRegistry;)V
+D/dalvikvm( 1387): VFY: replacing opcode 0x70 at 0x0002
+D/dalvikvm( 1387): VFY: dead code 0x0005-0005 in Lcom/googlecode/sardine/impl/SardineImpl;.createDefaultConnectionManager (Lorg/apache/http/conn/scheme/SchemeRegistry;)Lorg/apache/http/conn/ClientConnectionManager;
+I/dalvikvm( 1387): Could not find method org.apache.http.conn.scheme.Scheme.<init>, referenced from method com.googlecode.sardine.impl.SardineImpl.createDefaultSchemeRegistry
+W/dalvikvm( 1387): VFY: unable to resolve direct method 2470: Lorg/apache/http/conn/scheme/Scheme;.<init> (Ljava/lang/String;ILorg/apache/http/conn/scheme/SchemeSocketFactory;)V
+D/dalvikvm( 1387): VFY: replacing opcode 0x70 at 0x000f
+D/dalvikvm( 1387): VFY: dead code 0x0012-0025 in Lcom/googlecode/sardine/impl/SardineImpl;.createDefaultSchemeRegistry ()Lorg/apache/http/conn/scheme/SchemeRegistry;
+D/AndroidRuntime( 1387): Shutting down VM
+W/dalvikvm( 1387): threadid=1: thread exiting with uncaught exception (group=0x40015560)
+E/AndroidRuntime( 1387): FATAL EXCEPTION: main
+E/AndroidRuntime( 1387): java.lang.NoSuchMethodError: org.apache.http.conn.scheme.Scheme.<init>
+E/AndroidRuntime( 1387): 	at com.googlecode.sardine.impl.SardineImpl.createDefaultSchemeRegistry(SardineImpl.java:761)
+E/AndroidRuntime( 1387): 	at com.googlecode.sardine.impl.SardineImpl.createDefaultClient(SardineImpl.java:719)
+E/AndroidRuntime( 1387): 	at com.googlecode.sardine.impl.SardineImpl.<init>(SardineImpl.java:164)
+E/AndroidRuntime( 1387): 	at com.googlecode.sardine.SardineFactory.begin(SardineFactory.java:43)
+E/AndroidRuntime( 1387): 	at com.googlecode.sardine.SardineFactory.begin(SardineFactory.java:33)
+E/AndroidRuntime( 1387): 	at edu.sjsu.cs.davsync.davsync.test(davsync.java:50)
+E/AndroidRuntime( 1387): 	at edu.sjsu.cs.davsync.davsync.access$300(davsync.java:16)
+E/AndroidRuntime( 1387): 	at edu.sjsu.cs.davsync.davsync$ButtonListener.onClick(davsync.java:43)
+E/AndroidRuntime( 1387): 	at android.view.View.performClick(View.java:2485)
+E/AndroidRuntime( 1387): 	at android.view.View$PerformClick.run(View.java:9080)
+E/AndroidRuntime( 1387): 	at android.os.Handler.handleCallback(Handler.java:587)
+E/AndroidRuntime( 1387): 	at android.os.Handler.dispatchMessage(Handler.java:92)
+E/AndroidRuntime( 1387): 	at android.os.Looper.loop(Looper.java:130)
+E/AndroidRuntime( 1387): 	at android.app.ActivityThread.main(ActivityThread.java:3683)
+E/AndroidRuntime( 1387): 	at java.lang.reflect.Method.invokeNative(Native Method)
+E/AndroidRuntime( 1387): 	at java.lang.reflect.Method.invoke(Method.java:507)
+E/AndroidRuntime( 1387): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:839)
+E/AndroidRuntime( 1387): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:597)
+E/AndroidRuntime( 1387): 	at dalvik.system.NativeStart.main(Native Method)
+W/ActivityManager(   96):   Force finishing activity edu.sjsu.cs.davsync/.davsync

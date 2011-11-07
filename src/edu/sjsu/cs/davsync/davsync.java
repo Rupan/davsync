@@ -8,6 +8,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.util.Log;
 
+// sardine & dependencies
+import java.util.List;
+import java.io.IOException;
+import com.googlecode.sardine.*;
+
 public class davsync extends Activity {
 
     private DSDatabase db;
@@ -35,9 +40,23 @@ public class davsync extends Activity {
                 clearTextFields();
                 break;
             case TEST:
-                //test();
+                test();
                 break;
             }
+        }
+    }
+
+    private void test() {
+        Sardine sardine = SardineFactory.begin("username", "password");
+        List<DavResource> resources;
+        try {
+            resources = sardine.list("https://razor.temerity.net/net/kp/");
+        } catch(IOException e) {
+            Log.d("SYNC :: ", "Failed to list dir - " + e);
+            return;
+        }
+        for (DavResource res : resources) {
+            Log.d("SYNC :: ", "" + res);
         }
     }
 
