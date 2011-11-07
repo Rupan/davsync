@@ -19,9 +19,9 @@ package com.googlecode.sardine.impl.handler;
 import com.googlecode.sardine.impl.SardineException;
 import com.googlecode.sardine.model.Multistatus;
 import com.googlecode.sardine.util.SardineUtil;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.StatusLine;
 
 import java.io.IOException;
 import java.io.InputStream;

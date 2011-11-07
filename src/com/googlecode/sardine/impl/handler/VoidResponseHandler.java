@@ -16,7 +16,7 @@
 
 package com.googlecode.sardine.impl.handler;
 
-import org.apache.http.HttpResponse;
+import net.temerity.http.HttpResponse;
 
 import java.io.IOException;
 

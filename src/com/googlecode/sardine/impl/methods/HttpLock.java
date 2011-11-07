@@ -18,9 +18,9 @@ package com.googlecode.sardine.impl.methods;
 
 import java.net.URI;
 
-import org.apache.http.HttpHeaders;
-import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.HttpHeaders;
+import net.temerity.http.client.methods.HttpEntityEnclosingRequestBase;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * @version $Id: HttpLock.java 290 2011-07-04 17:22:05Z latchkey $

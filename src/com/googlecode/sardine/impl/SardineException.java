@@ -16,7 +16,7 @@
 
 package com.googlecode.sardine.impl;
 
-import org.apache.http.client.HttpResponseException;
+import net.temerity.http.client.HttpResponseException;
 
 /**
  * Specialized type of exception for Sardine so

@@ -16,9 +16,9 @@
 
 package com.googlecode.sardine.impl.io;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.util.EntityUtils;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.util.EntityUtils;
 
 import java.io.IOException;
 import java.io.InputStream;

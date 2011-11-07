@@ -16,7 +16,7 @@
 
 package com.googlecode.sardine.impl.methods;
 
-import org.apache.http.client.methods.HttpRequestBase;
+import net.temerity.http.client.methods.HttpRequestBase;
 
 import java.net.URI;
 
