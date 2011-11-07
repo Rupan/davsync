@@ -30,15 +30,15 @@ package net.temerity.http.impl.io;
 import java.io.IOException;
 import java.util.Iterator;
 
-import org.apache.http.Header;
-import org.apache.http.HttpException;
-import org.apache.http.HttpMessage;
-import org.apache.http.io.HttpMessageWriter;
-import org.apache.http.io.SessionOutputBuffer;
-import org.apache.http.message.LineFormatter;
-import org.apache.http.message.BasicLineFormatter;
-import org.apache.http.params.HttpParams;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.Header;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpMessage;
+import net.temerity.http.io.HttpMessageWriter;
+import net.temerity.http.io.SessionOutputBuffer;
+import net.temerity.http.message.LineFormatter;
+import net.temerity.http.message.BasicLineFormatter;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Abstract base class for HTTP message writers that serialize output to

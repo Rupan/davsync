@@ -30,7 +30,7 @@
 
 package net.temerity.http.client.utils;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * Facade that provides conversion between Unicode and Punycode domain names.

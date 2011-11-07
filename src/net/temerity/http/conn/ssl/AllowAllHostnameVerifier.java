@@ -27,7 +27,7 @@
 
 package net.temerity.http.conn.ssl;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * The ALLOW_ALL HostnameVerifier essentially turns hostname verification

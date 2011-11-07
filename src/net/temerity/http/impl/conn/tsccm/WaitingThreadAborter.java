@@ -26,7 +26,7 @@
 
 package net.temerity.http.impl.conn.tsccm;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
 // TODO - only called from ConnPoolByRoute currently; consider adding it as nested class
 /**

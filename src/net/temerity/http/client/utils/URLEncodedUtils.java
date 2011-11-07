@@ -37,15 +37,15 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.Header;
-import org.apache.http.HeaderElement;
-import org.apache.http.HttpEntity;
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.EntityUtils;
+import net.temerity.http.Header;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.NameValuePair;
+import net.temerity.http.message.BasicNameValuePair;
+import net.temerity.http.protocol.HTTP;
+import net.temerity.http.util.EntityUtils;
 
 /**
  * A collection of utilities for encoding URLs.

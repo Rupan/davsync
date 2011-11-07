@@ -30,22 +30,22 @@ package net.temerity.http.client.protocol;
 import java.io.IOException;
 import java.util.List;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.Header;
-import org.apache.http.HeaderIterator;
-import org.apache.http.HttpException;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpResponseInterceptor;
-import org.apache.http.client.CookieStore;
-import org.apache.http.cookie.Cookie;
-import org.apache.http.cookie.CookieOrigin;
-import org.apache.http.cookie.CookieSpec;
-import org.apache.http.cookie.MalformedCookieException;
-import org.apache.http.cookie.SM;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.Header;
+import net.temerity.http.HeaderIterator;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpResponseInterceptor;
+import net.temerity.http.client.CookieStore;
+import net.temerity.http.cookie.Cookie;
+import net.temerity.http.cookie.CookieOrigin;
+import net.temerity.http.cookie.CookieSpec;
+import net.temerity.http.cookie.MalformedCookieException;
+import net.temerity.http.cookie.SM;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * Response interceptor that populates the current {@link CookieStore} with data

@@ -28,7 +28,7 @@ package net.temerity.http.impl.conn.tsccm;
 
 import java.util.concurrent.TimeUnit;
 
-import org.apache.http.conn.ConnectionPoolTimeoutException;
+import net.temerity.http.conn.ConnectionPoolTimeoutException;
 
 /**
  * Encapsulates a request for a {@link BasicPoolEntry}.

@@ -27,7 +27,7 @@
 
 package net.temerity.http.conn.routing;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * Basic implementation of an {@link HttpRouteDirector HttpRouteDirector}.

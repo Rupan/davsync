@@ -27,7 +27,7 @@
 
 package net.temerity.http.client;
 
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * A handler for determining if the given execution context is user specific

@@ -29,15 +29,15 @@ package net.temerity.http.protocol;
 
 import java.io.IOException;
 
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpException;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpResponseInterceptor;
-import org.apache.http.HttpStatus;
-import org.apache.http.HttpVersion;
-import org.apache.http.ProtocolVersion;
+import net.temerity.http.Header;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpResponseInterceptor;
+import net.temerity.http.HttpStatus;
+import net.temerity.http.HttpVersion;
+import net.temerity.http.ProtocolVersion;
 
 /**
  * ResponseConnControl is responsible for adding <code>Connection</code> header

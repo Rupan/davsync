@@ -31,16 +31,16 @@ import java.io.IOException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.HttpException;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpRequestInterceptor;
-import org.apache.http.conn.HttpRoutedConnection;
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.protocol.ExecutionContext;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpRequestInterceptor;
+import net.temerity.http.conn.HttpRoutedConnection;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.protocol.ExecutionContext;
+import net.temerity.http.protocol.HTTP;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * This protocol interceptor is responsible for adding <code>Connection</code>

@@ -29,9 +29,9 @@ package net.temerity.http.message;
 
 import java.io.Serializable;
 
-import org.apache.http.Header;
-import org.apache.http.HeaderElement;
-import org.apache.http.ParseException;
+import net.temerity.http.Header;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.ParseException;
 
 /**
  * Basic implementation of {@link Header}.

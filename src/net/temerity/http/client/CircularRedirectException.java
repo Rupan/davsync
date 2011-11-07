@@ -26,7 +26,7 @@
 
 package net.temerity.http.client;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * Signals a circular redirect

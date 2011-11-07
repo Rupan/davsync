@@ -27,11 +27,11 @@
 
 package net.temerity.http.impl.auth;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.auth.AuthScheme;
-import org.apache.http.auth.AuthSchemeFactory;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.auth.AuthScheme;
+import net.temerity.http.auth.AuthSchemeFactory;
+import net.temerity.http.params.HttpParams;
 
 /**
  * {@link AuthSchemeFactory} implementation that creates and initializes

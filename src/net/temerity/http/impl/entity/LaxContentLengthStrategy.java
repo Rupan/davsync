@@ -27,16 +27,16 @@
 
 package net.temerity.http.impl.entity;
 
-import org.apache.http.Header;
-import org.apache.http.HeaderElement;
-import org.apache.http.HttpException;
-import org.apache.http.HttpMessage;
-import org.apache.http.ParseException;
-import org.apache.http.ProtocolException;
-import org.apache.http.entity.ContentLengthStrategy;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.CoreProtocolPNames;
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.Header;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpMessage;
+import net.temerity.http.ParseException;
+import net.temerity.http.ProtocolException;
+import net.temerity.http.entity.ContentLengthStrategy;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.params.CoreProtocolPNames;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * The lax implementation of the content length strategy. This class will ignore

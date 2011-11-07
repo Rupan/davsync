@@ -27,10 +27,10 @@
 
 package net.temerity.http.impl.client;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.AbstractHttpParams;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.params.AbstractHttpParams;
 
 /**
  * Represents a stack of parameter collections.

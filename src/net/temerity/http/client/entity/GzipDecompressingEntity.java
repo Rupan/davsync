@@ -29,9 +29,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.zip.GZIPInputStream;
 
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.entity.HttpEntityWrapper;
+import net.temerity.http.Header;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.entity.HttpEntityWrapper;
 
 /**
  * {@link HttpEntityWrapper} for handling gzip Content Coded responses.

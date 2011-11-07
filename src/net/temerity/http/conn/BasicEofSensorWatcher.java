@@ -30,7 +30,7 @@ package net.temerity.http.conn;
 import java.io.InputStream;
 import java.io.IOException;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
 /**
  * Basic implementation of {@link EofSensorWatcher}. The underlying connection

@@ -27,9 +27,9 @@
 
 package net.temerity.http.impl;
 
-import org.apache.http.ConnectionReuseStrategy;
-import org.apache.http.HttpResponse;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.ConnectionReuseStrategy;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * A strategy that never re-uses a connection.

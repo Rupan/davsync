@@ -26,9 +26,9 @@
 
 package net.temerity.http.client;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.ProtocolException;
+import net.temerity.http.ProtocolException;
 
 /**
  * Signals failure to retry the request due to non-repeatable request

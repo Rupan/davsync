@@ -26,12 +26,12 @@
  */
 package net.temerity.http.impl.cookie;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.cookie.Cookie;
-import org.apache.http.cookie.CookieOrigin;
-import org.apache.http.cookie.MalformedCookieException;
-import org.apache.http.cookie.SetCookie;
+import net.temerity.http.cookie.Cookie;
+import net.temerity.http.cookie.CookieOrigin;
+import net.temerity.http.cookie.MalformedCookieException;
+import net.temerity.http.cookie.SetCookie;
 
 /**
  *

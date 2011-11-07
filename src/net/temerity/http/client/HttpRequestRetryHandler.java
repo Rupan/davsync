@@ -29,7 +29,7 @@ package net.temerity.http.client;
 
 import java.io.IOException;
 
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * A handler for determining if an HttpRequest should be retried after a

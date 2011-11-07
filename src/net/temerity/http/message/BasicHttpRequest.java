@@ -27,11 +27,11 @@
 
 package net.temerity.http.message;
 
-import org.apache.http.HttpRequest;
-import org.apache.http.ProtocolVersion;
-import org.apache.http.RequestLine;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.HttpProtocolParams;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.RequestLine;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.params.HttpProtocolParams;
 
 /**
  * Basic implementation of {@link HttpRequest}.

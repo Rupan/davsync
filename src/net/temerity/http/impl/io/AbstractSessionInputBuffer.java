@@ -30,15 +30,15 @@ package net.temerity.http.impl.io;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.apache.http.io.BufferInfo;
-import org.apache.http.io.SessionInputBuffer;
-import org.apache.http.io.HttpTransportMetrics;
-import org.apache.http.params.CoreConnectionPNames;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.HttpProtocolParams;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.ByteArrayBuffer;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.io.BufferInfo;
+import net.temerity.http.io.SessionInputBuffer;
+import net.temerity.http.io.HttpTransportMetrics;
+import net.temerity.http.params.CoreConnectionPNames;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.params.HttpProtocolParams;
+import net.temerity.http.protocol.HTTP;
+import net.temerity.http.util.ByteArrayBuffer;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Abstract base class for session input buffers that stream data from

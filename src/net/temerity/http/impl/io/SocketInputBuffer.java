@@ -31,9 +31,9 @@ import java.io.IOException;
 import java.io.InterruptedIOException;
 import java.net.Socket;
 
-import org.apache.http.io.EofSensor;
-import org.apache.http.io.SessionInputBuffer;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.io.EofSensor;
+import net.temerity.http.io.SessionInputBuffer;
+import net.temerity.http.params.HttpParams;
 
 /**
  * {@link SessionInputBuffer} implementation bound to a {@link Socket}.

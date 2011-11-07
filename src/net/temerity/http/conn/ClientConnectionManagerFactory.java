@@ -27,8 +27,8 @@
 
 package net.temerity.http.conn;
 
-import org.apache.http.conn.scheme.SchemeRegistry;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.conn.scheme.SchemeRegistry;
+import net.temerity.http.params.HttpParams;
 
 /**
  * A factory for creating new {@link ClientConnectionManager} instances.

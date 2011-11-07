@@ -29,7 +29,7 @@ package net.temerity.http.conn;
 
 import java.io.InterruptedIOException;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * A timeout while connecting to an HTTP server or waiting for an

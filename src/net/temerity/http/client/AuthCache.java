@@ -26,8 +26,8 @@
 
 package net.temerity.http.client;
 
-import org.apache.http.HttpHost;
-import org.apache.http.auth.AuthScheme;
+import net.temerity.http.HttpHost;
+import net.temerity.http.auth.AuthScheme;
 
 /**
  * Abstract {@link AuthScheme} cache. Initialized {@link AuthScheme} objects

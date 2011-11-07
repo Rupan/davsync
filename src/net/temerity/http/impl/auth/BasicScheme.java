@@ -26,20 +26,20 @@
 
 package net.temerity.http.impl.auth;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.http.Header;
-import org.apache.http.HttpRequest;
-import org.apache.http.auth.AuthenticationException;
-import org.apache.http.auth.Credentials;
-import org.apache.http.auth.AUTH;
-import org.apache.http.auth.InvalidCredentialsException;
-import org.apache.http.auth.MalformedChallengeException;
-import org.apache.http.auth.params.AuthParams;
-import org.apache.http.message.BufferedHeader;
-import org.apache.http.util.CharArrayBuffer;
-import org.apache.http.util.EncodingUtils;
+import net.temerity.http.Header;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.auth.AuthenticationException;
+import net.temerity.http.auth.Credentials;
+import net.temerity.http.auth.AUTH;
+import net.temerity.http.auth.InvalidCredentialsException;
+import net.temerity.http.auth.MalformedChallengeException;
+import net.temerity.http.auth.params.AuthParams;
+import net.temerity.http.message.BufferedHeader;
+import net.temerity.http.util.CharArrayBuffer;
+import net.temerity.http.util.EncodingUtils;
 
 /**
  * Basic authentication scheme as defined in RFC 2617.

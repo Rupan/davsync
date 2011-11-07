@@ -28,13 +28,13 @@ package net.temerity.http.impl.conn;
 
 import java.io.IOException;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.io.EofSensor;
-import org.apache.http.io.HttpTransportMetrics;
-import org.apache.http.io.SessionInputBuffer;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.io.EofSensor;
+import net.temerity.http.io.HttpTransportMetrics;
+import net.temerity.http.io.SessionInputBuffer;
+import net.temerity.http.protocol.HTTP;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Logs all data read to the wire LOG.

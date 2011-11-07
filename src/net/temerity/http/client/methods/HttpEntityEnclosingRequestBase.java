@@ -27,13 +27,13 @@
 
 package net.temerity.http.client.methods;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.client.utils.CloneUtils;
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.Header;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpEntityEnclosingRequest;
+import net.temerity.http.client.utils.CloneUtils;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * Basic implementation of an entity enclosing HTTP request

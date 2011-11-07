@@ -26,12 +26,12 @@
 
 package net.temerity.http.impl.client;
 
-import org.apache.http.annotation.ThreadSafe;
-import org.apache.http.client.protocol.RequestAcceptEncoding;
-import org.apache.http.client.protocol.ResponseContentEncoding;
-import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.BasicHttpProcessor;
+import net.temerity.http.annotation.ThreadSafe;
+import net.temerity.http.client.protocol.RequestAcceptEncoding;
+import net.temerity.http.client.protocol.ResponseContentEncoding;
+import net.temerity.http.conn.ClientConnectionManager;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.protocol.BasicHttpProcessor;
 
 /**
  * {@link DefaultHttpClient} sub-class which includes a {@link RequestAcceptEncoding}

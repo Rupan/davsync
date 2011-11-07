@@ -27,9 +27,9 @@
 
 package net.temerity.http.message;
 
-import org.apache.http.HeaderElement;
-import org.apache.http.NameValuePair;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.NameValuePair;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Basic implementation for formatting header value elements.

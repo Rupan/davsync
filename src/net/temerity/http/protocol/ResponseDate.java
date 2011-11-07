@@ -29,10 +29,10 @@ package net.temerity.http.protocol;
 
 import java.io.IOException;
 
-import org.apache.http.HttpException;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpResponseInterceptor;
-import org.apache.http.HttpStatus;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpResponseInterceptor;
+import net.temerity.http.HttpStatus;
 
 /**
  * ResponseDate is responsible for adding <code>Date<c/ode> header to the

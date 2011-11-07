@@ -29,10 +29,10 @@ package net.temerity.http.protocol;
 
 import java.io.IOException;
 
-import org.apache.http.HttpException;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpResponseInterceptor;
-import org.apache.http.params.CoreProtocolPNames;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpResponseInterceptor;
+import net.temerity.http.params.CoreProtocolPNames;
 
 /**
  * ResponseServer is responsible for adding <code>Server</code> header. This

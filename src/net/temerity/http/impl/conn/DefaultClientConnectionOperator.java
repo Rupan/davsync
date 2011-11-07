@@ -36,21 +36,21 @@ import java.net.UnknownHostException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.annotation.ThreadSafe;
+import net.temerity.http.annotation.ThreadSafe;
 
-import org.apache.http.HttpHost;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpHost;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.params.HttpConnectionParams;
+import net.temerity.http.protocol.HttpContext;
 
-import org.apache.http.conn.ConnectTimeoutException;
-import org.apache.http.conn.HttpHostConnectException;
-import org.apache.http.conn.OperatedClientConnection;
-import org.apache.http.conn.ClientConnectionOperator;
-import org.apache.http.conn.scheme.LayeredSchemeSocketFactory;
-import org.apache.http.conn.scheme.Scheme;
-import org.apache.http.conn.scheme.SchemeRegistry;
-import org.apache.http.conn.scheme.SchemeSocketFactory;
+import net.temerity.http.conn.ConnectTimeoutException;
+import net.temerity.http.conn.HttpHostConnectException;
+import net.temerity.http.conn.OperatedClientConnection;
+import net.temerity.http.conn.ClientConnectionOperator;
+import net.temerity.http.conn.scheme.LayeredSchemeSocketFactory;
+import net.temerity.http.conn.scheme.Scheme;
+import net.temerity.http.conn.scheme.SchemeRegistry;
+import net.temerity.http.conn.scheme.SchemeSocketFactory;
 
 /**
  * Default implementation of a {@link ClientConnectionOperator}. It uses a {@link SchemeRegistry}

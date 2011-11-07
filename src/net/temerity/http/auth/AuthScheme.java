@@ -26,8 +26,8 @@
 
 package net.temerity.http.auth;
 
-import org.apache.http.Header;
-import org.apache.http.HttpRequest;
+import net.temerity.http.Header;
+import net.temerity.http.HttpRequest;
 
 /**
  * This interface represents an abstract challenge-response oriented

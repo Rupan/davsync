@@ -33,10 +33,10 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.cookie.ClientCookie;
-import org.apache.http.cookie.SetCookie;
+import net.temerity.http.cookie.ClientCookie;
+import net.temerity.http.cookie.SetCookie;
 
 /**
  * Default implementation of {@link SetCookie}.

@@ -26,9 +26,9 @@
  */
 package net.temerity.http.conn;
 
-import org.apache.http.ConnectionReuseStrategy;
-import org.apache.http.HttpResponse;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.ConnectionReuseStrategy;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * Interface for deciding how long a connection can remain

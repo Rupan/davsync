@@ -29,15 +29,15 @@ package net.temerity.http.impl.client;
 
 import java.net.URI;
 
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.ProtocolException;
-import org.apache.http.annotation.Immutable;
-import org.apache.http.client.RedirectStrategy;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpHead;
-import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.ProtocolException;
+import net.temerity.http.annotation.Immutable;
+import net.temerity.http.client.RedirectStrategy;
+import net.temerity.http.client.methods.HttpGet;
+import net.temerity.http.client.methods.HttpHead;
+import net.temerity.http.client.methods.HttpUriRequest;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * @since 4.1

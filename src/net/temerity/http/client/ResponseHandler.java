@@ -28,7 +28,7 @@ package net.temerity.http.client;
 
 import java.io.IOException;
 
-import org.apache.http.HttpResponse;
+import net.temerity.http.HttpResponse;
 
 /**
  * Handler that encapsulates the process of generating a response object

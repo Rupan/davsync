@@ -29,11 +29,11 @@ package net.temerity.http.impl.client;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.apache.http.annotation.ThreadSafe;
+import net.temerity.http.annotation.ThreadSafe;
 
-import org.apache.http.auth.AuthScope;
-import org.apache.http.auth.Credentials;
-import org.apache.http.client.CredentialsProvider;
+import net.temerity.http.auth.AuthScope;
+import net.temerity.http.auth.Credentials;
+import net.temerity.http.client.CredentialsProvider;
 
 /**
  * Default implementation of {@link CredentialsProvider}.

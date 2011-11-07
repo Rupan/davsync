@@ -32,13 +32,13 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.SocketException;
 
-import org.apache.http.HttpInetConnection;
-import org.apache.http.impl.io.SocketInputBuffer;
-import org.apache.http.impl.io.SocketOutputBuffer;
-import org.apache.http.io.SessionInputBuffer;
-import org.apache.http.io.SessionOutputBuffer;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.HttpInetConnection;
+import net.temerity.http.impl.io.SocketInputBuffer;
+import net.temerity.http.impl.io.SocketOutputBuffer;
+import net.temerity.http.io.SessionInputBuffer;
+import net.temerity.http.io.SessionOutputBuffer;
+import net.temerity.http.params.HttpConnectionParams;
+import net.temerity.http.params.HttpParams;
 
 /**
  * Implementation of a client-side HTTP connection that can be bound to an

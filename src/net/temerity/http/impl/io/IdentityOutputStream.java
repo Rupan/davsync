@@ -30,7 +30,7 @@ package net.temerity.http.impl.io;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import org.apache.http.io.SessionOutputBuffer;
+import net.temerity.http.io.SessionOutputBuffer;
 
 /**
  * Output stream that writes data without any transformation. The end of

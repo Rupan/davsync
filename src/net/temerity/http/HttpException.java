@@ -27,7 +27,7 @@
 
 package net.temerity.http;
 
-import org.apache.http.util.ExceptionUtils;
+import net.temerity.http.util.ExceptionUtils;
 
 /**
  * Signals that an HTTP exception has occurred.

@@ -27,7 +27,7 @@
 
 package net.temerity.http.params;
 
-import org.apache.http.HttpVersion;
+import net.temerity.http.HttpVersion;
 
 /**
  * This is a Java Bean class that can be used to wrap an instance of

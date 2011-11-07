@@ -29,14 +29,14 @@ package net.temerity.http.impl.client;
 
 import java.io.IOException;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
-import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.HttpResponseException;
-import org.apache.http.util.EntityUtils;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.StatusLine;
+import net.temerity.http.client.ResponseHandler;
+import net.temerity.http.client.HttpResponseException;
+import net.temerity.http.util.EntityUtils;
 
 /**
  * A {@link ResponseHandler} that returns the response body as a String

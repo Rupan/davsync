@@ -27,11 +27,11 @@
 
 package net.temerity.http.message;
 
-import org.apache.http.ProtocolVersion;
-import org.apache.http.RequestLine;
-import org.apache.http.StatusLine;
-import org.apache.http.Header;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.RequestLine;
+import net.temerity.http.StatusLine;
+import net.temerity.http.Header;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Interface for formatting elements of the HEAD section of an HTTP message.

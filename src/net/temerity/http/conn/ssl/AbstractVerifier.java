@@ -27,9 +27,9 @@
 
 package net.temerity.http.conn.ssl;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.conn.util.InetAddressUtils;
+import net.temerity.http.conn.util.InetAddressUtils;
 
 import java.io.IOException;
 import java.io.InputStream;

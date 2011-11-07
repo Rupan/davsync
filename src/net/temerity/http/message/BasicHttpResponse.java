@@ -29,11 +29,11 @@ package net.temerity.http.message;
 
 import java.util.Locale;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.ProtocolVersion;
-import org.apache.http.StatusLine;
-import org.apache.http.ReasonPhraseCatalog;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.StatusLine;
+import net.temerity.http.ReasonPhraseCatalog;
 
 /**
  * Basic implementation of {@link HttpResponse}.

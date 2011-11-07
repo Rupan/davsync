@@ -29,7 +29,7 @@ package net.temerity.http;
 
 import java.io.IOException;
 
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * HTTP protocol interceptor is a routine that implements a specific aspect of

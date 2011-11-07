@@ -26,11 +26,11 @@
  */
 package net.temerity.http.impl.conn;
 
-import org.apache.http.annotation.ThreadSafe;
-import org.apache.http.conn.scheme.PlainSocketFactory;
-import org.apache.http.conn.scheme.Scheme;
-import org.apache.http.conn.scheme.SchemeRegistry;
-import org.apache.http.conn.ssl.SSLSocketFactory;
+import net.temerity.http.annotation.ThreadSafe;
+import net.temerity.http.conn.scheme.PlainSocketFactory;
+import net.temerity.http.conn.scheme.Scheme;
+import net.temerity.http.conn.scheme.SchemeRegistry;
+import net.temerity.http.conn.ssl.SSLSocketFactory;
 
 /**
  * @since 4.1

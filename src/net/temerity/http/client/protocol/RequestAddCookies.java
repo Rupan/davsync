@@ -34,28 +34,28 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.Header;
-import org.apache.http.HttpException;
-import org.apache.http.HttpHost;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpRequestInterceptor;
-import org.apache.http.ProtocolException;
-import org.apache.http.client.CookieStore;
-import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.client.params.HttpClientParams;
-import org.apache.http.conn.HttpRoutedConnection;
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.cookie.Cookie;
-import org.apache.http.cookie.CookieOrigin;
-import org.apache.http.cookie.CookieSpec;
-import org.apache.http.cookie.CookieSpecRegistry;
-import org.apache.http.cookie.SetCookie2;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.protocol.ExecutionContext;
+import net.temerity.http.Header;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpHost;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpRequestInterceptor;
+import net.temerity.http.ProtocolException;
+import net.temerity.http.client.CookieStore;
+import net.temerity.http.client.methods.HttpUriRequest;
+import net.temerity.http.client.params.HttpClientParams;
+import net.temerity.http.conn.HttpRoutedConnection;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.cookie.Cookie;
+import net.temerity.http.cookie.CookieOrigin;
+import net.temerity.http.cookie.CookieSpec;
+import net.temerity.http.cookie.CookieSpecRegistry;
+import net.temerity.http.cookie.SetCookie2;
+import net.temerity.http.protocol.HttpContext;
+import net.temerity.http.protocol.ExecutionContext;
 
 /**
  * Request interceptor that matches cookies available in the current

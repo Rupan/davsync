@@ -31,9 +31,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.apache.http.annotation.ThreadSafe;
+import net.temerity.http.annotation.ThreadSafe;
 
-import org.apache.http.HttpHost;
+import net.temerity.http.HttpHost;
 
 /**
  * A set of supported protocol {@link Scheme}s.

@@ -29,12 +29,12 @@ package net.temerity.http.client.entity;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.client.utils.URLEncodedUtils;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.NameValuePair;
+import net.temerity.http.client.utils.URLEncodedUtils;
+import net.temerity.http.entity.StringEntity;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * An entity composed of a list of url-encoded pairs.

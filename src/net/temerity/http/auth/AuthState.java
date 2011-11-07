@@ -26,7 +26,7 @@
 
 package net.temerity.http.auth;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
 
 /**

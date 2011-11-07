@@ -26,9 +26,9 @@
 
 package net.temerity.http.auth;
 
-import org.apache.http.Header;
-import org.apache.http.HttpRequest;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.Header;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * This interface represents an extended  authentication scheme

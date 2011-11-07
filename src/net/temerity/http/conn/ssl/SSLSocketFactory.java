@@ -27,14 +27,14 @@
 
 package net.temerity.http.conn.ssl;
 
-import org.apache.http.annotation.ThreadSafe;
+import net.temerity.http.annotation.ThreadSafe;
 
-import org.apache.http.conn.ConnectTimeoutException;
-import org.apache.http.conn.scheme.HostNameResolver;
-import org.apache.http.conn.scheme.LayeredSchemeSocketFactory;
-import org.apache.http.conn.scheme.LayeredSocketFactory;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.conn.ConnectTimeoutException;
+import net.temerity.http.conn.scheme.HostNameResolver;
+import net.temerity.http.conn.scheme.LayeredSchemeSocketFactory;
+import net.temerity.http.conn.scheme.LayeredSocketFactory;
+import net.temerity.http.params.HttpConnectionParams;
+import net.temerity.http.params.HttpParams;
 
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.KeyManagerFactory;

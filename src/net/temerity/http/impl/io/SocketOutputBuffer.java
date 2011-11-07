@@ -30,8 +30,8 @@ package net.temerity.http.impl.io;
 import java.io.IOException;
 import java.net.Socket;
 
-import org.apache.http.io.SessionOutputBuffer;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.io.SessionOutputBuffer;
+import net.temerity.http.params.HttpParams;
 
 /**
  * {@link SessionOutputBuffer} implementation bound to a {@link Socket}.

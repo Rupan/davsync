@@ -34,20 +34,20 @@ import java.util.List;
 import java.util.Locale;
 import java.util.StringTokenizer;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.Header;
-import org.apache.http.HttpRequest;
-import org.apache.http.auth.AuthenticationException;
-import org.apache.http.auth.Credentials;
-import org.apache.http.auth.AUTH;
-import org.apache.http.auth.MalformedChallengeException;
-import org.apache.http.auth.params.AuthParams;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.message.BasicHeaderValueFormatter;
-import org.apache.http.message.BufferedHeader;
-import org.apache.http.util.CharArrayBuffer;
-import org.apache.http.util.EncodingUtils;
+import net.temerity.http.Header;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.auth.AuthenticationException;
+import net.temerity.http.auth.Credentials;
+import net.temerity.http.auth.AUTH;
+import net.temerity.http.auth.MalformedChallengeException;
+import net.temerity.http.auth.params.AuthParams;
+import net.temerity.http.message.BasicNameValuePair;
+import net.temerity.http.message.BasicHeaderValueFormatter;
+import net.temerity.http.message.BufferedHeader;
+import net.temerity.http.util.CharArrayBuffer;
+import net.temerity.http.util.EncodingUtils;
 
 /**
  * Digest authentication scheme as defined in RFC 2617.

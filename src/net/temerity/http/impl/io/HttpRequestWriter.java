@@ -29,11 +29,11 @@ package net.temerity.http.impl.io;
 
 import java.io.IOException;
 
-import org.apache.http.HttpMessage;
-import org.apache.http.HttpRequest;
-import org.apache.http.io.SessionOutputBuffer;
-import org.apache.http.message.LineFormatter;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.HttpMessage;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.io.SessionOutputBuffer;
+import net.temerity.http.message.LineFormatter;
+import net.temerity.http.params.HttpParams;
 
 /**
  * HTTP request writer that serializes its output to an instance

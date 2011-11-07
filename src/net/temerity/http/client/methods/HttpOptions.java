@@ -31,12 +31,12 @@ import java.net.URI;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.Header;
-import org.apache.http.HeaderElement;
-import org.apache.http.HeaderIterator;
-import org.apache.http.HttpResponse;
+import net.temerity.http.Header;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.HeaderIterator;
+import net.temerity.http.HttpResponse;
 
 /**
  * HTTP OPTIONS method.

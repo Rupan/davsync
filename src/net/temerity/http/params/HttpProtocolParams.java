@@ -27,9 +27,9 @@
 
 package net.temerity.http.params;
 
-import org.apache.http.HttpVersion;
-import org.apache.http.ProtocolVersion;
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.HttpVersion;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * Utility class for accessing protocol parameters in {@link HttpParams}.

@@ -29,8 +29,8 @@ package net.temerity.http.io;
 
 import java.io.IOException;
 
-import org.apache.http.HttpException;
-import org.apache.http.HttpMessage;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpMessage;
 
 /**
  * Abstract message writer intended to serialize HTTP messages to an arbitrary

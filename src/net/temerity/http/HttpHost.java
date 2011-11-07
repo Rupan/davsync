@@ -30,8 +30,8 @@ package net.temerity.http;
 import java.io.Serializable;
 import java.util.Locale;
 
-import org.apache.http.util.CharArrayBuffer;
-import org.apache.http.util.LangUtils;
+import net.temerity.http.util.CharArrayBuffer;
+import net.temerity.http.util.LangUtils;
 
 /**
  * Holds all of the variables needed to describe an HTTP connection to a host.

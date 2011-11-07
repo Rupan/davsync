@@ -35,12 +35,12 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.apache.http.client.utils.Punycode;
-import org.apache.http.cookie.Cookie;
-import org.apache.http.cookie.CookieAttributeHandler;
-import org.apache.http.cookie.CookieOrigin;
-import org.apache.http.cookie.MalformedCookieException;
-import org.apache.http.cookie.SetCookie;
+import net.temerity.http.client.utils.Punycode;
+import net.temerity.http.cookie.Cookie;
+import net.temerity.http.cookie.CookieAttributeHandler;
+import net.temerity.http.cookie.CookieOrigin;
+import net.temerity.http.cookie.MalformedCookieException;
+import net.temerity.http.cookie.SetCookie;
 
 /**
  * Wraps a CookieAttributeHandler and leverages its match method

@@ -32,9 +32,9 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
 
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.entity.HttpEntityWrapper;
+import net.temerity.http.Header;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.entity.HttpEntityWrapper;
 
 /**
  * {@link HttpEntityWrapper} responsible for handling deflate Content Coded responses. In RFC2616

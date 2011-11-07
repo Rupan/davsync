@@ -29,16 +29,16 @@ package net.temerity.http.impl.cookie;
 
 import java.util.StringTokenizer;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.cookie.ClientCookie;
-import org.apache.http.cookie.Cookie;
-import org.apache.http.cookie.CookieAttributeHandler;
-import org.apache.http.cookie.CookieOrigin;
-import org.apache.http.cookie.CookieRestrictionViolationException;
-import org.apache.http.cookie.MalformedCookieException;
-import org.apache.http.cookie.SetCookie;
-import org.apache.http.cookie.SetCookie2;
+import net.temerity.http.cookie.ClientCookie;
+import net.temerity.http.cookie.Cookie;
+import net.temerity.http.cookie.CookieAttributeHandler;
+import net.temerity.http.cookie.CookieOrigin;
+import net.temerity.http.cookie.CookieRestrictionViolationException;
+import net.temerity.http.cookie.MalformedCookieException;
+import net.temerity.http.cookie.SetCookie;
+import net.temerity.http.cookie.SetCookie2;
 
 /**
  * <tt>"Port"</tt> cookie attribute handler for RFC 2965 cookie spec.

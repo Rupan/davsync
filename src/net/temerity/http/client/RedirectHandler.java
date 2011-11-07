@@ -29,9 +29,9 @@ package net.temerity.http.client;
 
 import java.net.URI;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.ProtocolException;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.ProtocolException;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * A handler for determining if an HTTP request should be redirected to

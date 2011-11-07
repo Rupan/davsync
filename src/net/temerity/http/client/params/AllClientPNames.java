@@ -26,13 +26,13 @@
 
 package net.temerity.http.client.params;
 
-import org.apache.http.params.CoreConnectionPNames;
-import org.apache.http.params.CoreProtocolPNames;
-import org.apache.http.auth.params.AuthPNames;
-import org.apache.http.cookie.params.CookieSpecPNames;
-import org.apache.http.conn.params.ConnManagerPNames;
-import org.apache.http.conn.params.ConnConnectionPNames;
-import org.apache.http.conn.params.ConnRoutePNames;
+import net.temerity.http.params.CoreConnectionPNames;
+import net.temerity.http.params.CoreProtocolPNames;
+import net.temerity.http.auth.params.AuthPNames;
+import net.temerity.http.cookie.params.CookieSpecPNames;
+import net.temerity.http.conn.params.ConnManagerPNames;
+import net.temerity.http.conn.params.ConnConnectionPNames;
+import net.temerity.http.conn.params.ConnRoutePNames;
 
 /**
  * Collected parameter names for the HttpClient module.

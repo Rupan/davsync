@@ -27,7 +27,7 @@
 
 package net.temerity.http;
 
-import org.apache.http.params.HttpParams;
+import net.temerity.http.params.HttpParams;
 
 /**
  * HTTP messages consist of requests from client to server and responses

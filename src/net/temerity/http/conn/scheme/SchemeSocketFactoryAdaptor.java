@@ -33,8 +33,8 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import org.apache.http.conn.ConnectTimeoutException;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.conn.ConnectTimeoutException;
+import net.temerity.http.params.HttpParams;
 
 @Deprecated
 class SchemeSocketFactoryAdaptor implements SchemeSocketFactory {

@@ -26,15 +26,15 @@
  */
 package net.temerity.http.impl.client;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.HeaderElement;
-import org.apache.http.HeaderElementIterator;
-import org.apache.http.HttpResponse;
-import org.apache.http.conn.ConnectionKeepAliveStrategy;
-import org.apache.http.message.BasicHeaderElementIterator;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.HeaderElementIterator;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.conn.ConnectionKeepAliveStrategy;
+import net.temerity.http.message.BasicHeaderElementIterator;
+import net.temerity.http.protocol.HTTP;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * Default implementation of a strategy deciding duration

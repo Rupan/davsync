@@ -28,12 +28,12 @@ package net.temerity.http.impl.conn;
 
 import java.io.IOException;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.io.HttpTransportMetrics;
-import org.apache.http.io.SessionOutputBuffer;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.io.HttpTransportMetrics;
+import net.temerity.http.io.SessionOutputBuffer;
+import net.temerity.http.protocol.HTTP;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Logs all data written to the wire LOG.

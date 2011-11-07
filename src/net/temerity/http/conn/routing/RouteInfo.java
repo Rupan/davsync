@@ -29,7 +29,7 @@ package net.temerity.http.conn.routing;
 
 import java.net.InetAddress;
 
-import org.apache.http.HttpHost;
+import net.temerity.http.HttpHost;
 
 /**
  * Read-only interface for route information.

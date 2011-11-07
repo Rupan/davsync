@@ -32,12 +32,12 @@ import java.util.concurrent.TimeUnit;
 
 import javax.net.ssl.SSLSession;
 
-import org.apache.http.HttpClientConnection;
-import org.apache.http.HttpHost;
-import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpClientConnection;
+import net.temerity.http.HttpHost;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.protocol.HttpContext;
 
-import org.apache.http.conn.routing.HttpRoute;
+import net.temerity.http.conn.routing.HttpRoute;
 
 /**
  * A client-side connection with advanced connection logic.

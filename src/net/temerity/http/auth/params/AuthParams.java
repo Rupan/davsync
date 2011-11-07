@@ -27,10 +27,10 @@
 
 package net.temerity.http.auth.params;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * An adaptor for manipulating HTTP authentication parameters

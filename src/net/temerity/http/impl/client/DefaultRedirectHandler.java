@@ -30,25 +30,25 @@ package net.temerity.http.impl.client;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.Header;
-import org.apache.http.HttpHost;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.ProtocolException;
-import org.apache.http.client.CircularRedirectException;
-import org.apache.http.client.RedirectHandler;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpHead;
-import org.apache.http.client.params.ClientPNames;
-import org.apache.http.client.utils.URIUtils;
-import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.protocol.ExecutionContext;
+import net.temerity.http.Header;
+import net.temerity.http.HttpHost;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpStatus;
+import net.temerity.http.ProtocolException;
+import net.temerity.http.client.CircularRedirectException;
+import net.temerity.http.client.RedirectHandler;
+import net.temerity.http.client.methods.HttpGet;
+import net.temerity.http.client.methods.HttpHead;
+import net.temerity.http.client.params.ClientPNames;
+import net.temerity.http.client.utils.URIUtils;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.protocol.HttpContext;
+import net.temerity.http.protocol.ExecutionContext;
 
 /**
  * Default implementation of {@link RedirectHandler}.

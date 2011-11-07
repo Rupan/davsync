@@ -31,10 +31,10 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 
-import org.apache.http.HttpHost;
-import org.apache.http.conn.scheme.SchemeSocketFactory;
-import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpHost;
+import net.temerity.http.conn.scheme.SchemeSocketFactory;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * ClientConnectionOperator represents a strategy for creating

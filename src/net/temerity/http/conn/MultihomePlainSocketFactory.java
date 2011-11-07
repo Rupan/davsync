@@ -37,12 +37,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Arrays;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.conn.scheme.SchemeSocketFactory;
-import org.apache.http.conn.scheme.SocketFactory;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.conn.scheme.SchemeSocketFactory;
+import net.temerity.http.conn.scheme.SocketFactory;
+import net.temerity.http.params.HttpConnectionParams;
+import net.temerity.http.params.HttpParams;
 
 /**
  * Socket factory that implements a simple multi-home fail-over on connect failure,

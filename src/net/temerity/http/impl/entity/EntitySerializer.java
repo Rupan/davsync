@@ -30,14 +30,14 @@ package net.temerity.http.impl.entity;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpException;
-import org.apache.http.HttpMessage;
-import org.apache.http.entity.ContentLengthStrategy;
-import org.apache.http.impl.io.ChunkedOutputStream;
-import org.apache.http.impl.io.ContentLengthOutputStream;
-import org.apache.http.impl.io.IdentityOutputStream;
-import org.apache.http.io.SessionOutputBuffer;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpMessage;
+import net.temerity.http.entity.ContentLengthStrategy;
+import net.temerity.http.impl.io.ChunkedOutputStream;
+import net.temerity.http.impl.io.ContentLengthOutputStream;
+import net.temerity.http.impl.io.IdentityOutputStream;
+import net.temerity.http.io.SessionOutputBuffer;
 
 /**
  * HTTP entity serializer.

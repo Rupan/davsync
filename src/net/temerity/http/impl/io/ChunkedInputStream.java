@@ -30,14 +30,14 @@ package net.temerity.http.impl.io;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.apache.http.Header;
-import org.apache.http.HttpException;
-import org.apache.http.MalformedChunkCodingException;
-import org.apache.http.TruncatedChunkException;
-import org.apache.http.io.BufferInfo;
-import org.apache.http.io.SessionInputBuffer;
-import org.apache.http.util.CharArrayBuffer;
-import org.apache.http.util.ExceptionUtils;
+import net.temerity.http.Header;
+import net.temerity.http.HttpException;
+import net.temerity.http.MalformedChunkCodingException;
+import net.temerity.http.TruncatedChunkException;
+import net.temerity.http.io.BufferInfo;
+import net.temerity.http.io.SessionInputBuffer;
+import net.temerity.http.util.CharArrayBuffer;
+import net.temerity.http.util.ExceptionUtils;
 
 /**
  * Implements chunked transfer coding. The content is received in small chunks.

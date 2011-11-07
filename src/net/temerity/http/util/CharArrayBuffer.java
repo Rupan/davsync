@@ -29,7 +29,7 @@ package net.temerity.http.util;
 
 import java.io.Serializable;
 
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * A resizable char array.

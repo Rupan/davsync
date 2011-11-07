@@ -30,9 +30,9 @@ package net.temerity.http.impl.cookie;
 import java.io.Serializable;
 import java.util.Date;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.cookie.SetCookie2;
+import net.temerity.http.cookie.SetCookie2;
 
 /**
  * Default implementation of {@link SetCookie2}.

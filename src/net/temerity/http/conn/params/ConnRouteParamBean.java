@@ -29,12 +29,12 @@ package net.temerity.http.conn.params;
 
 import java.net.InetAddress;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.HttpHost;
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.params.HttpAbstractParamBean;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.HttpHost;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.params.HttpAbstractParamBean;
+import net.temerity.http.params.HttpParams;
 
 /**
  * This is a Java Bean class that can be used to wrap an instance of

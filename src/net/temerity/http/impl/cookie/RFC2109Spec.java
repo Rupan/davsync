@@ -31,20 +31,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.Header;
-import org.apache.http.HeaderElement;
-import org.apache.http.cookie.ClientCookie;
-import org.apache.http.cookie.Cookie;
-import org.apache.http.cookie.CookieOrigin;
-import org.apache.http.cookie.CookiePathComparator;
-import org.apache.http.cookie.CookieRestrictionViolationException;
-import org.apache.http.cookie.CookieSpec;
-import org.apache.http.cookie.MalformedCookieException;
-import org.apache.http.cookie.SM;
-import org.apache.http.message.BufferedHeader;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.Header;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.cookie.ClientCookie;
+import net.temerity.http.cookie.Cookie;
+import net.temerity.http.cookie.CookieOrigin;
+import net.temerity.http.cookie.CookiePathComparator;
+import net.temerity.http.cookie.CookieRestrictionViolationException;
+import net.temerity.http.cookie.CookieSpec;
+import net.temerity.http.cookie.MalformedCookieException;
+import net.temerity.http.cookie.SM;
+import net.temerity.http.message.BufferedHeader;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * RFC 2109 compliant {@link CookieSpec} implementation. This is an older

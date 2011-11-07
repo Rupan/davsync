@@ -30,16 +30,16 @@ package net.temerity.http.impl.client;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.Header;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.auth.AUTH;
-import org.apache.http.auth.MalformedChallengeException;
-import org.apache.http.auth.params.AuthPNames;
-import org.apache.http.client.AuthenticationHandler;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.Header;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpStatus;
+import net.temerity.http.auth.AUTH;
+import net.temerity.http.auth.MalformedChallengeException;
+import net.temerity.http.auth.params.AuthPNames;
+import net.temerity.http.client.AuthenticationHandler;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * Default {@link AuthenticationHandler} implementation for proxy host

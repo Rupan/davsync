@@ -28,11 +28,11 @@ package net.temerity.http.conn.params;
 
 import java.net.InetAddress;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.HttpHost;
-import org.apache.http.params.HttpParams;
-import org.apache.http.conn.routing.HttpRoute;
+import net.temerity.http.HttpHost;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.conn.routing.HttpRoute;
 
 /**
  * An adaptor for manipulating HTTP routing parameters

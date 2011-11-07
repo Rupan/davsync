@@ -30,11 +30,11 @@ package net.temerity.http.message;
 import java.util.List;
 import java.util.ArrayList;
 
-import org.apache.http.HeaderElement;
-import org.apache.http.NameValuePair;
-import org.apache.http.ParseException;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.NameValuePair;
+import net.temerity.http.ParseException;
+import net.temerity.http.protocol.HTTP;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Basic implementation for parsing header values into elements.

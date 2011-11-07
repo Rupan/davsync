@@ -27,7 +27,7 @@
 
 package net.temerity.http;
 
-import org.apache.http.ProtocolException;
+import net.temerity.http.ProtocolException;
 
 /**
  * Signals an unsupported version of the HTTP protocol.

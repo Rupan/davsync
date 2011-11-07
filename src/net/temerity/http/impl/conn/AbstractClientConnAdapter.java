@@ -35,15 +35,15 @@ import java.util.concurrent.TimeUnit;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSession;
 
-import org.apache.http.HttpException;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpConnectionMetrics;
-import org.apache.http.conn.OperatedClientConnection;
-import org.apache.http.conn.ManagedClientConnection;
-import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpEntityEnclosingRequest;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpConnectionMetrics;
+import net.temerity.http.conn.OperatedClientConnection;
+import net.temerity.http.conn.ManagedClientConnection;
+import net.temerity.http.conn.ClientConnectionManager;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * Abstract adapter from {@link OperatedClientConnection operated} to

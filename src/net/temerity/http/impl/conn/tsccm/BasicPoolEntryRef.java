@@ -30,9 +30,9 @@ package net.temerity.http.impl.conn.tsccm;
 import java.lang.ref.WeakReference;
 import java.lang.ref.ReferenceQueue;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.conn.routing.HttpRoute;
+import net.temerity.http.conn.routing.HttpRoute;
 
 
 

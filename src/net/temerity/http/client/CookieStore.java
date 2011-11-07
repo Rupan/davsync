@@ -29,7 +29,7 @@ package net.temerity.http.client;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.http.cookie.Cookie;
+import net.temerity.http.cookie.Cookie;
 
 /**
  * This interface represents an abstract store for {@link Cookie}

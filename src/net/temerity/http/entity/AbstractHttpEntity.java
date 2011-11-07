@@ -30,10 +30,10 @@ package net.temerity.http.entity;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.message.BasicHeader;
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.Header;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.message.BasicHeader;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * Abstract base class for entities.

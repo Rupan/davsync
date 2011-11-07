@@ -32,8 +32,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.util.EntityUtils;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.util.EntityUtils;
 
 /**
  * A wrapping entity that buffers it content if necessary.

@@ -29,14 +29,14 @@ package net.temerity.http.client.protocol;
 
 import java.util.List;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.auth.AuthSchemeRegistry;
-import org.apache.http.client.CookieStore;
-import org.apache.http.client.CredentialsProvider;
-import org.apache.http.cookie.CookieSpecRegistry;
-import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.auth.AuthSchemeRegistry;
+import net.temerity.http.client.CookieStore;
+import net.temerity.http.client.CredentialsProvider;
+import net.temerity.http.cookie.CookieSpecRegistry;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * Configuration facade for {@link HttpContext} instances.

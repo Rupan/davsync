@@ -27,7 +27,7 @@
 
 package net.temerity.http.auth;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * Constants and static helpers related to the HTTP authentication.

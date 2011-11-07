@@ -27,7 +27,7 @@
 
 package net.temerity.http.cookie;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * Signals that a cookie violates a restriction imposed by the cookie

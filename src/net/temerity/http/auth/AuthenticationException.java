@@ -26,9 +26,9 @@
 
 package net.temerity.http.auth;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.ProtocolException;
+import net.temerity.http.ProtocolException;
 
 /**
  * Signals a failure in authentication process

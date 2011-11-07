@@ -29,7 +29,7 @@ package net.temerity.http.conn.ssl;
 
 import javax.net.ssl.SSLException;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * The Strict HostnameVerifier works the same way as Sun Java 1.4, Sun

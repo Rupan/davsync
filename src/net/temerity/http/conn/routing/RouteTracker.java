@@ -29,10 +29,10 @@ package net.temerity.http.conn.routing;
 
 import java.net.InetAddress;
 
-import org.apache.http.annotation.NotThreadSafe;
-import org.apache.http.util.LangUtils;
+import net.temerity.http.annotation.NotThreadSafe;
+import net.temerity.http.util.LangUtils;
 
-import org.apache.http.HttpHost;
+import net.temerity.http.HttpHost;
 
 /**
  * Helps tracking the steps in establishing a route.

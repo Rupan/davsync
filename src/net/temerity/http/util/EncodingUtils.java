@@ -28,7 +28,7 @@ package net.temerity.http.util;
 
 import java.io.UnsupportedEncodingException;
 
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * The home for utility methods that handle various encoding tasks.

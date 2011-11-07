@@ -27,7 +27,7 @@
 
 package net.temerity.http.auth;
 
-import org.apache.http.params.HttpParams;
+import net.temerity.http.params.HttpParams;
 
 /**
  * Factory for {@link AuthScheme} implementations.

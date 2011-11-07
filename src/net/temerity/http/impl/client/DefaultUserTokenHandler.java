@@ -30,16 +30,16 @@ import java.security.Principal;
 
 import javax.net.ssl.SSLSession;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.auth.AuthScheme;
-import org.apache.http.auth.AuthState;
-import org.apache.http.auth.Credentials;
-import org.apache.http.client.UserTokenHandler;
-import org.apache.http.client.protocol.ClientContext;
-import org.apache.http.conn.HttpRoutedConnection;
-import org.apache.http.protocol.ExecutionContext;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.auth.AuthScheme;
+import net.temerity.http.auth.AuthState;
+import net.temerity.http.auth.Credentials;
+import net.temerity.http.client.UserTokenHandler;
+import net.temerity.http.client.protocol.ClientContext;
+import net.temerity.http.conn.HttpRoutedConnection;
+import net.temerity.http.protocol.ExecutionContext;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * Default implementation of {@link UserTokenHandler}. This class will use

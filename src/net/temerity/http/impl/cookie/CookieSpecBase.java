@@ -31,14 +31,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.HeaderElement;
-import org.apache.http.NameValuePair;
-import org.apache.http.cookie.Cookie;
-import org.apache.http.cookie.CookieAttributeHandler;
-import org.apache.http.cookie.CookieOrigin;
-import org.apache.http.cookie.MalformedCookieException;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.NameValuePair;
+import net.temerity.http.cookie.Cookie;
+import net.temerity.http.cookie.CookieAttributeHandler;
+import net.temerity.http.cookie.CookieOrigin;
+import net.temerity.http.cookie.MalformedCookieException;
 
 /**
  * Cookie management functions shared by all specification.

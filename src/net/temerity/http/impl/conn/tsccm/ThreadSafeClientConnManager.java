@@ -31,19 +31,19 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.annotation.ThreadSafe;
-import org.apache.http.conn.params.ConnPerRouteBean;
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.conn.scheme.SchemeRegistry;
-import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.conn.ClientConnectionOperator;
-import org.apache.http.conn.ClientConnectionRequest;
-import org.apache.http.conn.ConnectionPoolTimeoutException;
-import org.apache.http.conn.ManagedClientConnection;
-import org.apache.http.conn.OperatedClientConnection;
-import org.apache.http.params.HttpParams;
-import org.apache.http.impl.conn.DefaultClientConnectionOperator;
-import org.apache.http.impl.conn.SchemeRegistryFactory;
+import net.temerity.http.annotation.ThreadSafe;
+import net.temerity.http.conn.params.ConnPerRouteBean;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.conn.scheme.SchemeRegistry;
+import net.temerity.http.conn.ClientConnectionManager;
+import net.temerity.http.conn.ClientConnectionOperator;
+import net.temerity.http.conn.ClientConnectionRequest;
+import net.temerity.http.conn.ConnectionPoolTimeoutException;
+import net.temerity.http.conn.ManagedClientConnection;
+import net.temerity.http.conn.OperatedClientConnection;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.impl.conn.DefaultClientConnectionOperator;
+import net.temerity.http.impl.conn.SchemeRegistryFactory;
 
 /**
  * Manages a pool of {@link OperatedClientConnection client connections} and

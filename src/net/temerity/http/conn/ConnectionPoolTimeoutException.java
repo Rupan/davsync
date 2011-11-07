@@ -27,7 +27,7 @@
 
 package net.temerity.http.conn;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * A timeout while waiting for an available connection

@@ -30,8 +30,8 @@ package net.temerity.http.impl;
 import java.io.IOException;
 import java.net.Socket;
 
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.params.HttpConnectionParams;
+import net.temerity.http.params.HttpParams;
 
 /**
  * Default implementation of a client-side HTTP connection.

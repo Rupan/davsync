@@ -30,16 +30,16 @@ package net.temerity.http.impl.cookie;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.HeaderElement;
-import org.apache.http.NameValuePair;
-import org.apache.http.ParseException;
-import org.apache.http.message.BasicHeaderElement;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.message.ParserCursor;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.NameValuePair;
+import net.temerity.http.ParseException;
+import net.temerity.http.message.BasicHeaderElement;
+import net.temerity.http.message.BasicNameValuePair;
+import net.temerity.http.message.ParserCursor;
+import net.temerity.http.protocol.HTTP;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  *

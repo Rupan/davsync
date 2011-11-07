@@ -29,11 +29,11 @@ package net.temerity.http.impl.conn.tsccm;
 import java.lang.ref.ReferenceQueue;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.http.annotation.NotThreadSafe;
-import org.apache.http.conn.OperatedClientConnection;
-import org.apache.http.conn.ClientConnectionOperator;
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.impl.conn.AbstractPoolEntry;
+import net.temerity.http.annotation.NotThreadSafe;
+import net.temerity.http.conn.OperatedClientConnection;
+import net.temerity.http.conn.ClientConnectionOperator;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.impl.conn.AbstractPoolEntry;
 
 /**
  * Basic implementation of a connection pool entry.

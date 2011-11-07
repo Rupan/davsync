@@ -26,7 +26,7 @@
 
 package net.temerity.http.conn.params;
 
-import org.apache.http.conn.routing.HttpRoute;
+import net.temerity.http.conn.routing.HttpRoute;
 
 /**
  * This interface is intended for looking up maximum number of connections

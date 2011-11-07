@@ -28,8 +28,8 @@
 package net.temerity.http.impl;
 
 import java.util.HashMap;
-import org.apache.http.HttpConnectionMetrics;
-import org.apache.http.io.HttpTransportMetrics;
+import net.temerity.http.HttpConnectionMetrics;
+import net.temerity.http.io.HttpTransportMetrics;
 
 /**
  * Default implementation of the {@link HttpConnectionMetrics} interface.

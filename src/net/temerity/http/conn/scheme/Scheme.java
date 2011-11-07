@@ -28,9 +28,9 @@ package net.temerity.http.conn.scheme;
 
 import java.util.Locale;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.util.LangUtils;
+import net.temerity.http.util.LangUtils;
 
 /**
  * Encapsulates specifics of a protocol scheme such as "http" or "https". Schemes are identified

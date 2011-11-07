@@ -30,16 +30,16 @@ package net.temerity.http.impl.client;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.HttpRequest;
-import org.apache.http.ProtocolException;
-import org.apache.http.ProtocolVersion;
-import org.apache.http.RequestLine;
-import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.message.AbstractHttpMessage;
-import org.apache.http.message.BasicRequestLine;
-import org.apache.http.params.HttpProtocolParams;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.ProtocolException;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.RequestLine;
+import net.temerity.http.client.methods.HttpUriRequest;
+import net.temerity.http.message.AbstractHttpMessage;
+import net.temerity.http.message.BasicRequestLine;
+import net.temerity.http.params.HttpProtocolParams;
 
 /**
  * A wrapper class for {@link HttpRequest}s that can be used to change

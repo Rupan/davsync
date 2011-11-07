@@ -29,9 +29,9 @@ package net.temerity.http.message;
 
 import java.io.Serializable;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.util.CharArrayBuffer;
-import org.apache.http.util.LangUtils;
+import net.temerity.http.NameValuePair;
+import net.temerity.http.util.CharArrayBuffer;
+import net.temerity.http.util.LangUtils;
 
 /**
  * Basic implementation of {@link NameValuePair}.

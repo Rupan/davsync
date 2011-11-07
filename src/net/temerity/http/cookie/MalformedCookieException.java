@@ -27,9 +27,9 @@
 
 package net.temerity.http.cookie;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.ProtocolException;
+import net.temerity.http.ProtocolException;
 
 /**
  * Signals that a cookie is in some way invalid or illegal in a given

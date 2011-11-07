@@ -29,7 +29,7 @@ package net.temerity.http.cookie;
 
 import java.util.List;
 
-import org.apache.http.Header;
+import net.temerity.http.Header;
 
 /**
  * Defines the cookie management specification.

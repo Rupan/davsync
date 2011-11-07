@@ -29,9 +29,9 @@ package net.temerity.http.auth;
 import java.io.Serializable;
 import java.security.Principal;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.util.LangUtils;
+import net.temerity.http.util.LangUtils;
 
 /**
  * Simple {@link Credentials} implementation based on a user name / password

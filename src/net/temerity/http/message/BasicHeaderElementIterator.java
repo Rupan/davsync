@@ -29,12 +29,12 @@ package net.temerity.http.message;
 
 import java.util.NoSuchElementException;
 
-import org.apache.http.FormattedHeader;
-import org.apache.http.Header;
-import org.apache.http.HeaderElement;
-import org.apache.http.HeaderElementIterator;
-import org.apache.http.HeaderIterator;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.FormattedHeader;
+import net.temerity.http.Header;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.HeaderElementIterator;
+import net.temerity.http.HeaderIterator;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Basic implementation of a {@link HeaderElementIterator}.

@@ -31,14 +31,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import org.apache.http.annotation.NotThreadSafe;
-import org.apache.http.entity.HttpEntityWrapper;
+import net.temerity.http.annotation.NotThreadSafe;
+import net.temerity.http.entity.HttpEntityWrapper;
 
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.ProtocolException;
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.Header;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpEntityEnclosingRequest;
+import net.temerity.http.ProtocolException;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * A wrapper class for {@link HttpEntityEnclosingRequest}s that can

@@ -26,13 +26,13 @@
 
 package net.temerity.http.conn.params;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
-import org.apache.http.params.CoreConnectionPNames;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.impl.conn.tsccm.ThreadSafeClientConnManager;
+import net.temerity.http.params.CoreConnectionPNames;
+import net.temerity.http.params.HttpConnectionParams;
+import net.temerity.http.params.HttpParams;
 
 /**
  * An adaptor for manipulating HTTP connection management

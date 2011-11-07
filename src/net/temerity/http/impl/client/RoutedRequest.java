@@ -27,9 +27,9 @@
 
 package net.temerity.http.impl.client;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.conn.routing.HttpRoute;
+import net.temerity.http.conn.routing.HttpRoute;
 
 /**
  * A request with the route along which it should be sent.

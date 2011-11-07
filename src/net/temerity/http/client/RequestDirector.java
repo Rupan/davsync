@@ -29,11 +29,11 @@ package net.temerity.http.client;
 
 import java.io.IOException;
 
-import org.apache.http.HttpHost;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpException;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpHost;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpException;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * A client-side request director.

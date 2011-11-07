@@ -34,13 +34,13 @@ import java.net.UnknownHostException;
 
 import javax.net.ssl.SSLException;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.HttpRequest;
-import org.apache.http.client.HttpRequestRetryHandler;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.protocol.ExecutionContext;
+import net.temerity.http.HttpEntityEnclosingRequest;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.client.HttpRequestRetryHandler;
+import net.temerity.http.protocol.HttpContext;
+import net.temerity.http.protocol.ExecutionContext;
 
 /**
  * The default {@link HttpRequestRetryHandler} used by request executors.

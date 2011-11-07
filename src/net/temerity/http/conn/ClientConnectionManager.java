@@ -29,8 +29,8 @@ package net.temerity.http.conn;
 
 import java.util.concurrent.TimeUnit;
 
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.conn.scheme.SchemeRegistry;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.conn.scheme.SchemeRegistry;
 
 /**
  * Management interface for {@link ManagedClientConnection client connections}.

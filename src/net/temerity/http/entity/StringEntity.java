@@ -33,7 +33,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * A self contained, repeatable entity that obtains its content from

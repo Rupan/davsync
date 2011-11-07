@@ -27,8 +27,8 @@
 
 package net.temerity.http.protocol;
 
-import org.apache.http.HttpRequestInterceptor;
-import org.apache.http.HttpResponseInterceptor;
+import net.temerity.http.HttpRequestInterceptor;
+import net.temerity.http.HttpResponseInterceptor;
 
 /**
  * HTTP protocol processor is a collection of protocol interceptors that

@@ -30,7 +30,7 @@ package net.temerity.http.impl.conn.tsccm;
 import java.util.Date;
 import java.util.concurrent.locks.Condition;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
 /**
  * Represents a thread waiting for a connection.

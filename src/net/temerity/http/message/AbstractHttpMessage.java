@@ -29,11 +29,11 @@ package net.temerity.http.message;
 
 import java.util.Iterator;
 
-import org.apache.http.Header;
-import org.apache.http.HeaderIterator;
-import org.apache.http.HttpMessage;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.BasicHttpParams;
+import net.temerity.http.Header;
+import net.temerity.http.HeaderIterator;
+import net.temerity.http.HttpMessage;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.params.BasicHttpParams;
 
 /**
  * Basic implementation of {@link HttpMessage}.

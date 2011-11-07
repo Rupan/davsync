@@ -29,23 +29,23 @@ package net.temerity.http.impl.conn;
 
 import java.io.IOException;
 
-import org.apache.http.annotation.ThreadSafe;
+import net.temerity.http.annotation.ThreadSafe;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.HttpException;
-import org.apache.http.HttpMessage;
-import org.apache.http.HttpResponseFactory;
-import org.apache.http.NoHttpResponseException;
-import org.apache.http.ProtocolException;
-import org.apache.http.StatusLine;
-import org.apache.http.conn.params.ConnConnectionPNames;
-import org.apache.http.impl.io.AbstractMessageParser;
-import org.apache.http.io.SessionInputBuffer;
-import org.apache.http.message.LineParser;
-import org.apache.http.message.ParserCursor;
-import org.apache.http.params.HttpParams;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpMessage;
+import net.temerity.http.HttpResponseFactory;
+import net.temerity.http.NoHttpResponseException;
+import net.temerity.http.ProtocolException;
+import net.temerity.http.StatusLine;
+import net.temerity.http.conn.params.ConnConnectionPNames;
+import net.temerity.http.impl.io.AbstractMessageParser;
+import net.temerity.http.io.SessionInputBuffer;
+import net.temerity.http.message.LineParser;
+import net.temerity.http.message.ParserCursor;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Default HTTP response parser implementation.

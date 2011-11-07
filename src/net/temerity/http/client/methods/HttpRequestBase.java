@@ -32,18 +32,18 @@ import java.net.URI;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.ProtocolVersion;
-import org.apache.http.RequestLine;
-import org.apache.http.client.utils.CloneUtils;
-import org.apache.http.conn.ClientConnectionRequest;
-import org.apache.http.conn.ConnectionReleaseTrigger;
-import org.apache.http.message.AbstractHttpMessage;
-import org.apache.http.message.BasicRequestLine;
-import org.apache.http.message.HeaderGroup;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.HttpProtocolParams;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.RequestLine;
+import net.temerity.http.client.utils.CloneUtils;
+import net.temerity.http.conn.ClientConnectionRequest;
+import net.temerity.http.conn.ConnectionReleaseTrigger;
+import net.temerity.http.message.AbstractHttpMessage;
+import net.temerity.http.message.BasicRequestLine;
+import net.temerity.http.message.HeaderGroup;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.params.HttpProtocolParams;
 
 /**
  * Basic implementation of an HTTP request that can be modified.

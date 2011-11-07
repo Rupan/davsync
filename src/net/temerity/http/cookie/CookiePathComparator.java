@@ -30,7 +30,7 @@ package net.temerity.http.cookie;
 import java.io.Serializable;
 import java.util.Comparator;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * This cookie comparator ensures that multiple cookies satisfying

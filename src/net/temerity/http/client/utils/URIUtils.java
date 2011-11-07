@@ -30,9 +30,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Stack;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.HttpHost;
+import net.temerity.http.HttpHost;
 
 /**
  * A collection of utilities for {@link URI URIs}, to workaround

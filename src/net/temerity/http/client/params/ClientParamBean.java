@@ -29,13 +29,13 @@ package net.temerity.http.client.params;
 
 import java.util.Collection;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.Header;
-import org.apache.http.HttpHost;
-import org.apache.http.conn.ClientConnectionManagerFactory;
-import org.apache.http.params.HttpAbstractParamBean;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.Header;
+import net.temerity.http.HttpHost;
+import net.temerity.http.conn.ClientConnectionManagerFactory;
+import net.temerity.http.params.HttpAbstractParamBean;
+import net.temerity.http.params.HttpParams;
 
 /**
  * This is a Java Bean class that can be used to wrap an instance of

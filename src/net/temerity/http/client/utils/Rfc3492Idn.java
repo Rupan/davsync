@@ -32,7 +32,7 @@ package net.temerity.http.client.utils;
 
 import java.util.StringTokenizer;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * Implementation from pseudo code in RFC 3492.

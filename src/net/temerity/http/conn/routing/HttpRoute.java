@@ -29,10 +29,10 @@ package net.temerity.http.conn.routing;
 
 import java.net.InetAddress;
 
-import org.apache.http.annotation.Immutable;
-import org.apache.http.util.LangUtils;
+import net.temerity.http.annotation.Immutable;
+import net.temerity.http.util.LangUtils;
 
-import org.apache.http.HttpHost;
+import net.temerity.http.HttpHost;
 
 /**
  * The route for a request.

@@ -29,15 +29,15 @@ package net.temerity.http.impl;
 
 import java.util.Locale;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpResponseFactory;
-import org.apache.http.ProtocolVersion;
-import org.apache.http.StatusLine;
-import org.apache.http.message.BasicHttpResponse;
-import org.apache.http.message.BasicStatusLine;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.ReasonPhraseCatalog;
-import org.apache.http.impl.EnglishReasonPhraseCatalog;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpResponseFactory;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.StatusLine;
+import net.temerity.http.message.BasicHttpResponse;
+import net.temerity.http.message.BasicStatusLine;
+import net.temerity.http.protocol.HttpContext;
+import net.temerity.http.ReasonPhraseCatalog;
+import net.temerity.http.impl.EnglishReasonPhraseCatalog;
 
 /**
  * Default factory for creating {@link HttpResponse} objects.

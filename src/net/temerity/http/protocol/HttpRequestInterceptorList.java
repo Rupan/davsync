@@ -29,7 +29,7 @@ package net.temerity.http.protocol;
 
 import java.util.List;
 
-import org.apache.http.HttpRequestInterceptor;
+import net.temerity.http.HttpRequestInterceptor;
 
 /**
  * Provides access to an ordered list of request interceptors.

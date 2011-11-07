@@ -29,7 +29,7 @@ package net.temerity.http.impl.conn;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 
-import org.apache.http.HttpHost;
+import net.temerity.http.HttpHost;
 
 /**
  * Extended {@link InetSocketAddress} implementation that also provides access to the original

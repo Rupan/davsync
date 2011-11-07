@@ -27,7 +27,7 @@
 
 package net.temerity.http.cookie;
 
-import org.apache.http.params.HttpParams;
+import net.temerity.http.params.HttpParams;
 
 /**
  * Factory for {@link CookieSpec} implementations.

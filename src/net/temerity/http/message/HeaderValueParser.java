@@ -27,10 +27,10 @@
 
 package net.temerity.http.message;
 
-import org.apache.http.HeaderElement;
-import org.apache.http.NameValuePair;
-import org.apache.http.ParseException;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.NameValuePair;
+import net.temerity.http.ParseException;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Interface for parsing header values into elements.

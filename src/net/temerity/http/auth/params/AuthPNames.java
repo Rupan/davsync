@@ -27,7 +27,7 @@
 
 package net.temerity.http.auth.params;
 
-import org.apache.http.auth.AuthScheme;
+import net.temerity.http.auth.AuthScheme;
 
 /**
  * Parameter names for HTTP authentication classes.

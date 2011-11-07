@@ -27,7 +27,7 @@
 
 package net.temerity.http;
 
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * A factory for {@link HttpResponse HttpResponse} objects.

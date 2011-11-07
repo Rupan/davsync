@@ -32,9 +32,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import org.apache.http.Header;
-import org.apache.http.HeaderIterator;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.Header;
+import net.temerity.http.HeaderIterator;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * A class for combining a set of headers.

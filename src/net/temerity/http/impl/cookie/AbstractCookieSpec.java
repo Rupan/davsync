@@ -31,10 +31,10 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.cookie.CookieAttributeHandler;
-import org.apache.http.cookie.CookieSpec;
+import net.temerity.http.cookie.CookieAttributeHandler;
+import net.temerity.http.cookie.CookieSpec;
 
 /**
  * Abstract cookie specification which can delegate the job of parsing,

@@ -32,9 +32,9 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.apache.http.annotation.ThreadSafe;
+import net.temerity.http.annotation.ThreadSafe;
 
-import org.apache.http.params.HttpParams;
+import net.temerity.http.params.HttpParams;
 
 /**
  * Authentication scheme registry that can be used to obtain the corresponding

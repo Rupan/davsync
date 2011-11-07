@@ -29,12 +29,12 @@ package net.temerity.http.client;
 
 import java.util.Map;
 
-import org.apache.http.Header;
-import org.apache.http.HttpResponse;
-import org.apache.http.auth.AuthScheme;
-import org.apache.http.auth.AuthenticationException;
-import org.apache.http.auth.MalformedChallengeException;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.Header;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.auth.AuthScheme;
+import net.temerity.http.auth.AuthenticationException;
+import net.temerity.http.auth.MalformedChallengeException;
+import net.temerity.http.protocol.HttpContext;
 
 /**
 /**

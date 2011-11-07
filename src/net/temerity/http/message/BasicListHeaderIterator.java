@@ -30,8 +30,8 @@ package net.temerity.http.message;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import org.apache.http.Header;
-import org.apache.http.HeaderIterator;
+import net.temerity.http.Header;
+import net.temerity.http.HeaderIterator;
 
 /**
  * Implementation of a {@link HeaderIterator} based on a {@link List}.

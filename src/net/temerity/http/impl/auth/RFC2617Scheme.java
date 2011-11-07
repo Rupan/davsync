@@ -30,14 +30,14 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.HeaderElement;
-import org.apache.http.auth.MalformedChallengeException;
-import org.apache.http.message.BasicHeaderValueParser;
-import org.apache.http.message.HeaderValueParser;
-import org.apache.http.message.ParserCursor;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.auth.MalformedChallengeException;
+import net.temerity.http.message.BasicHeaderValueParser;
+import net.temerity.http.message.HeaderValueParser;
+import net.temerity.http.message.ParserCursor;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Abstract authentication scheme class that lays foundation for all

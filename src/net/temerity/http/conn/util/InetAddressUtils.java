@@ -29,7 +29,7 @@ package net.temerity.http.conn.util;
 
 import java.util.regex.Pattern;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * A collection of utilities relating to InetAddresses.

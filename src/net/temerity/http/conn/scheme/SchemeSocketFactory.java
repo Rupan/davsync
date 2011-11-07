@@ -32,8 +32,8 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import org.apache.http.conn.ConnectTimeoutException;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.conn.ConnectTimeoutException;
+import net.temerity.http.params.HttpParams;
 
 /**
  * A factory for creating, initializing and connecting sockets. The factory encapsulates the logic

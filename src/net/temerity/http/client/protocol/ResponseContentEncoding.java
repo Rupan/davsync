@@ -29,16 +29,16 @@ package net.temerity.http.client.protocol;
 import java.io.IOException;
 import java.util.Locale;
 
-import org.apache.http.Header;
-import org.apache.http.HeaderElement;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpException;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpResponseInterceptor;
-import org.apache.http.annotation.Immutable;
-import org.apache.http.client.entity.DeflateDecompressingEntity;
-import org.apache.http.client.entity.GzipDecompressingEntity;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.Header;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpResponseInterceptor;
+import net.temerity.http.annotation.Immutable;
+import net.temerity.http.client.entity.DeflateDecompressingEntity;
+import net.temerity.http.client.entity.GzipDecompressingEntity;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * {@link HttpResponseInterceptor} responsible for processing Content-Encoding

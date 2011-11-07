@@ -28,9 +28,9 @@ package net.temerity.http.auth;
 
 import java.util.Locale;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.util.LangUtils;
+import net.temerity.http.util.LangUtils;
 
 /**
  * The class represents an authentication scope consisting of a host name,

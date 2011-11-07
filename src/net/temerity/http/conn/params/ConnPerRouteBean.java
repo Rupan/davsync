@@ -29,9 +29,9 @@ package net.temerity.http.conn.params;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.apache.http.annotation.ThreadSafe;
+import net.temerity.http.annotation.ThreadSafe;
 
-import org.apache.http.conn.routing.HttpRoute;
+import net.temerity.http.conn.routing.HttpRoute;
 
 /**
  * This class maintains a map of HTTP routes to maximum number of connections allowed

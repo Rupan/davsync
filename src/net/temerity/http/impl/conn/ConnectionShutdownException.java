@@ -27,7 +27,7 @@
 
 package net.temerity.http.impl.conn;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * Signals that the connection has been shut down or released back to the

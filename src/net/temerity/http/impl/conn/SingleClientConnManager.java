@@ -30,19 +30,19 @@ package net.temerity.http.impl.conn;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.http.annotation.GuardedBy;
-import org.apache.http.annotation.ThreadSafe;
+import net.temerity.http.annotation.GuardedBy;
+import net.temerity.http.annotation.ThreadSafe;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.conn.ClientConnectionOperator;
-import org.apache.http.conn.ClientConnectionRequest;
-import org.apache.http.conn.ManagedClientConnection;
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.conn.routing.RouteTracker;
-import org.apache.http.conn.scheme.SchemeRegistry;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.conn.ClientConnectionManager;
+import net.temerity.http.conn.ClientConnectionOperator;
+import net.temerity.http.conn.ClientConnectionRequest;
+import net.temerity.http.conn.ManagedClientConnection;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.conn.routing.RouteTracker;
+import net.temerity.http.conn.scheme.SchemeRegistry;
+import net.temerity.http.params.HttpParams;
 
 /**
  * A connection manager for a single connection. This connection manager

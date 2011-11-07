@@ -29,8 +29,8 @@ package net.temerity.http.conn;
 
 import javax.net.ssl.SSLSession;
 
-import org.apache.http.HttpInetConnection;
-import org.apache.http.conn.routing.HttpRoute;
+import net.temerity.http.HttpInetConnection;
+import net.temerity.http.conn.routing.HttpRoute;
 
 /**
  * Interface to access routing information of a client side connection.

@@ -32,7 +32,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import org.apache.http.params.HttpParams;
+import net.temerity.http.params.HttpParams;
 
 /**
  * Default implementation of {@link HttpParams} interface.

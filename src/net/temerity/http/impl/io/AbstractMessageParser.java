@@ -31,18 +31,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.Header;
-import org.apache.http.HttpException;
-import org.apache.http.HttpMessage;
-import org.apache.http.ParseException;
-import org.apache.http.ProtocolException;
-import org.apache.http.io.HttpMessageParser;
-import org.apache.http.io.SessionInputBuffer;
-import org.apache.http.message.LineParser;
-import org.apache.http.message.BasicLineParser;
-import org.apache.http.params.CoreConnectionPNames;
-import org.apache.http.params.HttpParams;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.Header;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpMessage;
+import net.temerity.http.ParseException;
+import net.temerity.http.ProtocolException;
+import net.temerity.http.io.HttpMessageParser;
+import net.temerity.http.io.SessionInputBuffer;
+import net.temerity.http.message.LineParser;
+import net.temerity.http.message.BasicLineParser;
+import net.temerity.http.params.CoreConnectionPNames;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Abstract base class for HTTP message parsers that obtain input from

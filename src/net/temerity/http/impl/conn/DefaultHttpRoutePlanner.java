@@ -30,19 +30,19 @@ package net.temerity.http.impl.conn;
 
 import java.net.InetAddress;
 
-import org.apache.http.annotation.ThreadSafe;
+import net.temerity.http.annotation.ThreadSafe;
 
-import org.apache.http.HttpException;
-import org.apache.http.HttpHost;
-import org.apache.http.HttpRequest;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpHost;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.protocol.HttpContext;
 
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.conn.routing.HttpRoutePlanner;
-import org.apache.http.conn.scheme.Scheme;
-import org.apache.http.conn.scheme.SchemeRegistry;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.conn.routing.HttpRoutePlanner;
+import net.temerity.http.conn.scheme.Scheme;
+import net.temerity.http.conn.scheme.SchemeRegistry;
 
-import org.apache.http.conn.params.ConnRouteParams;
+import net.temerity.http.conn.params.ConnRouteParams;
 
 /**
  * Default implementation of an {@link HttpRoutePlanner}. This implementation

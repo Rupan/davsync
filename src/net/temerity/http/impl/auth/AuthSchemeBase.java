@@ -26,19 +26,19 @@
 
 package net.temerity.http.impl.auth;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.FormattedHeader;
-import org.apache.http.Header;
-import org.apache.http.HttpRequest;
-import org.apache.http.auth.AUTH;
-import org.apache.http.auth.AuthenticationException;
-import org.apache.http.auth.ContextAwareAuthScheme;
-import org.apache.http.auth.Credentials;
-import org.apache.http.auth.MalformedChallengeException;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.FormattedHeader;
+import net.temerity.http.Header;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.auth.AUTH;
+import net.temerity.http.auth.AuthenticationException;
+import net.temerity.http.auth.ContextAwareAuthScheme;
+import net.temerity.http.auth.Credentials;
+import net.temerity.http.auth.MalformedChallengeException;
+import net.temerity.http.protocol.HTTP;
+import net.temerity.http.protocol.HttpContext;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Abstract authentication scheme class that serves as a basis

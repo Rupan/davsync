@@ -29,10 +29,10 @@ package net.temerity.http.message;
 
 import java.io.Serializable;
 
-import org.apache.http.FormattedHeader;
-import org.apache.http.HeaderElement;
-import org.apache.http.ParseException;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.FormattedHeader;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.ParseException;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * This class represents a raw HTTP header whose content is parsed 'on demand'

@@ -30,10 +30,10 @@ package net.temerity.http.conn;
 import java.io.IOException;
 import java.net.Socket;
 
-import org.apache.http.HttpClientConnection;
-import org.apache.http.HttpHost;
-import org.apache.http.HttpInetConnection;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.HttpClientConnection;
+import net.temerity.http.HttpHost;
+import net.temerity.http.HttpInetConnection;
+import net.temerity.http.params.HttpParams;
 
 /**
  * A client-side connection that relies on outside logic to connect sockets to the

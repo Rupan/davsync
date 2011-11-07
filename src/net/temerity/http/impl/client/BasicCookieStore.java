@@ -29,12 +29,12 @@ package net.temerity.http.impl.client;
 import java.io.Serializable;
 import java.util.*;
 
-import org.apache.http.annotation.GuardedBy;
-import org.apache.http.annotation.ThreadSafe;
+import net.temerity.http.annotation.GuardedBy;
+import net.temerity.http.annotation.ThreadSafe;
 
-import org.apache.http.client.CookieStore;
-import org.apache.http.cookie.Cookie;
-import org.apache.http.cookie.CookieIdentityComparator;
+import net.temerity.http.client.CookieStore;
+import net.temerity.http.cookie.Cookie;
+import net.temerity.http.cookie.CookieIdentityComparator;
 
 /**
  * Default implementation of {@link CookieStore}

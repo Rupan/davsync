@@ -28,9 +28,9 @@ package net.temerity.http.conn;
 
 import java.net.ConnectException;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.HttpHost;
+import net.temerity.http.HttpHost;
 
 /**
  * A {@link ConnectException} that specifies the {@link HttpHost} that was

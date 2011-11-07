@@ -37,20 +37,20 @@ import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.FormattedHeader;
-import org.apache.http.Header;
-import org.apache.http.HttpResponse;
-import org.apache.http.annotation.Immutable;
-import org.apache.http.auth.AuthScheme;
-import org.apache.http.auth.AuthSchemeRegistry;
-import org.apache.http.auth.AuthenticationException;
-import org.apache.http.auth.MalformedChallengeException;
-import org.apache.http.client.AuthenticationHandler;
-import org.apache.http.client.params.AuthPolicy;
-import org.apache.http.client.protocol.ClientContext;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.FormattedHeader;
+import net.temerity.http.Header;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.annotation.Immutable;
+import net.temerity.http.auth.AuthScheme;
+import net.temerity.http.auth.AuthSchemeRegistry;
+import net.temerity.http.auth.AuthenticationException;
+import net.temerity.http.auth.MalformedChallengeException;
+import net.temerity.http.client.AuthenticationHandler;
+import net.temerity.http.client.params.AuthPolicy;
+import net.temerity.http.client.protocol.ClientContext;
+import net.temerity.http.protocol.HTTP;
+import net.temerity.http.protocol.HttpContext;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Base class for {@link AuthenticationHandler} implementations.

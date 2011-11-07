@@ -27,7 +27,7 @@
 
 package net.temerity.http.impl.cookie;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * An exception to indicate an error parsing a date string.

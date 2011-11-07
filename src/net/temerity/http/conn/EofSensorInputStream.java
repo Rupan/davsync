@@ -29,7 +29,7 @@ package net.temerity.http.conn;
 import java.io.InputStream;
 import java.io.IOException;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
 /**
  * A stream wrapper that triggers actions on {@link #close close()} and EOF.

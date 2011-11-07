@@ -29,19 +29,19 @@ package net.temerity.http.impl.cookie;
 
 import java.util.List;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.FormattedHeader;
-import org.apache.http.Header;
-import org.apache.http.HeaderElement;
-import org.apache.http.cookie.Cookie;
-import org.apache.http.cookie.CookieOrigin;
-import org.apache.http.cookie.CookieSpec;
-import org.apache.http.cookie.MalformedCookieException;
-import org.apache.http.cookie.SM;
-import org.apache.http.cookie.SetCookie2;
-import org.apache.http.message.ParserCursor;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.FormattedHeader;
+import net.temerity.http.Header;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.cookie.Cookie;
+import net.temerity.http.cookie.CookieOrigin;
+import net.temerity.http.cookie.CookieSpec;
+import net.temerity.http.cookie.MalformedCookieException;
+import net.temerity.http.cookie.SM;
+import net.temerity.http.cookie.SetCookie2;
+import net.temerity.http.message.ParserCursor;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * 'Meta' cookie specification that picks up a cookie policy based on

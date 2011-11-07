@@ -40,14 +40,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.annotation.ThreadSafe;
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.conn.ClientConnectionOperator;
-import org.apache.http.conn.ConnectionPoolTimeoutException;
-import org.apache.http.conn.OperatedClientConnection;
-import org.apache.http.conn.params.ConnPerRoute;
-import org.apache.http.conn.params.ConnManagerParams;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.annotation.ThreadSafe;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.conn.ClientConnectionOperator;
+import net.temerity.http.conn.ConnectionPoolTimeoutException;
+import net.temerity.http.conn.OperatedClientConnection;
+import net.temerity.http.conn.params.ConnPerRoute;
+import net.temerity.http.conn.params.ConnManagerParams;
+import net.temerity.http.params.HttpParams;
 
 /**
  * A connection pool that maintains connections by route.

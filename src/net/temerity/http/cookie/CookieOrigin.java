@@ -28,7 +28,7 @@ package net.temerity.http.cookie;
 
 import java.util.Locale;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * CookieOrigin class encapsulates details of an origin server that

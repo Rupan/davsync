@@ -27,19 +27,19 @@
 
 package net.temerity.http.impl;
 
-import org.apache.http.ConnectionReuseStrategy;
-import org.apache.http.HttpConnection;
-import org.apache.http.HeaderIterator;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpVersion;
-import org.apache.http.ParseException;
-import org.apache.http.ProtocolVersion;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.protocol.ExecutionContext;
-import org.apache.http.TokenIterator;
-import org.apache.http.message.BasicTokenIterator;
+import net.temerity.http.ConnectionReuseStrategy;
+import net.temerity.http.HttpConnection;
+import net.temerity.http.HeaderIterator;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpVersion;
+import net.temerity.http.ParseException;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.protocol.HTTP;
+import net.temerity.http.protocol.HttpContext;
+import net.temerity.http.protocol.ExecutionContext;
+import net.temerity.http.TokenIterator;
+import net.temerity.http.message.BasicTokenIterator;
 
 /**
  * Default implementation of a strategy deciding about connection re-use.

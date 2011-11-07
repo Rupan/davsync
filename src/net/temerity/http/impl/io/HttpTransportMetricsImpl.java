@@ -27,7 +27,7 @@
 
 package net.temerity.http.impl.io;
 
-import org.apache.http.io.HttpTransportMetrics;
+import net.temerity.http.io.HttpTransportMetrics;
 
 /**
  * Default implementation of {@link HttpTransportMetrics}.

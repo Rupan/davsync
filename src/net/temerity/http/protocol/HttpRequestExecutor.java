@@ -30,16 +30,16 @@ package net.temerity.http.protocol;
 import java.io.IOException;
 import java.net.ProtocolException;
 
-import org.apache.http.HttpClientConnection;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.HttpException;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.HttpVersion;
-import org.apache.http.ProtocolVersion;
-import org.apache.http.params.CoreProtocolPNames;
+import net.temerity.http.HttpClientConnection;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpEntityEnclosingRequest;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpStatus;
+import net.temerity.http.HttpVersion;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.params.CoreProtocolPNames;
 
 /**
  * HttpRequestExecutor is a client side HTTP protocol handler based on the

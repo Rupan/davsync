@@ -26,9 +26,9 @@
 
 package net.temerity.http.impl.auth;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.auth.AuthenticationException;
+import net.temerity.http.auth.AuthenticationException;
 
 /**
  * Signals NTLM protocol failure.

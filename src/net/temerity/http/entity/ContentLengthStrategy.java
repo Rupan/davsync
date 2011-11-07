@@ -27,8 +27,8 @@
 
 package net.temerity.http.entity;
 
-import org.apache.http.HttpException;
-import org.apache.http.HttpMessage;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpMessage;
 
 /**
  * Represents a strategy to determine length of the enclosed content entity

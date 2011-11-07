@@ -29,7 +29,7 @@ package net.temerity.http.client.methods;
 
 import java.net.URI;
 
-import org.apache.http.HttpRequest;
+import net.temerity.http.HttpRequest;
 
 /**
  * Extended version of the {@link HttpRequest} interface that provides

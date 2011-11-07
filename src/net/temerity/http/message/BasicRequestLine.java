@@ -29,8 +29,8 @@ package net.temerity.http.message;
 
 import java.io.Serializable;
 
-import org.apache.http.ProtocolVersion;
-import org.apache.http.RequestLine;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.RequestLine;
 
 /**
  * Basic implementation of {@link RequestLine}.

@@ -29,10 +29,10 @@ package net.temerity.http.cookie.params;
 
 import java.util.Collection;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
-import org.apache.http.params.HttpAbstractParamBean;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.params.HttpAbstractParamBean;
+import net.temerity.http.params.HttpParams;
 
 /**
  * This is a Java Bean class that can be used to wrap an instance of

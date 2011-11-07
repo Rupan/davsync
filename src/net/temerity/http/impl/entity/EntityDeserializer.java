@@ -29,17 +29,17 @@ package net.temerity.http.impl.entity;
 
 import java.io.IOException;
 
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpException;
-import org.apache.http.HttpMessage;
-import org.apache.http.entity.BasicHttpEntity;
-import org.apache.http.entity.ContentLengthStrategy;
-import org.apache.http.impl.io.ChunkedInputStream;
-import org.apache.http.impl.io.ContentLengthInputStream;
-import org.apache.http.impl.io.IdentityInputStream;
-import org.apache.http.io.SessionInputBuffer;
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.Header;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpMessage;
+import net.temerity.http.entity.BasicHttpEntity;
+import net.temerity.http.entity.ContentLengthStrategy;
+import net.temerity.http.impl.io.ChunkedInputStream;
+import net.temerity.http.impl.io.ContentLengthInputStream;
+import net.temerity.http.impl.io.IdentityInputStream;
+import net.temerity.http.io.SessionInputBuffer;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * HTTP entity deserializer.

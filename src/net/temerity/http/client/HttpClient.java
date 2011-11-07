@@ -29,13 +29,13 @@ package net.temerity.http.client;
 
 import java.io.IOException;
 
-import org.apache.http.HttpHost;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpHost;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.client.methods.HttpUriRequest;
+import net.temerity.http.conn.ClientConnectionManager;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * This interface represents only the most basic contract for HTTP request

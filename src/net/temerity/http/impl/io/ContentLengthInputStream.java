@@ -30,9 +30,9 @@ package net.temerity.http.impl.io;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.apache.http.ConnectionClosedException;
-import org.apache.http.io.BufferInfo;
-import org.apache.http.io.SessionInputBuffer;
+import net.temerity.http.ConnectionClosedException;
+import net.temerity.http.io.BufferInfo;
+import net.temerity.http.io.SessionInputBuffer;
 
 /**
  * Input stream that cuts off after a defined number of bytes. This class

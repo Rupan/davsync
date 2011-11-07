@@ -26,8 +26,8 @@
 
 package net.temerity.http.client;
 
-import org.apache.http.auth.AuthScope;
-import org.apache.http.auth.Credentials;
+import net.temerity.http.auth.AuthScope;
+import net.temerity.http.auth.Credentials;
 
 /**
  * Abstract credentials provider that maintains a collection of user

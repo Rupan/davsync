@@ -27,12 +27,12 @@
 
 package net.temerity.http.message;
 
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.ProtocolVersion;
-import org.apache.http.RequestLine;
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.Header;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpEntityEnclosingRequest;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.RequestLine;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * Basic implementation of {@link HttpEntityEnclosingRequest}.

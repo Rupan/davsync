@@ -27,7 +27,7 @@
 
 package net.temerity.http;
 
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * An HTTP header which is already formatted.

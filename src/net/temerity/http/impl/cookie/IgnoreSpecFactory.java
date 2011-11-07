@@ -27,10 +27,10 @@
 
 package net.temerity.http.impl.cookie;
 
-import org.apache.http.annotation.Immutable;
-import org.apache.http.cookie.CookieSpec;
-import org.apache.http.cookie.CookieSpecFactory;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.annotation.Immutable;
+import net.temerity.http.cookie.CookieSpec;
+import net.temerity.http.cookie.CookieSpecFactory;
+import net.temerity.http.params.HttpParams;
 
 /**
  * {@link CookieSpecFactory} implementation that ignores all cookies.

@@ -29,7 +29,7 @@ package net.temerity.http.client.methods;
 
 import java.net.URI;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
 /**
  * HTTP HEAD method.

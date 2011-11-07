@@ -30,15 +30,15 @@ package net.temerity.http.protocol;
 import java.io.IOException;
 import java.net.InetAddress;
 
-import org.apache.http.HttpConnection;
-import org.apache.http.HttpException;
-import org.apache.http.HttpHost;
-import org.apache.http.HttpInetConnection;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpRequestInterceptor;
-import org.apache.http.HttpVersion;
-import org.apache.http.ProtocolVersion;
-import org.apache.http.ProtocolException;
+import net.temerity.http.HttpConnection;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpHost;
+import net.temerity.http.HttpInetConnection;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpRequestInterceptor;
+import net.temerity.http.HttpVersion;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.ProtocolException;
 
 /**
  * RequestTargetHost is responsible for adding <code>Host</code> header. This

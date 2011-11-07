@@ -28,10 +28,10 @@ package net.temerity.http.impl.client;
 
 import java.util.HashMap;
 
-import org.apache.http.HttpHost;
-import org.apache.http.annotation.NotThreadSafe;
-import org.apache.http.auth.AuthScheme;
-import org.apache.http.client.AuthCache;
+import net.temerity.http.HttpHost;
+import net.temerity.http.annotation.NotThreadSafe;
+import net.temerity.http.auth.AuthScheme;
+import net.temerity.http.client.AuthCache;
 
 /**
  * Default implementation of {@link AuthCache}.

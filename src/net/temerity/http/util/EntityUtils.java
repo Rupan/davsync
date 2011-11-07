@@ -32,11 +32,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-import org.apache.http.HeaderElement;
-import org.apache.http.HttpEntity;
-import org.apache.http.NameValuePair;
-import org.apache.http.ParseException;
-import org.apache.http.protocol.HTTP;
+import net.temerity.http.HeaderElement;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.NameValuePair;
+import net.temerity.http.ParseException;
+import net.temerity.http.protocol.HTTP;
 
 /**
  * Static helpers for dealing with {@link HttpEntity}s.

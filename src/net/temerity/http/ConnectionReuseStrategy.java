@@ -27,7 +27,7 @@
 
 package net.temerity.http;
 
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * Interface for deciding whether a connection can be re-used for

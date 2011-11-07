@@ -36,14 +36,14 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import org.apache.http.annotation.GuardedBy;
+import net.temerity.http.annotation.GuardedBy;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.conn.ConnectionPoolTimeoutException;
-import org.apache.http.conn.OperatedClientConnection;
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.impl.conn.IdleConnectionHandler;
+import net.temerity.http.conn.ConnectionPoolTimeoutException;
+import net.temerity.http.conn.OperatedClientConnection;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.impl.conn.IdleConnectionHandler;
 
 /**
  * An abstract connection pool.

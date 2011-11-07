@@ -27,31 +27,31 @@
 
 package net.temerity.http.impl.client;
 
-import org.apache.http.HttpVersion;
-import org.apache.http.annotation.ThreadSafe;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.protocol.RequestAddCookies;
-import org.apache.http.client.protocol.RequestAuthCache;
-import org.apache.http.client.protocol.RequestClientConnControl;
-import org.apache.http.client.protocol.RequestDefaultHeaders;
-import org.apache.http.client.protocol.RequestProxyAuthentication;
-import org.apache.http.client.protocol.RequestTargetAuthentication;
-import org.apache.http.client.protocol.ResponseAuthCache;
-import org.apache.http.client.protocol.ResponseProcessCookies;
-import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.params.CoreConnectionPNames;
-import org.apache.http.params.CoreProtocolPNames;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.HttpProtocolParams;
-import org.apache.http.params.SyncBasicHttpParams;
-import org.apache.http.protocol.BasicHttpProcessor;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.protocol.RequestContent;
-import org.apache.http.protocol.RequestExpectContinue;
-import org.apache.http.protocol.RequestTargetHost;
-import org.apache.http.protocol.RequestUserAgent;
-import org.apache.http.util.VersionInfo;
+import net.temerity.http.HttpVersion;
+import net.temerity.http.annotation.ThreadSafe;
+import net.temerity.http.client.HttpClient;
+import net.temerity.http.client.protocol.RequestAddCookies;
+import net.temerity.http.client.protocol.RequestAuthCache;
+import net.temerity.http.client.protocol.RequestClientConnControl;
+import net.temerity.http.client.protocol.RequestDefaultHeaders;
+import net.temerity.http.client.protocol.RequestProxyAuthentication;
+import net.temerity.http.client.protocol.RequestTargetAuthentication;
+import net.temerity.http.client.protocol.ResponseAuthCache;
+import net.temerity.http.client.protocol.ResponseProcessCookies;
+import net.temerity.http.conn.ClientConnectionManager;
+import net.temerity.http.params.CoreConnectionPNames;
+import net.temerity.http.params.CoreProtocolPNames;
+import net.temerity.http.params.HttpConnectionParams;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.params.HttpProtocolParams;
+import net.temerity.http.params.SyncBasicHttpParams;
+import net.temerity.http.protocol.BasicHttpProcessor;
+import net.temerity.http.protocol.HTTP;
+import net.temerity.http.protocol.RequestContent;
+import net.temerity.http.protocol.RequestExpectContinue;
+import net.temerity.http.protocol.RequestTargetHost;
+import net.temerity.http.protocol.RequestUserAgent;
+import net.temerity.http.util.VersionInfo;
 
 /**
  * Default implementation of {@link HttpClient} pre-configured for most common use scenarios.

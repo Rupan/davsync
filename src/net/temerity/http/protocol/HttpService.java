@@ -29,25 +29,25 @@ package net.temerity.http.protocol;
 
 import java.io.IOException;
 
-import org.apache.http.ConnectionReuseStrategy;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.HttpException;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpResponseFactory;
-import org.apache.http.HttpServerConnection;
-import org.apache.http.HttpStatus;
-import org.apache.http.HttpVersion;
-import org.apache.http.MethodNotSupportedException;
-import org.apache.http.ProtocolException;
-import org.apache.http.ProtocolVersion;
-import org.apache.http.UnsupportedHttpVersionException;
-import org.apache.http.entity.ByteArrayEntity;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.DefaultedHttpParams;
-import org.apache.http.util.EncodingUtils;
-import org.apache.http.util.EntityUtils;
+import net.temerity.http.ConnectionReuseStrategy;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpEntityEnclosingRequest;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpResponseFactory;
+import net.temerity.http.HttpServerConnection;
+import net.temerity.http.HttpStatus;
+import net.temerity.http.HttpVersion;
+import net.temerity.http.MethodNotSupportedException;
+import net.temerity.http.ProtocolException;
+import net.temerity.http.ProtocolVersion;
+import net.temerity.http.UnsupportedHttpVersionException;
+import net.temerity.http.entity.ByteArrayEntity;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.params.DefaultedHttpParams;
+import net.temerity.http.util.EncodingUtils;
+import net.temerity.http.util.EntityUtils;
 
 /**
  * HttpService is a server side HTTP protocol handler based in the blocking

@@ -29,8 +29,8 @@ package net.temerity.http.impl;
 
 import java.util.Locale;
 
-import org.apache.http.HttpStatus;
-import org.apache.http.ReasonPhraseCatalog;
+import net.temerity.http.HttpStatus;
+import net.temerity.http.ReasonPhraseCatalog;
 
 /**
  * English reason phrases for HTTP status codes.

@@ -29,21 +29,21 @@ package net.temerity.http.client.protocol;
 
 import java.io.IOException;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.Header;
-import org.apache.http.HttpException;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpRequestInterceptor;
-import org.apache.http.auth.AUTH;
-import org.apache.http.auth.AuthScheme;
-import org.apache.http.auth.AuthState;
-import org.apache.http.auth.AuthenticationException;
-import org.apache.http.auth.ContextAwareAuthScheme;
-import org.apache.http.auth.Credentials;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.Header;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpRequestInterceptor;
+import net.temerity.http.auth.AUTH;
+import net.temerity.http.auth.AuthScheme;
+import net.temerity.http.auth.AuthState;
+import net.temerity.http.auth.AuthenticationException;
+import net.temerity.http.auth.ContextAwareAuthScheme;
+import net.temerity.http.auth.Credentials;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * Generates authentication header for the target host, if required,

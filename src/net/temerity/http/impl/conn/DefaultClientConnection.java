@@ -32,25 +32,25 @@ import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.Header;
-import org.apache.http.HttpException;
-import org.apache.http.HttpHost;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpResponseFactory;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.HttpProtocolParams;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.impl.SocketHttpClientConnection;
-import org.apache.http.io.HttpMessageParser;
-import org.apache.http.io.SessionInputBuffer;
-import org.apache.http.io.SessionOutputBuffer;
+import net.temerity.http.Header;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpHost;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpResponseFactory;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.params.HttpProtocolParams;
+import net.temerity.http.protocol.HttpContext;
+import net.temerity.http.impl.SocketHttpClientConnection;
+import net.temerity.http.io.HttpMessageParser;
+import net.temerity.http.io.SessionInputBuffer;
+import net.temerity.http.io.SessionOutputBuffer;
 
-import org.apache.http.conn.OperatedClientConnection;
+import net.temerity.http.conn.OperatedClientConnection;
 
 /**
  * Default implementation of an operated client connection.

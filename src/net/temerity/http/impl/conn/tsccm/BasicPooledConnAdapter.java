@@ -26,9 +26,9 @@
 
 package net.temerity.http.impl.conn.tsccm;
 
-import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.impl.conn.AbstractPoolEntry;
-import org.apache.http.impl.conn.AbstractPooledConnAdapter;
+import net.temerity.http.conn.ClientConnectionManager;
+import net.temerity.http.impl.conn.AbstractPoolEntry;
+import net.temerity.http.impl.conn.AbstractPooledConnAdapter;
 
 /**
  * A connection wrapper and callback handler.

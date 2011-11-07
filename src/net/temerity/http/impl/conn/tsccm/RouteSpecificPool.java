@@ -31,14 +31,14 @@ import java.util.ListIterator;
 import java.util.Queue;
 import java.util.LinkedList;
 
-import org.apache.http.annotation.NotThreadSafe;
+import net.temerity.http.annotation.NotThreadSafe;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.conn.OperatedClientConnection;
-import org.apache.http.conn.params.ConnPerRoute;
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.util.LangUtils;
+import net.temerity.http.conn.OperatedClientConnection;
+import net.temerity.http.conn.params.ConnPerRoute;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.util.LangUtils;
 
 
 /**

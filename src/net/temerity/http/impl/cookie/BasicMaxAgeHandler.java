@@ -28,10 +28,10 @@ package net.temerity.http.impl.cookie;
 
 import java.util.Date;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.cookie.MalformedCookieException;
-import org.apache.http.cookie.SetCookie;
+import net.temerity.http.cookie.MalformedCookieException;
+import net.temerity.http.cookie.SetCookie;
 
 /**
  *

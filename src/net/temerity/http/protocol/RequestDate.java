@@ -29,10 +29,10 @@ package net.temerity.http.protocol;
 
 import java.io.IOException;
 
-import org.apache.http.HttpException;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.HttpRequestInterceptor;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpEntityEnclosingRequest;
+import net.temerity.http.HttpRequestInterceptor;
 
 /**
  * RequestDate interceptor is responsible for adding <code>Date</code> header

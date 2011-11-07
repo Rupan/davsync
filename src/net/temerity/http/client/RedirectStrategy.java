@@ -27,11 +27,11 @@
 
 package net.temerity.http.client;
 
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.ProtocolException;
-import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.ProtocolException;
+import net.temerity.http.client.methods.HttpUriRequest;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * A strategy for determining if an HTTP request should be redirected to

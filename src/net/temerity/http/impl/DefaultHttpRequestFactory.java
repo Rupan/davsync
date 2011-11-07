@@ -27,12 +27,12 @@
 
 package net.temerity.http.impl;
 
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpRequestFactory;
-import org.apache.http.MethodNotSupportedException;
-import org.apache.http.RequestLine;
-import org.apache.http.message.BasicHttpEntityEnclosingRequest;
-import org.apache.http.message.BasicHttpRequest;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpRequestFactory;
+import net.temerity.http.MethodNotSupportedException;
+import net.temerity.http.RequestLine;
+import net.temerity.http.message.BasicHttpEntityEnclosingRequest;
+import net.temerity.http.message.BasicHttpRequest;
 
 /**
  * Default factory for creating {@link HttpRequest} objects.

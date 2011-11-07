@@ -29,30 +29,30 @@ package net.temerity.http.impl;
 
 import java.io.IOException;
 
-import org.apache.http.HttpClientConnection;
-import org.apache.http.HttpConnectionMetrics;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.HttpException;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpResponseFactory;
-import org.apache.http.entity.ContentLengthStrategy;
-import org.apache.http.impl.entity.EntityDeserializer;
-import org.apache.http.impl.entity.EntitySerializer;
-import org.apache.http.impl.entity.LaxContentLengthStrategy;
-import org.apache.http.impl.entity.StrictContentLengthStrategy;
-import org.apache.http.impl.io.HttpRequestWriter;
-import org.apache.http.impl.io.HttpResponseParser;
-import org.apache.http.io.EofSensor;
-import org.apache.http.io.HttpMessageParser;
-import org.apache.http.io.HttpMessageWriter;
-import org.apache.http.io.HttpTransportMetrics;
-import org.apache.http.io.SessionInputBuffer;
-import org.apache.http.io.SessionOutputBuffer;
-import org.apache.http.message.LineFormatter;
-import org.apache.http.message.LineParser;
-import org.apache.http.params.HttpParams;
+import net.temerity.http.HttpClientConnection;
+import net.temerity.http.HttpConnectionMetrics;
+import net.temerity.http.HttpEntity;
+import net.temerity.http.HttpEntityEnclosingRequest;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpResponseFactory;
+import net.temerity.http.entity.ContentLengthStrategy;
+import net.temerity.http.impl.entity.EntityDeserializer;
+import net.temerity.http.impl.entity.EntitySerializer;
+import net.temerity.http.impl.entity.LaxContentLengthStrategy;
+import net.temerity.http.impl.entity.StrictContentLengthStrategy;
+import net.temerity.http.impl.io.HttpRequestWriter;
+import net.temerity.http.impl.io.HttpResponseParser;
+import net.temerity.http.io.EofSensor;
+import net.temerity.http.io.HttpMessageParser;
+import net.temerity.http.io.HttpMessageWriter;
+import net.temerity.http.io.HttpTransportMetrics;
+import net.temerity.http.io.SessionInputBuffer;
+import net.temerity.http.io.SessionOutputBuffer;
+import net.temerity.http.message.LineFormatter;
+import net.temerity.http.message.LineParser;
+import net.temerity.http.params.HttpParams;
 
 /**
  * Abstract client-side HTTP connection capable of transmitting and receiving

@@ -29,9 +29,9 @@ package net.temerity.http.message;
 
 import java.util.NoSuchElementException;
 
-import org.apache.http.HeaderIterator;
-import org.apache.http.ParseException;
-import org.apache.http.TokenIterator;
+import net.temerity.http.HeaderIterator;
+import net.temerity.http.ParseException;
+import net.temerity.http.TokenIterator;
 
 /**
  * Basic implementation of a {@link TokenIterator}.

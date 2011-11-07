@@ -28,7 +28,7 @@
 package net.temerity.http;
 
 import java.io.Serializable;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Represents a protocol version. The "major.minor" numbering

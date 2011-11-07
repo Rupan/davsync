@@ -30,9 +30,9 @@ import java.io.Serializable;
 import java.security.Principal;
 import java.util.Locale;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.util.LangUtils;
+import net.temerity.http.util.LangUtils;
 
 /**
  * Microsoft Windows specific user principal implementation.

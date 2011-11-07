@@ -31,18 +31,18 @@ import java.io.IOException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.HttpException;
-import org.apache.http.HttpHost;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpResponseInterceptor;
-import org.apache.http.annotation.Immutable;
-import org.apache.http.auth.AuthScheme;
-import org.apache.http.auth.AuthState;
-import org.apache.http.client.AuthCache;
-import org.apache.http.client.params.AuthPolicy;
-import org.apache.http.impl.client.BasicAuthCache;
-import org.apache.http.protocol.ExecutionContext;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpHost;
+import net.temerity.http.HttpResponse;
+import net.temerity.http.HttpResponseInterceptor;
+import net.temerity.http.annotation.Immutable;
+import net.temerity.http.auth.AuthScheme;
+import net.temerity.http.auth.AuthState;
+import net.temerity.http.client.AuthCache;
+import net.temerity.http.client.params.AuthPolicy;
+import net.temerity.http.impl.client.BasicAuthCache;
+import net.temerity.http.protocol.ExecutionContext;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * Response interceptor that adds successfully completed {@link AuthScheme}s

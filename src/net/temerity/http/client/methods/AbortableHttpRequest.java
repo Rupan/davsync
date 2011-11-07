@@ -29,12 +29,12 @@ package net.temerity.http.client.methods;
 
 import java.io.IOException;
 
-import org.apache.http.client.HttpClient;
-import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.conn.ClientConnectionRequest;
-import org.apache.http.conn.ConnectionReleaseTrigger;
-import org.apache.http.conn.ManagedClientConnection;
-import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
+import net.temerity.http.client.HttpClient;
+import net.temerity.http.conn.ClientConnectionManager;
+import net.temerity.http.conn.ClientConnectionRequest;
+import net.temerity.http.conn.ConnectionReleaseTrigger;
+import net.temerity.http.conn.ManagedClientConnection;
+import net.temerity.http.impl.conn.tsccm.ThreadSafeClientConnManager;
 
 /**
  * Interface representing an HTTP request that can be aborted by shutting

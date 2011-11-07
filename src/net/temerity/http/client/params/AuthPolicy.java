@@ -27,7 +27,7 @@
 
 package net.temerity.http.client.params;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
 /**
  * Standard authentication schemes supported by HttpClient.

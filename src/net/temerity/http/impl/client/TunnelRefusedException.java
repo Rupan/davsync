@@ -27,10 +27,10 @@
 
 package net.temerity.http.impl.client;
 
-import org.apache.http.annotation.Immutable;
+import net.temerity.http.annotation.Immutable;
 
-import org.apache.http.HttpException;
-import org.apache.http.HttpResponse;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpResponse;
 
 /**
  * Signals that the tunnel request was rejected by the proxy host.

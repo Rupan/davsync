@@ -27,7 +27,7 @@
 
 package net.temerity.http.params;
 
-import org.apache.http.params.HttpParams;
+import net.temerity.http.params.HttpParams;
 
 /**
  * Abstract base class for parameter collections.

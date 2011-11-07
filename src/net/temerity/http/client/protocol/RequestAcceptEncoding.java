@@ -26,11 +26,11 @@ package net.temerity.http.client.protocol;
 
 import java.io.IOException;
 
-import org.apache.http.HttpException;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpRequestInterceptor;
-import org.apache.http.annotation.Immutable;
-import org.apache.http.protocol.HttpContext;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpRequestInterceptor;
+import net.temerity.http.annotation.Immutable;
+import net.temerity.http.protocol.HttpContext;
 
 /**
  * Class responsible for handling Content Encoding requests in HTTP.

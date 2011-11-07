@@ -27,7 +27,7 @@
 
 package net.temerity.http.message;
 
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * This class represents a context of a parsing operation:

@@ -28,14 +28,14 @@ package net.temerity.http.impl.conn;
 
 import java.io.IOException;
 
-import org.apache.http.HttpHost;
-import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.annotation.NotThreadSafe;
-import org.apache.http.conn.routing.HttpRoute;
-import org.apache.http.conn.routing.RouteTracker;
-import org.apache.http.conn.ClientConnectionOperator;
-import org.apache.http.conn.OperatedClientConnection;
+import net.temerity.http.HttpHost;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.protocol.HttpContext;
+import net.temerity.http.annotation.NotThreadSafe;
+import net.temerity.http.conn.routing.HttpRoute;
+import net.temerity.http.conn.routing.RouteTracker;
+import net.temerity.http.conn.ClientConnectionOperator;
+import net.temerity.http.conn.OperatedClientConnection;
 
 /**
  * A pool entry for use by connection manager implementations.

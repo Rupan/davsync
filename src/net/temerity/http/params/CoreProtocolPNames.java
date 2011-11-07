@@ -27,7 +27,7 @@
 
 package net.temerity.http.params;
 
-import org.apache.http.ProtocolVersion;
+import net.temerity.http.ProtocolVersion;
 
 /**
  * Defines parameter names for protocol execution in HttpCore.

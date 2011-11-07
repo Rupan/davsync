@@ -26,8 +26,8 @@
 
 package net.temerity.http.conn.params;
 
-import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
-import org.apache.http.params.CoreConnectionPNames;
+import net.temerity.http.impl.conn.tsccm.ThreadSafeClientConnManager;
+import net.temerity.http.params.CoreConnectionPNames;
 
 /**
  * Parameter names for connection managers in HttpConn.

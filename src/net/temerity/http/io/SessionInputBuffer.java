@@ -29,7 +29,7 @@ package net.temerity.http.io;
 
 import java.io.IOException;
 
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * Session input buffer for blocking connections. This interface is similar to

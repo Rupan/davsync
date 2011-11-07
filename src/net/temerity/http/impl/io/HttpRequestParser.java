@@ -29,18 +29,18 @@ package net.temerity.http.impl.io;
 
 import java.io.IOException;
 
-import org.apache.http.ConnectionClosedException;
-import org.apache.http.HttpException;
-import org.apache.http.HttpMessage;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpRequestFactory;
-import org.apache.http.RequestLine;
-import org.apache.http.ParseException;
-import org.apache.http.io.SessionInputBuffer;
-import org.apache.http.message.LineParser;
-import org.apache.http.message.ParserCursor;
-import org.apache.http.params.HttpParams;
-import org.apache.http.util.CharArrayBuffer;
+import net.temerity.http.ConnectionClosedException;
+import net.temerity.http.HttpException;
+import net.temerity.http.HttpMessage;
+import net.temerity.http.HttpRequest;
+import net.temerity.http.HttpRequestFactory;
+import net.temerity.http.RequestLine;
+import net.temerity.http.ParseException;
+import net.temerity.http.io.SessionInputBuffer;
+import net.temerity.http.message.LineParser;
+import net.temerity.http.message.ParserCursor;
+import net.temerity.http.params.HttpParams;
+import net.temerity.http.util.CharArrayBuffer;
 
 /**
  * HTTP request parser that obtain its input from an instance
