@@ -17,7 +17,7 @@ fi
 # rebuild JNI shared objects, if applicable
 if [ -d "jni" ]
 then
-  rm -rf obj libs/*/*.so
+  rm -rf obj libs/armeabi*/*.so
   ndk-build
   if [ $? -ne 0 ]
   then
