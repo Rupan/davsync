@@ -53,9 +53,9 @@ import net.temerity.http.util.CharArrayBuffer;
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#MAX_HEADER_COUNT}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#MAX_LINE_LENGTH}</li>
- *  <li>{@link org.apache.http.conn.params.ConnConnectionPNames#MAX_STATUS_LINE_GARBAGE}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#MAX_HEADER_COUNT}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#MAX_LINE_LENGTH}</li>
+ *  <li>{@link net.temerity.http.conn.params.ConnConnectionPNames#MAX_STATUS_LINE_GARBAGE}</li>
  * </ul>
  *
  * @since 4.0

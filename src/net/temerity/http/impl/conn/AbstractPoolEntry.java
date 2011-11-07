@@ -206,7 +206,7 @@ public abstract class AbstractPoolEntry {
      * request to the previous proxy.
      *
      * @param next      the proxy to which the tunnel was established.
-     *  See {@link org.apache.http.conn.ManagedClientConnection#tunnelProxy
+     *  See {@link net.temerity.http.conn.ManagedClientConnection#tunnelProxy
      *                                  ManagedClientConnection.tunnelProxy}
      *                  for details.
      * @param secure    <code>true</code> if the tunnel should be

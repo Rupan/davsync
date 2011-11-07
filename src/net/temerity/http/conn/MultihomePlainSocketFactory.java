@@ -82,7 +82,7 @@ public final class MultihomePlainSocketFactory implements SocketFactory {
     }
 
 
-    // non-javadoc, see interface org.apache.http.conn.SocketFactory
+    // non-javadoc, see interface net.temerity.http.conn.SocketFactory
     public Socket createSocket() {
         return new Socket();
     }

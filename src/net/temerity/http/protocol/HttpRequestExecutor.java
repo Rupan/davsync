@@ -55,7 +55,7 @@ import net.temerity.http.params.CoreProtocolPNames;
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#WAIT_FOR_CONTINUE}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#WAIT_FOR_CONTINUE}</li>
  * </ul>
  *
  * @since 4.0

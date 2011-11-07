@@ -41,8 +41,8 @@ import net.temerity.http.params.HttpParams;
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#HTTP_ELEMENT_CHARSET}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#MAX_LINE_LENGTH}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#HTTP_ELEMENT_CHARSET}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#MAX_LINE_LENGTH}</li>
  * </ul>
  *
  * @since 4.0

@@ -71,12 +71,12 @@ public interface AbortableHttpRequest {
      * executions with this request to fail.
      *
      * @see HttpClient#execute(HttpUriRequest)
-     * @see HttpClient#execute(org.apache.http.HttpHost,
-     *      org.apache.http.HttpRequest)
+     * @see HttpClient#execute(net.temerity.http.HttpHost,
+     *      net.temerity.http.HttpRequest)
      * @see HttpClient#execute(HttpUriRequest,
-     *      org.apache.http.protocol.HttpContext)
-     * @see HttpClient#execute(org.apache.http.HttpHost,
-     *      org.apache.http.HttpRequest, org.apache.http.protocol.HttpContext)
+     *      net.temerity.http.protocol.HttpContext)
+     * @see HttpClient#execute(net.temerity.http.HttpHost,
+     *      net.temerity.http.HttpRequest, net.temerity.http.protocol.HttpContext)
      */
     void abort();
 

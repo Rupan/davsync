@@ -36,7 +36,7 @@ import net.temerity.http.conn.routing.HttpRoute;
 /**
  * This class maintains a map of HTTP routes to maximum number of connections allowed
  * for those routes. This class can be used by pooling
- * {@link org.apache.http.conn.ClientConnectionManager connection managers} for
+ * {@link net.temerity.http.conn.ClientConnectionManager connection managers} for
  * a fine-grained control of connections on a per route basis.
  *
  * @since 4.0

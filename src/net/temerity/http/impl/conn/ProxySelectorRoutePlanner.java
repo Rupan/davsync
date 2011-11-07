@@ -56,15 +56,15 @@ import net.temerity.http.conn.params.ConnRouteParams;
  * By default, it will pick up the proxy settings of the JVM, either
  * from system properties or from the browser running the application.
  * Additionally, it interprets some
- * {@link org.apache.http.conn.params.ConnRoutePNames parameters},
+ * {@link net.temerity.http.conn.params.ConnRoutePNames parameters},
  * though not the {@link
- * org.apache.http.conn.params.ConnRoutePNames#DEFAULT_PROXY DEFAULT_PROXY}.
+ * net.temerity.http.conn.params.ConnRoutePNames#DEFAULT_PROXY DEFAULT_PROXY}.
  * <p>
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.conn.params.ConnRoutePNames#LOCAL_ADDRESS}</li>
- *  <li>{@link org.apache.http.conn.params.ConnRoutePNames#FORCED_ROUTE}</li>
+ *  <li>{@link net.temerity.http.conn.params.ConnRoutePNames#LOCAL_ADDRESS}</li>
+ *  <li>{@link net.temerity.http.conn.params.ConnRoutePNames#FORCED_ROUTE}</li>
  * </ul>
  *
  * @since 4.0

@@ -46,7 +46,7 @@ import net.temerity.http.params.AbstractHttpParams;
  *     </li>
  * <li>Client parameters:
  *     specific to an instance of
- *     {@link org.apache.http.client.HttpClient HttpClient}.
+ *     {@link net.temerity.http.client.HttpClient HttpClient}.
  *     These provide client specific defaults.
  *     </li>
  * <li>Request parameters:
@@ -55,7 +55,7 @@ import net.temerity.http.params.AbstractHttpParams;
  *     </li>
  * <li>Override parameters:
  *     specific to an instance of
- *     {@link org.apache.http.client.HttpClient HttpClient}.
+ *     {@link net.temerity.http.client.HttpClient HttpClient}.
  *     These can be used to set parameters that cannot be overridden
  *     on a per-request basis.
  *     </li>

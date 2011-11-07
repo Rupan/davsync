@@ -57,19 +57,19 @@ import net.temerity.http.util.EncodingUtils;
  * used.
  * <p>
  * Credential charset is configured via the
- * {@link org.apache.http.auth.params.AuthPNames#CREDENTIAL_CHARSET}
+ * {@link net.temerity.http.auth.params.AuthPNames#CREDENTIAL_CHARSET}
  * parameter of the HTTP request.
  * <p>
  * Since the digest username is included as clear text in the generated
  * Authentication header, the charset of the username must be compatible
  * with the
- * {@link org.apache.http.params.CoreProtocolPNames#HTTP_ELEMENT_CHARSET
+ * {@link net.temerity.http.params.CoreProtocolPNames#HTTP_ELEMENT_CHARSET
  *        http element charset}.
  * <p>
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.auth.params.AuthPNames#CREDENTIAL_CHARSET}</li>
+ *  <li>{@link net.temerity.http.auth.params.AuthPNames#CREDENTIAL_CHARSET}</li>
  * </ul>
  *
  * @since 4.0
@@ -176,7 +176,7 @@ public class DigestScheme extends RFC2617Scheme {
      * @param credentials A set of credentials to be used for athentication
      * @param request    The request being authenticated
      *
-     * @throws org.apache.http.auth.InvalidCredentialsException if authentication credentials
+     * @throws net.temerity.http.auth.InvalidCredentialsException if authentication credentials
      *         are not valid or not applicable for this authentication scheme
      * @throws AuthenticationException if authorization string cannot
      *   be generated due to an authentication failure

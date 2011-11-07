@@ -46,8 +46,8 @@ import net.temerity.http.params.HttpParams;
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#CONNECTION_TIMEOUT}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#SO_REUSEADDR}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#CONNECTION_TIMEOUT}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#SO_REUSEADDR}</li>
  * </ul>
  *
  * @since 4.0

@@ -34,7 +34,7 @@ package net.temerity.http.client.params;
 public interface ClientPNames {
 
     /**
-     * Defines the class name of the default {@link org.apache.http.conn.ClientConnectionManager}
+     * Defines the class name of the default {@link net.temerity.http.conn.ClientConnectionManager}
      * <p>
      * This parameter expects a value of type {@link String}.
      * </p>
@@ -103,7 +103,7 @@ public interface ClientPNames {
      * Defines the virtual host to be used in the <code>Host</code>
      * request header instead of the physical host.
      * <p>
-     * This parameter expects a value of type {@link org.apache.http.HttpHost}.
+     * This parameter expects a value of type {@link net.temerity.http.HttpHost}.
      * </p>
      * If a port is not provided, it will be derived from the request URL.
      */
@@ -113,7 +113,7 @@ public interface ClientPNames {
      * Defines the request headers to be sent per default with each request.
      * <p>
      * This parameter expects a value of type {@link java.util.Collection}. The
-     * collection is expected to contain {@link org.apache.http.Header}s.
+     * collection is expected to contain {@link net.temerity.http.Header}s.
      * </p>
      */
     public static final String DEFAULT_HEADERS = "http.default-headers";
@@ -122,7 +122,7 @@ public interface ClientPNames {
      * Defines the default host. The default value will be used if the target host is
      * not explicitly specified in the request URI.
      * <p>
-     * This parameter expects a value of type {@link org.apache.http.HttpHost}.
+     * This parameter expects a value of type {@link net.temerity.http.HttpHost}.
      * </p>
      */
     public static final String DEFAULT_HOST = "http.default-host";

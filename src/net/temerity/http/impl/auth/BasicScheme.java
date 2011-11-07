@@ -47,7 +47,7 @@ import net.temerity.http.util.EncodingUtils;
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.auth.params.AuthPNames#CREDENTIAL_CHARSET}</li>
+ *  <li>{@link net.temerity.http.auth.params.AuthPNames#CREDENTIAL_CHARSET}</li>
  * </ul>
  *
  * @since 4.0

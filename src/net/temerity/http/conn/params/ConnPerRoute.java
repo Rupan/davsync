@@ -31,7 +31,7 @@ import net.temerity.http.conn.routing.HttpRoute;
 /**
  * This interface is intended for looking up maximum number of connections
  * allowed for a given route. This class can be used by pooling
- * {@link org.apache.http.conn.ClientConnectionManager connection managers} for
+ * {@link net.temerity.http.conn.ClientConnectionManager connection managers} for
  * a fine-grained control of connections on a per route basis.
  *
  * @since 4.0

@@ -53,8 +53,8 @@ public final class ConnManagerParams implements ConnManagerPNames {
 
     /**
      * Returns the timeout in milliseconds used when retrieving a
-     * {@link org.apache.http.conn.ManagedClientConnection} from the
-     * {@link org.apache.http.conn.ClientConnectionManager}.
+     * {@link net.temerity.http.conn.ManagedClientConnection} from the
+     * {@link net.temerity.http.conn.ClientConnectionManager}.
      *
      * @return timeout in milliseconds.
      *
@@ -74,8 +74,8 @@ public final class ConnManagerParams implements ConnManagerPNames {
 
     /**
      * Sets the timeout in milliseconds used when retrieving a
-     * {@link org.apache.http.conn.ManagedClientConnection} from the
-     * {@link org.apache.http.conn.ClientConnectionManager}.
+     * {@link net.temerity.http.conn.ManagedClientConnection} from the
+     * {@link net.temerity.http.conn.ClientConnectionManager}.
      *
      * @param timeout the timeout in milliseconds
      *
@@ -105,7 +105,7 @@ public final class ConnManagerParams implements ConnManagerPNames {
      * @param connPerRoute lookup interface for maximum number of connections allowed
      *        per route
      *
-     * @deprecated use {@link ThreadSafeClientConnManager#setMaxForRoute(org.apache.http.conn.routing.HttpRoute, int)}
+     * @deprecated use {@link ThreadSafeClientConnManager#setMaxForRoute(net.temerity.http.conn.routing.HttpRoute, int)}
      */
     @Deprecated
     public static void setMaxConnectionsPerRoute(final HttpParams params,
@@ -124,7 +124,7 @@ public final class ConnManagerParams implements ConnManagerPNames {
      *
      * @return lookup interface for maximum number of connections allowed per route.
      *
-     * @deprecated use {@link ThreadSafeClientConnManager#getMaxForRoute(org.apache.http.conn.routing.HttpRoute)}
+     * @deprecated use {@link ThreadSafeClientConnManager#getMaxForRoute(net.temerity.http.conn.routing.HttpRoute)}
      */
     @Deprecated
     public static ConnPerRoute getMaxConnectionsPerRoute(final HttpParams params) {

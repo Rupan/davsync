@@ -49,7 +49,7 @@ public final class AuthParams {
 
     /**
      * Obtains the charset for encoding
-     * {@link org.apache.http.auth.Credentials}.If not configured,
+     * {@link net.temerity.http.auth.Credentials}.If not configured,
      * {@link HTTP#DEFAULT_PROTOCOL_CHARSET}is used instead.
      *
      * @return The charset
@@ -69,7 +69,7 @@ public final class AuthParams {
 
     /**
      * Sets the charset to be used when encoding
-     * {@link org.apache.http.auth.Credentials}.
+     * {@link net.temerity.http.auth.Credentials}.
      *
      * @param charset The charset
      */

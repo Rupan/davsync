@@ -38,7 +38,7 @@ import net.temerity.http.params.HttpProtocolParams;
  * <p>
  * The following parameters can be used to customize the behavior of this class:
  * <ul>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#PROTOCOL_VERSION}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#PROTOCOL_VERSION}</li>
  * </ul>
  *
  * @since 4.0

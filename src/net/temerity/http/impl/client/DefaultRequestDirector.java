@@ -98,35 +98,35 @@ import net.temerity.http.util.EntityUtils;
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#PROTOCOL_VERSION}</li>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#STRICT_TRANSFER_ENCODING}</li>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#HTTP_ELEMENT_CHARSET}</li>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#USE_EXPECT_CONTINUE}</li>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#WAIT_FOR_CONTINUE}</li>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#USER_AGENT}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#SOCKET_BUFFER_SIZE}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#MAX_LINE_LENGTH}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#MAX_HEADER_COUNT}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#SO_TIMEOUT}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#SO_LINGER}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#SO_REUSEADDR}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#TCP_NODELAY}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#CONNECTION_TIMEOUT}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#STALE_CONNECTION_CHECK}</li>
- *  <li>{@link org.apache.http.conn.params.ConnRoutePNames#FORCED_ROUTE}</li>
- *  <li>{@link org.apache.http.conn.params.ConnRoutePNames#LOCAL_ADDRESS}</li>
- *  <li>{@link org.apache.http.conn.params.ConnRoutePNames#DEFAULT_PROXY}</li>
- *  <li>{@link org.apache.http.cookie.params.CookieSpecPNames#DATE_PATTERNS}</li>
- *  <li>{@link org.apache.http.cookie.params.CookieSpecPNames#SINGLE_COOKIE_HEADER}</li>
- *  <li>{@link org.apache.http.auth.params.AuthPNames#CREDENTIAL_CHARSET}</li>
- *  <li>{@link org.apache.http.client.params.ClientPNames#COOKIE_POLICY}</li>
- *  <li>{@link org.apache.http.client.params.ClientPNames#HANDLE_AUTHENTICATION}</li>
- *  <li>{@link org.apache.http.client.params.ClientPNames#HANDLE_REDIRECTS}</li>
- *  <li>{@link org.apache.http.client.params.ClientPNames#MAX_REDIRECTS}</li>
- *  <li>{@link org.apache.http.client.params.ClientPNames#ALLOW_CIRCULAR_REDIRECTS}</li>
- *  <li>{@link org.apache.http.client.params.ClientPNames#VIRTUAL_HOST}</li>
- *  <li>{@link org.apache.http.client.params.ClientPNames#DEFAULT_HOST}</li>
- *  <li>{@link org.apache.http.client.params.ClientPNames#DEFAULT_HEADERS}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#PROTOCOL_VERSION}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#STRICT_TRANSFER_ENCODING}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#HTTP_ELEMENT_CHARSET}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#USE_EXPECT_CONTINUE}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#WAIT_FOR_CONTINUE}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#USER_AGENT}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#SOCKET_BUFFER_SIZE}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#MAX_LINE_LENGTH}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#MAX_HEADER_COUNT}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#SO_TIMEOUT}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#SO_LINGER}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#SO_REUSEADDR}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#TCP_NODELAY}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#CONNECTION_TIMEOUT}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#STALE_CONNECTION_CHECK}</li>
+ *  <li>{@link net.temerity.http.conn.params.ConnRoutePNames#FORCED_ROUTE}</li>
+ *  <li>{@link net.temerity.http.conn.params.ConnRoutePNames#LOCAL_ADDRESS}</li>
+ *  <li>{@link net.temerity.http.conn.params.ConnRoutePNames#DEFAULT_PROXY}</li>
+ *  <li>{@link net.temerity.http.cookie.params.CookieSpecPNames#DATE_PATTERNS}</li>
+ *  <li>{@link net.temerity.http.cookie.params.CookieSpecPNames#SINGLE_COOKIE_HEADER}</li>
+ *  <li>{@link net.temerity.http.auth.params.AuthPNames#CREDENTIAL_CHARSET}</li>
+ *  <li>{@link net.temerity.http.client.params.ClientPNames#COOKIE_POLICY}</li>
+ *  <li>{@link net.temerity.http.client.params.ClientPNames#HANDLE_AUTHENTICATION}</li>
+ *  <li>{@link net.temerity.http.client.params.ClientPNames#HANDLE_REDIRECTS}</li>
+ *  <li>{@link net.temerity.http.client.params.ClientPNames#MAX_REDIRECTS}</li>
+ *  <li>{@link net.temerity.http.client.params.ClientPNames#ALLOW_CIRCULAR_REDIRECTS}</li>
+ *  <li>{@link net.temerity.http.client.params.ClientPNames#VIRTUAL_HOST}</li>
+ *  <li>{@link net.temerity.http.client.params.ClientPNames#DEFAULT_HOST}</li>
+ *  <li>{@link net.temerity.http.client.params.ClientPNames#DEFAULT_HEADERS}</li>
  * </ul>
  *
  * @since 4.0
@@ -160,7 +160,7 @@ public class DefaultRequestDirector implements RequestDirector {
 
     /** The redirect handler. */
     @Deprecated
-    protected final org.apache.http.client.RedirectHandler redirectHandler = null;
+    protected final net.temerity.http.client.RedirectHandler redirectHandler = null;
 
     /** The redirect strategy. */
     protected final RedirectStrategy redirectStrategy;
@@ -201,7 +201,7 @@ public class DefaultRequestDirector implements RequestDirector {
             final HttpRoutePlanner rouplan,
             final HttpProcessor httpProcessor,
             final HttpRequestRetryHandler retryHandler,
-            final org.apache.http.client.RedirectHandler redirectHandler,
+            final net.temerity.http.client.RedirectHandler redirectHandler,
             final AuthenticationHandler targetAuthHandler,
             final AuthenticationHandler proxyAuthHandler,
             final UserTokenHandler userTokenHandler,

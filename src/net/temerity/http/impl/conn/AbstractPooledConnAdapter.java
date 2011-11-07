@@ -37,7 +37,7 @@ import net.temerity.http.conn.OperatedClientConnection;
 
 /**
  * Abstract adapter from pool {@link AbstractPoolEntry entries} to
- * {@link org.apache.http.conn.ManagedClientConnection managed}
+ * {@link net.temerity.http.conn.ManagedClientConnection managed}
  * client connections.
  * The connection in the pool entry is used to initialize the base class.
  * In addition, methods to establish a route are delegated to the

@@ -41,7 +41,7 @@ import net.temerity.http.HttpConnection;
  *
  * <p>This class is not synchronized.</p>
  *
- * @see org.apache.http.conn.ClientConnectionManager#closeIdleConnections
+ * @see net.temerity.http.conn.ClientConnectionManager#closeIdleConnections
  *
  * @since 4.0
  *

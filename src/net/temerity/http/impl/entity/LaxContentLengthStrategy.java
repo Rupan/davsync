@@ -48,7 +48,7 @@ import net.temerity.http.protocol.HTTP;
  * <p>
  * The following parameters can be used to customize the behavior of this class:
  * <ul>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#STRICT_TRANSFER_ENCODING}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#STRICT_TRANSFER_ENCODING}</li>
  * </ul>
  *
  * @since 4.0

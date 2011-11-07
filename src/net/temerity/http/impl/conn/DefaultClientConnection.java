@@ -58,11 +58,11 @@ import net.temerity.http.conn.OperatedClientConnection;
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#STRICT_TRANSFER_ENCODING}</li>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#HTTP_ELEMENT_CHARSET}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#SOCKET_BUFFER_SIZE}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#MAX_LINE_LENGTH}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#MAX_HEADER_COUNT}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#STRICT_TRANSFER_ENCODING}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#HTTP_ELEMENT_CHARSET}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#SOCKET_BUFFER_SIZE}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#MAX_LINE_LENGTH}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#MAX_HEADER_COUNT}</li>
  * </ul>
  *
  * @since 4.0
@@ -72,8 +72,8 @@ public class DefaultClientConnection extends SocketHttpClientConnection
     implements OperatedClientConnection, HttpContext {
 
     private final Log log = LogFactory.getLog(getClass());
-    private final Log headerLog = LogFactory.getLog("org.apache.http.headers");
-    private final Log wireLog = LogFactory.getLog("org.apache.http.wire");
+    private final Log headerLog = LogFactory.getLog("net.temerity.http.headers");
+    private final Log wireLog = LogFactory.getLog("net.temerity.http.wire");
 
     /** The unconnected socket */
     private volatile Socket socket;

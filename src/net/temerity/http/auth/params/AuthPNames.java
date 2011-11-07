@@ -38,7 +38,7 @@ public interface AuthPNames {
 
     /**
      * Defines the charset to be used when encoding
-     * {@link org.apache.http.auth.Credentials}.
+     * {@link net.temerity.http.auth.Credentials}.
      * <p>
      * This parameter expects a value of type {@link String}.
      */

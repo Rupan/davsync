@@ -46,16 +46,16 @@ import net.temerity.http.conn.params.ConnRouteParams;
 
 /**
  * Default implementation of an {@link HttpRoutePlanner}. This implementation
- * is based on {@link org.apache.http.conn.params.ConnRoutePNames parameters}.
+ * is based on {@link net.temerity.http.conn.params.ConnRoutePNames parameters}.
  * It will not make use of any Java system properties, nor of system or
  * browser proxy settings.
  * <p>
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.conn.params.ConnRoutePNames#DEFAULT_PROXY}</li>
- *  <li>{@link org.apache.http.conn.params.ConnRoutePNames#LOCAL_ADDRESS}</li>
- *  <li>{@link org.apache.http.conn.params.ConnRoutePNames#FORCED_ROUTE}</li>
+ *  <li>{@link net.temerity.http.conn.params.ConnRoutePNames#DEFAULT_PROXY}</li>
+ *  <li>{@link net.temerity.http.conn.params.ConnRoutePNames#LOCAL_ADDRESS}</li>
+ *  <li>{@link net.temerity.http.conn.params.ConnRoutePNames#FORCED_ROUTE}</li>
  * </ul>
  *
  * @since 4.0

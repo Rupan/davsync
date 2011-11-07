@@ -62,8 +62,8 @@ import net.temerity.http.params.HttpParams;
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#STRICT_TRANSFER_ENCODING}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#MAX_HEADER_COUNT}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#STRICT_TRANSFER_ENCODING}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#MAX_HEADER_COUNT}</li>
  * </ul>
  *
  * @since 4.0

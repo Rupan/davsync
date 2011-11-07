@@ -59,7 +59,7 @@ import net.temerity.http.conn.scheme.SchemeSocketFactory;
  * This connection operator is multihome network aware and will attempt to retry failed connects
  * against all known IP addresses sequentially until the connect is successful or all known
  * addresses fail to respond. Please note the same
- * {@link org.apache.http.params.CoreConnectionPNames#CONNECTION_TIMEOUT} value will be used
+ * {@link net.temerity.http.params.CoreConnectionPNames#CONNECTION_TIMEOUT} value will be used
  * for each connection attempt, so in the worst case the total elapsed time before timeout
  * can be <code>CONNECTION_TIMEOUT * n</code> where <code>n</code> is the number of IP addresses
  * of the given host. One can disable multihome support by overriding
@@ -69,14 +69,14 @@ import net.temerity.http.conn.scheme.SchemeSocketFactory;
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#HTTP_ELEMENT_CHARSET}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#SO_TIMEOUT}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#SO_LINGER}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#SO_REUSEADDR}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#TCP_NODELAY}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#SOCKET_BUFFER_SIZE}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#CONNECTION_TIMEOUT}</li>
- *  <li>{@link org.apache.http.params.CoreConnectionPNames#MAX_LINE_LENGTH}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#HTTP_ELEMENT_CHARSET}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#SO_TIMEOUT}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#SO_LINGER}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#SO_REUSEADDR}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#TCP_NODELAY}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#SOCKET_BUFFER_SIZE}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#CONNECTION_TIMEOUT}</li>
+ *  <li>{@link net.temerity.http.params.CoreConnectionPNames#MAX_LINE_LENGTH}</li>
  * </ul>
  *
  * @since 4.0

@@ -41,7 +41,7 @@ import net.temerity.http.params.CoreProtocolPNames;
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#ORIGIN_SERVER}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#ORIGIN_SERVER}</li>
  * </ul>
  *
  * @since 4.0

@@ -65,9 +65,9 @@ import net.temerity.http.protocol.ExecutionContext;
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.cookie.params.CookieSpecPNames#DATE_PATTERNS}</li>
- *  <li>{@link org.apache.http.cookie.params.CookieSpecPNames#SINGLE_COOKIE_HEADER}</li>
- *  <li>{@link org.apache.http.client.params.ClientPNames#COOKIE_POLICY}</li>
+ *  <li>{@link net.temerity.http.cookie.params.CookieSpecPNames#DATE_PATTERNS}</li>
+ *  <li>{@link net.temerity.http.cookie.params.CookieSpecPNames#SINGLE_COOKIE_HEADER}</li>
+ *  <li>{@link net.temerity.http.client.params.ClientPNames#COOKIE_POLICY}</li>
  * </ul>
  *
  * @since 4.0

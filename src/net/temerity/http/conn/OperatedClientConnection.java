@@ -86,7 +86,7 @@ public interface OperatedClientConnection extends HttpClientConnection, HttpInet
      * By calling this method, the connection can be re-initialized
      * with a new Socket instance before {@link #openCompleted} is called.
      * This enabled the connection to close that socket if
-     * {@link org.apache.http.HttpConnection#shutdown shutdown}
+     * {@link net.temerity.http.HttpConnection#shutdown shutdown}
      * is called before it is fully open. Closing an unconnected socket
      * will interrupt a thread that is blocked on the connect.
      * Otherwise, that thread will either time out on the connect,

@@ -177,7 +177,7 @@ public interface ManagedClientConnection extends
      * This can be used immediately before releasing this connection
      * to prevent its reuse. Reasons for preventing reuse include
      * error conditions and the evaluation of a
-     * {@link org.apache.http.ConnectionReuseStrategy reuse strategy}.
+     * {@link net.temerity.http.ConnectionReuseStrategy reuse strategy}.
      * <br/>
      * <b>Note:</b>
      * It is <i>not</i> necessary to call here before writing to

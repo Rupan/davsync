@@ -39,8 +39,8 @@ public interface ConnManagerPNames {
 
     /**
      * Defines the timeout in milliseconds used when retrieving an instance of
-     * {@link org.apache.http.conn.ManagedClientConnection} from the
-     * {@link org.apache.http.conn.ClientConnectionManager}.
+     * {@link net.temerity.http.conn.ManagedClientConnection} from the
+     * {@link net.temerity.http.conn.ClientConnectionManager}.
      * <p>
      * This parameter expects a value of type {@link Long}.
      * <p>
@@ -56,8 +56,8 @@ public interface ConnManagerPNames {
      * <p>
      * This parameter expects a value of type {@link ConnPerRoute}.
      * <p>
-     * @deprecated use {@link ThreadSafeClientConnManager#setMaxForRoute(org.apache.http.conn.routing.HttpRoute, int)},
-     *  {@link ThreadSafeClientConnManager#getMaxForRoute(org.apache.http.conn.routing.HttpRoute)}
+     * @deprecated use {@link ThreadSafeClientConnManager#setMaxForRoute(net.temerity.http.conn.routing.HttpRoute, int)},
+     *  {@link ThreadSafeClientConnManager#getMaxForRoute(net.temerity.http.conn.routing.HttpRoute)}
      */
     @Deprecated
     public static final String MAX_CONNECTIONS_PER_ROUTE = "http.conn-manager.max-per-route";

@@ -44,8 +44,8 @@ import net.temerity.http.util.EntityUtils;
  * body is consumed and an {@link HttpResponseException} is thrown.
  *
  * If this is used with
- * {@link org.apache.http.client.HttpClient#execute(
- *  org.apache.http.client.methods.HttpUriRequest, ResponseHandler)},
+ * {@link net.temerity.http.client.HttpClient#execute(
+ *  net.temerity.http.client.methods.HttpUriRequest, ResponseHandler)},
  * HttpClient may handle redirects (3xx responses) internally.
  *
  *

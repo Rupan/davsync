@@ -46,10 +46,10 @@ import net.temerity.http.protocol.HttpContext;
 @Deprecated
 class DefaultRedirectStrategyAdaptor implements RedirectStrategy {
 
-    private final org.apache.http.client.RedirectHandler handler;
+    private final net.temerity.http.client.RedirectHandler handler;
 
     @Deprecated
-    public DefaultRedirectStrategyAdaptor(final org.apache.http.client.RedirectHandler handler) {
+    public DefaultRedirectStrategyAdaptor(final net.temerity.http.client.RedirectHandler handler) {
         super();
         this.handler = handler;
     }

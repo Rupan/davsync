@@ -832,7 +832,7 @@ public abstract class AbstractHttpClient implements HttpClient {
             final HttpRoutePlanner rouplan,
             final HttpProcessor httpProcessor,
             final HttpRequestRetryHandler retryHandler,
-            final org.apache.http.client.RedirectHandler redirectHandler,
+            final net.temerity.http.client.RedirectHandler redirectHandler,
             final AuthenticationHandler targetAuthHandler,
             final AuthenticationHandler proxyAuthHandler,
             final UserTokenHandler stateHandler,

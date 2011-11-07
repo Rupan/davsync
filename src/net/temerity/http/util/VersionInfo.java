@@ -215,7 +215,7 @@ public class VersionInfo {
      * Loads version information for a package.
      *
      * @param pckg      the package for which to load version information,
-     *                  for example "org.apache.http".
+     *                  for example "net.temerity.http".
      *                  The package name should NOT end with a dot.
      * @param clsldr    the classloader to load from, or
      *                  <code>null</code> for the thread context classloader
@@ -235,7 +235,7 @@ public class VersionInfo {
 
         Properties vip = null; // version info properties, if available
         try {
-            // org.apache.http      becomes
+            // net.temerity.http      becomes
             // org/apache/http/version.properties
             InputStream is = clsldr.getResourceAsStream
                 (pckg.replace('.', '/') + "/" + VERSION_PROPERTY_FILE);

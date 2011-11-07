@@ -46,7 +46,7 @@ import net.temerity.http.params.HttpProtocolParams;
  * The following parameters can be used to customize the behavior of this
  * class:
  * <ul>
- *  <li>{@link org.apache.http.params.CoreProtocolPNames#USE_EXPECT_CONTINUE}</li>
+ *  <li>{@link net.temerity.http.params.CoreProtocolPNames#USE_EXPECT_CONTINUE}</li>
  * </ul>
  *
  * @since 4.0
