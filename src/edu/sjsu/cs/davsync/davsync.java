@@ -47,6 +47,7 @@ public class davsync extends Activity {
     }
 
     private void test() {
+        /*
         Sardine sardine = SardineFactory.begin("username", "password");
         List<DavResource> resources;
         try {
@@ -58,6 +59,7 @@ public class davsync extends Activity {
         for (DavResource res : resources) {
             Log.d("SYNC :: ", "" + res);
         }
+        */
     }
 
     // read the state of all fields from memory and return a Profile object
