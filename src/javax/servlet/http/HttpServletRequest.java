@@ -56,7 +56,6 @@ package javax.servlet.http;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
 import java.util.Enumeration;
 
 /**
@@ -72,7 +71,7 @@ import java.util.Enumeration;
  * @author 	Various
  */
 
-public interface HttpServletRequest extends ServletRequest {
+public interface HttpServletRequest {
 
     /**
     * String identifier for Basic authentication. Value "BASIC"
