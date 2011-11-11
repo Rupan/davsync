@@ -75,9 +75,9 @@ public class davsync extends Activity {
 		try {
 			copy = new CopyMethod("https://razor.temerity.net/kp/random.kdb", "https://razor.temerity.net/kp/junk.kdb", true);
 			client.executeMethod(copy);
-			Log.d("TEST:", copy.getStatusCode() + " " + copy.getStatusText());
+			Log.d("COPY/SUCCESS:", copy.getStatusCode() + " " + copy.getStatusText());
 		} catch(Exception e) {
-			Log.d("TEST:", "" + e);
+			Log.d("COPY/FAILURE:", "" + e);
 		}
 
 		// propfind
@@ -92,10 +92,10 @@ public class davsync extends Activity {
 			Collection propertyColl = props.getContent();
 			for(Iterator iterator = propertyColl.iterator(); iterator.hasNext();){
 				DefaultDavProperty tmpProp = (DefaultDavProperty)iterator.next();
-				Log.d("TEST:", tmpProp.getName() + " " + tmpProp.getValue());
+				Log.d("PROPFIND/SUCCESS:", tmpProp.getName() + " " + tmpProp.getValue());
 			}
 		} catch(Exception e) {
-			Log.d("TEST:", "" + e);
+			Log.d("PROPFIND/FAILURE:", "" + e);
 		}
     }
 
