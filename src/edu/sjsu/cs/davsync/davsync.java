@@ -8,10 +8,20 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.util.Log;
 
-// sardine & dependencies
-import java.util.List;
-import java.io.IOException;
-import com.googlecode.sardine.*;
+// webdav client & dependencies
+import java.util.*;
+import org.apache.commons.httpclient.*;
+import org.apache.commons.httpclient.params.*;
+import org.apache.commons.httpclient.auth.*;
+import org.apache.jackrabbit.webdav.*;
+import org.apache.jackrabbit.webdav.client.methods.*;
+import org.apache.jackrabbit.webdav.header.*;
+import org.apache.jackrabbit.webdav.io.*;
+import org.apache.jackrabbit.webdav.lock.*;
+import org.apache.jackrabbit.webdav.server.*;
+import org.apache.jackrabbit.webdav.util.*;
+import org.apache.jackrabbit.webdav.xml.*;
+import org.apache.jackrabbit.webdav.property.*;
 
 public class davsync extends Activity {
 
@@ -47,19 +57,46 @@ public class davsync extends Activity {
     }
 
     private void test() {
-        /*
-        Sardine sardine = SardineFactory.begin("username", "password");
-        List<DavResource> resources;
-        try {
-            resources = sardine.list("https://razor.temerity.net/net/kp/");
-        } catch(IOException e) {
-            Log.d("SYNC :: ", "Failed to list dir - " + e);
-            return;
-        }
-        for (DavResource res : resources) {
-            Log.d("SYNC :: ", "" + res);
-        }
-        */
+		// client init
+		HostConfiguration hostConfig = new HostConfiguration();
+		hostConfig.setHost("razor.temerity.net", 443, "https");
+		HttpConnectionManager connectionManager = new MultiThreadedHttpConnectionManager();
+		HttpConnectionManagerParams params = new HttpConnectionManagerParams();
+		int maxHostConnections = 20;
+		params.setMaxConnectionsPerHost(hostConfig, maxHostConnections);
+		connectionManager.setParams(params);
+		HttpClient client = new HttpClient(connectionManager);
+		Credentials creds = new UsernamePasswordCredentials("cs266", "bie0Up7X");
+		client.getState().setCredentials(AuthScope.ANY, creds);
+		client.setHostConfiguration(hostConfig);
+
+		//copy a file: source, dest, overwrite
+		DavMethod copy;
+		try {
+			copy = new CopyMethod("https://razor.temerity.net/kp/random.kdb", "https://razor.temerity.net/kp/junk.kdb", true);
+			client.executeMethod(copy);
+			Log.d("TEST:", copy.getStatusCode() + " " + copy.getStatusText());
+		} catch(Exception e) {
+			Log.d("TEST:", "" + e);
+		}
+
+		// propfind
+		DavMethod pFind;
+		MultiStatus multiStatus;
+		DavPropertySet props;
+		try {
+			pFind = new PropFindMethod("/kp/random.kdb", DavConstants.PROPFIND_ALL_PROP, DavConstants.DEPTH_INFINITY);
+			client.executeMethod(pFind);
+			multiStatus = pFind.getResponseBodyAsMultiStatus();
+			props = multiStatus.getResponses()[0].getProperties(200);
+			Collection propertyColl = props.getContent();
+			for(Iterator iterator = propertyColl.iterator(); iterator.hasNext();){
+				DefaultDavProperty tmpProp = (DefaultDavProperty)iterator.next();
+				Log.d("TEST:", tmpProp.getName() + " " + tmpProp.getValue());
+			}
+		} catch(Exception e) {
+			Log.d("TEST:", "" + e);
+		}
     }
 
     // read the state of all fields from memory and return a Profile object
