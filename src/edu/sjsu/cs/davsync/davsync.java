@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.util.Log;
+import android.content.Context;
 
 // webdav code
 import java.io.IOException;
@@ -23,6 +25,7 @@ import org.apache.jackrabbit.webdav.client.methods.PropFindMethod;
 
 public class davsync extends Activity {
 
+    private Context context;
     private DSDatabase db;
     private EditText[] field = new EditText[4]; // hostname, resource, username, password
     private Button[] button = new Button[3]; // save, clear, test
@@ -41,11 +44,21 @@ public class davsync extends Activity {
         public void onClick(View v) {
             switch( type ) {
             case SAVE:
-                db.addProfile(getCurrentProfile());
+                try {
+                        db.addProfile(getCurrentProfile());
+                } catch( ConfigurationException ce ) {
+                        Toast toast = Toast.makeText(context, ce.toString(), Toast.LENGTH_SHORT);
+                        toast.show();
+                }
                 break;
             case CLEAR:
-                db.delProfile(getCurrentProfile());
-                clearTextFields();
+                try {
+                        db.delProfile(getCurrentProfile());
+                        clearTextFields();
+                } catch( ConfigurationException ce ) {
+                        Toast toast = Toast.makeText(context, ce.toString(), Toast.LENGTH_SHORT);
+                        toast.show();
+                }
                 break;
             case TEST:
                 test();
@@ -54,11 +67,21 @@ public class davsync extends Activity {
         }
     }
 
+    // TODO: add a dialog during the test
+    // http://developer.android.com/guide/topics/ui/dialogs.html
     private void test() {
+        Toast toast;
         int ret = -1;
         Log.d("davsync/test", "PROPFIND starting...");
 
-        Profile p = getCurrentProfile();
+        Profile p;
+        try {
+                p = getCurrentProfile();
+        } catch( ConfigurationException ce ) {
+                toast = Toast.makeText(context, ce.toString(), Toast.LENGTH_SHORT);
+                toast.show();
+                return;
+        }
 
         HostConfiguration hostConfig = new HostConfiguration();
         hostConfig.setHost(p.getHostname(), 443, "https");
@@ -80,19 +103,28 @@ public class davsync extends Activity {
         } catch( HttpException he ) {
             Log.w("davsync/test", "Caught HttpException: " + he.getMessage());
         } catch ( IOException ioe ) {
-            Log.w("davsync/test", "Caught IOException: " + ioe.getMessage() + ioe);
+            Log.w("davsync/test", "Caught IOException: " + ioe.getMessage());
         }
-        // ret should be 207 if the resource exists
+        if( ret == 207 ) { // ret will be 207 if the resource exists
+                toast = Toast.makeText(context, "Success", Toast.LENGTH_SHORT);
+                toast.show();
+        } else {
+                toast = Toast.makeText(context, "Failure", Toast.LENGTH_SHORT);
+                toast.show();
+        }
         Log.d("davsync/test", "PROPFIND returned " + ret);
     }
 
     // read the state of all fields from memory and return a Profile object
-    // TODO: throw an exception if any field is incorrect
-    private Profile getCurrentProfile() {
+    private Profile getCurrentProfile() throws ConfigurationException {
         String host = field[0].getText().toString();
+        if( host.length() == 0 ) { throw new ConfigurationException("please input a hostname"); }
         String rsrc = field[1].getText().toString();
+        if( rsrc.length() == 0 ) { throw new ConfigurationException("please input a resource"); }
         String user = field[2].getText().toString();
+        if( user.length() == 0 ) { throw new ConfigurationException("please input a username"); }
         String pass = field[3].getText().toString();
+        if( pass.length() == 0 ) { throw new ConfigurationException("please input a password"); }
         return new Profile(host, rsrc, user, pass);
     }
 
@@ -106,7 +138,8 @@ public class davsync extends Activity {
     @Override public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
-	db = new DSDatabase(this);
+        db = new DSDatabase(this);
+        context = getApplicationContext();
 
         // handle button events
         button[0] = (Button)this.findViewById(R.id.btnSave);
