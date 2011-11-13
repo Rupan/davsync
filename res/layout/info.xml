@@ -2,21 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
 
   <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
-    <TextView android:text="Hostname"    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
-    <EditText android:id="@+id/hostname" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:drawable/editbox_background" />
-    <TextView android:text="Resource"    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
-    <EditText android:id="@+id/resource" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:drawable/editbox_background" />
-    <TextView android:text="Username"    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
-    <EditText android:id="@+id/username" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:drawable/editbox_background" />
-    <TextView android:text="Password"    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
-    <EditText android:id="@+id/password" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:drawable/editbox_background" android:password="true" />
+    <TextView android:text="Hostname"    style="@style/DAVPrefsHeading" />
+    <EditText android:id="@+id/hostname" style="@style/DAVPrefsEditBox" />
+    <TextView android:text="Resource"    style="@style/DAVPrefsHeading" />
+    <EditText android:id="@+id/resource" style="@style/DAVPrefsEditBox" />
+    <TextView android:text="Username"    style="@style/DAVPrefsHeading" />
+    <EditText android:id="@+id/username" style="@style/DAVPrefsEditBox" />
+    <TextView android:text="Password"    style="@style/DAVPrefsHeading" />
+    <EditText android:id="@+id/password" style="@style/DAVPrefsEditBox" android:password="true" />
   </LinearLayout>
 
   <TableLayout android:layout_width="match_parent" android:layout_height="match_parent" android:stretchColumns="*">
     <TableRow android:layout_width="match_parent">
-      <Button android:id="@+id/btnSave"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_red"    style="@style/CoolButton" android:text="Save" />
-      <Button android:id="@+id/btnClear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_green"  style="@style/CoolButton" android:text="Clear" />
-      <Button android:id="@+id/btnTest"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_yellow" style="@style/CoolButton" android:text="Test" />
+      <Button android:id="@+id/btnSave"  style="@style/DAVPrefsButton" android:background="@drawable/btn_red"    android:text="Save" />
+      <Button android:id="@+id/btnClear" style="@style/DAVPrefsButton" android:background="@drawable/btn_green"  android:text="Clear" />
+      <Button android:id="@+id/btnTest"  style="@style/DAVPrefsButton" android:background="@drawable/btn_yellow" android:text="Test" />
     </TableRow>
   </TableLayout>
 
