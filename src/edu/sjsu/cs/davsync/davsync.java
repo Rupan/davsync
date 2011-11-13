@@ -128,13 +128,21 @@ public class davsync extends Activity {
     // read the state of all fields from memory and return a Profile object
     private Profile getCurrentProfile() throws ConfigurationException {
         String host = field[0].getText().toString();
-        if( host.length() == 0 ) { throw new ConfigurationException("please input a hostname"); }
+        if( ! host.matches("[a-zA-Z0-9.]+") ) {
+        	throw new ConfigurationException("please input a hostname");
+        }
         String rsrc = field[1].getText().toString();
-        if( rsrc.length() == 0 ) { throw new ConfigurationException("please input a resource"); }
+        if( ! rsrc.matches("[a-zA-Z0-9./]+") ) {
+        	throw new ConfigurationException("please input a resource");
+        }
         String user = field[2].getText().toString();
-        if( user.length() == 0 ) { throw new ConfigurationException("please input a username"); }
+        if( user.length() == 0 ) {
+        	throw new ConfigurationException("please input a username");
+        }
         String pass = field[3].getText().toString();
-        if( pass.length() == 0 ) { throw new ConfigurationException("please input a password"); }
+        if( pass.length() == 0 ) {
+        	throw new ConfigurationException("please input a password");
+        }
         return new Profile(host, rsrc, user, pass);
     }
 
