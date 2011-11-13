@@ -25,7 +25,7 @@ public class DSDatabase {
 		}
 	} // end DSOH
 
-	private final String TAG = "davsync";
+	private final String TAG = "davsync::DSDatabase";
 	private Context context;
 	private DSOH dsoh;
 
@@ -39,6 +39,7 @@ public class DSDatabase {
 	public void addProfile(Profile p) {
 		Log.d(TAG, "saving data...");
 		SQLiteDatabase db = dsoh.getWritableDatabase();
+		db.execSQL("DELETE FROM dav_profiles;"); // FIXME: delete all records until we support multiple profiles
 		String q = "INSERT OR REPLACE INTO dav_profiles VALUES('"
 			   + p.getHostname() + "','"
 			   + p.getResource() + "','"
@@ -69,14 +70,9 @@ public class DSDatabase {
 	public void delProfile(Profile p) {
 		Log.d(TAG, "removing profile...");
 		SQLiteDatabase db = dsoh.getWritableDatabase();
-		// for now, just drop all rows from dav_profiles...
+		// FIXME: for now, just drop all rows from dav_profiles...
 		db.execSQL("DELETE FROM dav_profiles;");
 		db.close();
-	}
-
-	// connect to the server & test credentials
-	private void test() {
-		Log.d(TAG, "testing connection...");
 	}
 
 }

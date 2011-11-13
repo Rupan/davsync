@@ -12,6 +12,7 @@ import android.content.Context;
 
 // webdav code
 import java.io.IOException;
+import java.lang.IllegalArgumentException;
 import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.Credentials;
@@ -104,6 +105,9 @@ public class davsync extends Activity {
             Log.w("davsync/test", "Caught HttpException: " + he.getMessage());
         } catch ( IOException ioe ) {
             Log.w("davsync/test", "Caught IOException: " + ioe.getMessage());
+        } catch( IllegalArgumentException iae ) {
+            // if e.g. one of the Profile fields contains a space
+            Log.w("davsync/test", "Caught IllegalArgumentException: " + iae.getMessage());
         }
         if( ret == 207 ) { // ret will be 207 if the resource exists
                 toast = Toast.makeText(context, "Success", Toast.LENGTH_SHORT);
@@ -144,8 +148,8 @@ public class davsync extends Activity {
     @Override public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
-        db = new DSDatabase(this);
         context = getApplicationContext();
+        db = new DSDatabase(context);
 
         // handle button events
         button[0] = (Button)this.findViewById(R.id.btnSave);
