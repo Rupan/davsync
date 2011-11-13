@@ -5,6 +5,7 @@ import java.lang.Throwable;
 
 public class ConfigurationException extends Exception {
 
+	private static final long serialVersionUID = -4879636486257695816L;
 	private String error = "unknown error";
 
 	public ConfigurationException() {

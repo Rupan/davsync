@@ -26,12 +26,10 @@ public class DSDatabase {
 	} // end DSOH
 
 	private final String TAG = "davsync::DSDatabase";
-	private Context context;
 	private DSOH dsoh;
 
 	// cache the application context in order to access application assets and resources
 	public DSDatabase(Context context) {
-		this.context = context;
 		dsoh = new DSOH(context);
 	}
 

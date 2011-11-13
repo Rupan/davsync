@@ -67,7 +67,8 @@ package javax.servlet;
 
 public class ServletException extends Exception {
 
-    private Throwable rootCause;
+	private static final long serialVersionUID = 4221302886851315160L;
+	private Throwable rootCause;
 
 
 
