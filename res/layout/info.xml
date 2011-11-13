@@ -1,63 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-  <LinearLayout
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_weight="1">
-    <TextView
-        android:text="Username"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/editbox_background" />
-    <TextView
-        android:text="Password"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-    <EditText
-        android:id="@+id/password"
-        android:password="true"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/editbox_background" />
-    <TextView
-        android:text="Hostname"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-    <EditText
-        android:id="@+id/hostname"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/editbox_background" />
-    <TextView
-        android:text="Resource"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-    <EditText
-        android:id="@+id/resource"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/editbox_background" />
+  <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+    <TextView android:text="Hostname"    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+    <EditText android:id="@+id/hostname" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:drawable/editbox_background" />
+    <TextView android:text="Resource"    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+    <EditText android:id="@+id/resource" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:drawable/editbox_background" />
+    <TextView android:text="Username"    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+    <EditText android:id="@+id/username" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:drawable/editbox_background" />
+    <TextView android:text="Password"    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+    <EditText android:id="@+id/password" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:drawable/editbox_background" android:password="true" />
   </LinearLayout>
 
-  <TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="*">
-    <TableRow android:layout_width="fill_parent">
-      <Button android:id="@+id/btnSave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_red" style="@style/CoolButton" android:text="Save" />
-      <Button android:id="@+id/btnClear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_green" style="@style/CoolButton" android:text="Clear" />
-      <Button android:id="@+id/btnTest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_yellow" style="@style/CoolButton" android:text="Test" />
+  <TableLayout android:layout_width="match_parent" android:layout_height="match_parent" android:stretchColumns="*">
+    <TableRow android:layout_width="match_parent">
+      <Button android:id="@+id/btnSave"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_red"    style="@style/CoolButton" android:text="Save" />
+      <Button android:id="@+id/btnClear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_green"  style="@style/CoolButton" android:text="Clear" />
+      <Button android:id="@+id/btnTest"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/btn_yellow" style="@style/CoolButton" android:text="Test" />
     </TableRow>
   </TableLayout>
 
 </LinearLayout>
+
