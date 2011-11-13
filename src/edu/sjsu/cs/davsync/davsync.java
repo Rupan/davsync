@@ -108,8 +108,14 @@ public class davsync extends Activity {
         if( ret == 207 ) { // ret will be 207 if the resource exists
                 toast = Toast.makeText(context, "Success", Toast.LENGTH_SHORT);
                 toast.show();
+        } else if( ret == 401 ) {
+                toast = Toast.makeText(context, "Bad username or password", Toast.LENGTH_SHORT);
+                toast.show();
+        } else if( ret == 404 ) {
+                toast = Toast.makeText(context, "Resource not found", Toast.LENGTH_SHORT);
+                toast.show();
         } else {
-                toast = Toast.makeText(context, "Failure", Toast.LENGTH_SHORT);
+                toast = Toast.makeText(context, "Unspecified Failure", Toast.LENGTH_SHORT);
                 toast.show();
         }
         Log.d("davsync/test", "PROPFIND returned " + ret);
