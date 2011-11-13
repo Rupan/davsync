@@ -8,20 +8,18 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.util.Log;
 
-// webdav client & dependencies
-import java.util.*;
-import org.apache.commons.httpclient.*;
-import org.apache.commons.httpclient.params.*;
-import org.apache.commons.httpclient.auth.*;
-import org.apache.jackrabbit.webdav.*;
-import org.apache.jackrabbit.webdav.client.methods.*;
-import org.apache.jackrabbit.webdav.header.*;
-import org.apache.jackrabbit.webdav.io.*;
-import org.apache.jackrabbit.webdav.lock.*;
-import org.apache.jackrabbit.webdav.server.*;
-import org.apache.jackrabbit.webdav.util.*;
-import org.apache.jackrabbit.webdav.xml.*;
-import org.apache.jackrabbit.webdav.property.*;
+// webdav code
+import java.io.IOException;
+import org.apache.commons.httpclient.HttpException;
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.Credentials;
+import org.apache.commons.httpclient.auth.AuthScope;
+import org.apache.commons.httpclient.HostConfiguration;
+import org.apache.commons.httpclient.HttpConnectionManager;
+import org.apache.commons.httpclient.UsernamePasswordCredentials;
+import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
+import org.apache.commons.httpclient.params.HttpConnectionManagerParams;
+import org.apache.jackrabbit.webdav.client.methods.PropFindMethod;
 
 public class davsync extends Activity {
 
@@ -57,57 +55,45 @@ public class davsync extends Activity {
     }
 
     private void test() {
-		// client init
-		HostConfiguration hostConfig = new HostConfiguration();
-		hostConfig.setHost("razor.temerity.net", 443, "https");
-		HttpConnectionManager connectionManager = new MultiThreadedHttpConnectionManager();
-		HttpConnectionManagerParams params = new HttpConnectionManagerParams();
-		int maxHostConnections = 20;
-		params.setMaxConnectionsPerHost(hostConfig, maxHostConnections);
-		connectionManager.setParams(params);
-		HttpClient client = new HttpClient(connectionManager);
-		Credentials creds = new UsernamePasswordCredentials("cs266", "bie0Up7X");
-		client.getState().setCredentials(AuthScope.ANY, creds);
-		client.setHostConfiguration(hostConfig);
+        int ret = -1;
+        Log.d("davsync/test", "PROPFIND starting...");
 
-		//copy a file: source, dest, overwrite
-		DavMethod copy;
-		try {
-			copy = new CopyMethod("https://razor.temerity.net/kp/random.kdb", "https://razor.temerity.net/kp/junk.kdb", true);
-			client.executeMethod(copy);
-			Log.d("COPY/SUCCESS:", copy.getStatusCode() + " " + copy.getStatusText());
-		} catch(Exception e) {
-			Log.d("COPY/FAILURE:", "" + e);
-		}
+        Profile p = getCurrentProfile();
 
-		// propfind
-		DavMethod pFind;
-		MultiStatus multiStatus;
-		DavPropertySet props;
-		try {
-			pFind = new PropFindMethod("/kp/random.kdb", DavConstants.PROPFIND_ALL_PROP, DavConstants.DEPTH_INFINITY);
-			client.executeMethod(pFind);
-			multiStatus = pFind.getResponseBodyAsMultiStatus();
-			props = multiStatus.getResponses()[0].getProperties(200);
-			Collection propertyColl = props.getContent();
-			for(Iterator iterator = propertyColl.iterator(); iterator.hasNext();){
-				DefaultDavProperty tmpProp = (DefaultDavProperty)iterator.next();
-				Log.d("PROPFIND/SUCCESS:", tmpProp.getName() + " " + tmpProp.getValue());
-			}
-		} catch(Exception e) {
-			Log.d("PROPFIND/FAILURE:", "" + e);
-		}
+        HostConfiguration hostConfig = new HostConfiguration();
+        hostConfig.setHost(p.getHostname(), 443, "https");
+
+        HttpConnectionManagerParams params = new HttpConnectionManagerParams();
+        params.setMaxConnectionsPerHost(hostConfig, 20);
+
+        HttpConnectionManager connectionManager = new MultiThreadedHttpConnectionManager();
+        connectionManager.setParams(params);
+
+        HttpClient client = new HttpClient(connectionManager);
+        Credentials creds = new UsernamePasswordCredentials(p.getUsername(), p.getPassword());
+        client.getState().setCredentials(AuthScope.ANY, creds);
+        PropFindMethod pfm;
+
+        try {
+            pfm = new PropFindMethod("https://" + p.getHostname() + p.getResource());
+            ret = client.executeMethod(pfm);
+        } catch( HttpException he ) {
+            Log.w("davsync/test", "Caught HttpException: " + he.getMessage());
+        } catch ( IOException ioe ) {
+            Log.w("davsync/test", "Caught IOException: " + ioe.getMessage() + ioe);
+        }
+        // ret should be 207 if the resource exists
+        Log.d("davsync/test", "PROPFIND returned " + ret);
     }
 
     // read the state of all fields from memory and return a Profile object
+    // TODO: throw an exception if any field is incorrect
     private Profile getCurrentProfile() {
-        Profile p;
-        p = new Profile(
-            field[0].getText().toString(),
-            field[1].getText().toString(),
-            field[2].getText().toString(),
-            field[3].getText().toString());
-        return p;
+        String host = field[0].getText().toString();
+        String rsrc = field[1].getText().toString();
+        String user = field[2].getText().toString();
+        String pass = field[3].getText().toString();
+        return new Profile(host, rsrc, user, pass);
     }
 
     // removes any text from all fields
