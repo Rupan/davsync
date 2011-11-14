@@ -76,6 +76,7 @@ public class davsync extends Activity {
 			net.download();
 			net.upload();
 		} catch (ConfigurationException ce) {
+			Log.d("davsync/test", "failed to get a valid profile");
 		}
     	/*
         Toast toast;

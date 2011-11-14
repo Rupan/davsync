@@ -30,7 +30,6 @@ public class DAVNetwork {
 	HttpClient client;
 	
 	public DAVNetwork(Profile profile) {
-		// TODO: validate profile...
 		url = "https://" + profile.getHostname() + profile.getResource();
 		creds = new UsernamePasswordCredentials(profile.getUsername(), profile.getPassword());
 		path = "/sdcard" + profile.getResource();
@@ -70,7 +69,7 @@ public class DAVNetwork {
 		pm.setRequestEntity(new FileRequestEntity(new File(path), "binary/octet-stream"));
 		try {
 			int ret = client.executeMethod(pm);
-			if ( ret != HttpStatus.SC_OK ) {
+			if ( ret != HttpStatus.SC_NO_CONTENT ) {
 				Log.d(TAG, "Failed to execute Put method: " + ret);
 			} else {
 				Log.d(TAG, "Put method successfully completed");
