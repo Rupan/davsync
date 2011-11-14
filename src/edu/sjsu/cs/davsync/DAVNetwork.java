@@ -1,5 +1,6 @@
 package edu.sjsu.cs.davsync;
 
+import android.os.Environment;
 import android.util.Log;
 
 import java.io.FileOutputStream;
@@ -20,19 +21,18 @@ import org.apache.jackrabbit.webdav.MultiStatus;
 import org.apache.jackrabbit.webdav.client.methods.PropFindMethod;
 import org.apache.jackrabbit.webdav.DavException;
 
-// TODO:
-// 1. what happens if the directory on the sd card doesn't exist?
-// 2. is the sd card always as /sdcard?
-
 public class DAVNetwork {
-	private String url, path;
+	File path;
+	private String url;
 	private Credentials creds;
 	HttpClient client;
 	
 	public DAVNetwork(Profile profile) {
 		url = "https://" + profile.getHostname() + profile.getResource();
 		creds = new UsernamePasswordCredentials(profile.getUsername(), profile.getPassword());
-		path = "/sdcard" + profile.getResource();
+		File sdcard = Environment.getExternalStorageDirectory();
+		path = new File( sdcard.getAbsolutePath() + profile.getResource() );
+		path.getParentFile().mkdirs();
 		client = new HttpClient();
 		client.getState().setCredentials(AuthScope.ANY, creds);
 		client.getHttpConnectionManager().getParams().setConnectionTimeout(5000);
@@ -66,7 +66,7 @@ public class DAVNetwork {
 		final String TAG = "DAVNetwork::upload";
         
         PutMethod pm = new PutMethod(url);
-		pm.setRequestEntity(new FileRequestEntity(new File(path), "binary/octet-stream"));
+		pm.setRequestEntity(new FileRequestEntity(path, "binary/octet-stream"));
 		try {
 			int ret = client.executeMethod(pm);
 			if ( ret != HttpStatus.SC_NO_CONTENT ) {
