@@ -71,6 +71,13 @@ public class davsync extends Activity {
     // TODO: add a dialog during the test
     // http://developer.android.com/guide/topics/ui/dialogs.html
     private void test() {
+    	try {
+			DAVNetwork net = new DAVNetwork(getCurrentProfile());
+			net.download();
+			net.upload();
+		} catch (ConfigurationException ce) {
+		}
+    	/*
         Toast toast;
         int ret = -1;
         Log.d("davsync/test", "PROPFIND starting...");
@@ -123,6 +130,7 @@ public class davsync extends Activity {
                 toast.show();
         }
         Log.d("davsync/test", "PROPFIND returned " + ret);
+        */
     }
 
     // read the state of all fields from memory and return a Profile object
