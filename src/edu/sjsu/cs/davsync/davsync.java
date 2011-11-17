@@ -58,7 +58,7 @@ public class davsync extends Activity {
     // TODO: add a dialog during the test
     // http://developer.android.com/guide/topics/ui/dialogs.html
     private void test() {
-    	Toast toast = Toast.makeText(context, "Unspecified failure", Toast.LENGTH_SHORT);
+    	Toast toast = Toast.makeText(context, "Unspecified test failure", Toast.LENGTH_SHORT);
     	try {
 			DAVNetwork net = new DAVNetwork(getCurrentProfile());
 			if( net.testRemote() ) {
@@ -74,7 +74,19 @@ public class davsync extends Activity {
     }
     
     private void sync() {
-    	// TODO
+    	Toast toast = Toast.makeText(context, "Unspecified test failure", Toast.LENGTH_SHORT);
+    	try {
+    		DAVNetwork net = new DAVNetwork(getCurrentProfile());
+    		if( net.sync() == true ) {
+    			toast = Toast.makeText(context, "Sync succeeded", Toast.LENGTH_SHORT);
+    		} else {
+    			toast = Toast.makeText(context, "Sync failed", Toast.LENGTH_SHORT);
+    		}
+    	} catch( Exception e ) {
+    		// TODO
+    	} finally {
+    		toast.show();
+    	}
     }
 
     // read the state of all fields from memory and return a Profile object

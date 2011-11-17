@@ -8,6 +8,13 @@ import java.io.IOException;
 import java.io.File;
 import java.io.InputStream;
 import java.lang.IllegalArgumentException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Collection;
+import java.util.Date;
+import java.util.Iterator;
+
 import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.Credentials;
@@ -18,7 +25,12 @@ import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.methods.FileRequestEntity;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
 import org.apache.jackrabbit.webdav.MultiStatus;
+import org.apache.jackrabbit.webdav.MultiStatusResponse;
 import org.apache.jackrabbit.webdav.client.methods.PropFindMethod;
+import org.apache.jackrabbit.webdav.property.DavPropertyName;
+import org.apache.jackrabbit.webdav.property.DavPropertySet;
+import org.apache.jackrabbit.webdav.property.DefaultDavProperty;
+import org.apache.jackrabbit.webdav.property.PropEntry;
 import org.apache.jackrabbit.webdav.DavException;
 
 public class DAVNetwork {
@@ -42,11 +54,14 @@ public class DAVNetwork {
 		try {
 			PropFindMethod pfm = new PropFindMethod(url);
             int ret = client.executeMethod(pfm);
-            pfm.releaseConnection();
-            
-            if( ret == HttpStatus.SC_MULTI_STATUS && pfm.succeeded() ) {
+
+            if( (ret == HttpStatus.SC_MULTI_STATUS && pfm.succeeded()) || ret == HttpStatus.SC_NOT_FOUND ) {
+            	// not found (404) isn't an error in this sense since it only means
+            	// that the remote file doesn't exist - BUT, this means we can log in
+            	pfm.releaseConnection();
             	return true;
             } else {
+            	pfm.releaseConnection();
             	return false;
             }
 		} catch( IOException ioe ) {
@@ -58,42 +73,86 @@ public class DAVNetwork {
 		}
 	}
 	
-	public MultiStatus propfind() throws IOException {
-		final String TAG = "DAVNetwork::propfind";
+	public boolean sync() throws HttpException, IOException, IllegalArgumentException, DavException {
+		boolean has_remote = false, has_local = false;
+		
+		// first check if the file exists
+        PropFindMethod pfm = new PropFindMethod(url);
+        int ret = client.executeMethod(pfm);
+        if( ret == HttpStatus.SC_MULTI_STATUS && pfm.succeeded() )
+        	has_remote = true;
+        pfm.releaseConnection();
+        if( path.exists() )
+        	has_local = true;
         
-        try {
-        	PropFindMethod pfm = new PropFindMethod(url);
-            int ret = client.executeMethod(pfm);
-            if( ret != 207 ) { throw new IOException(); }
-            MultiStatus ms = pfm.getResponseBodyAsMultiStatus();
-            return ms;
-        } catch( HttpException he ) {
-            Log.w(TAG, "Caught HttpException: " + he.getMessage());
-        } catch ( IOException ioe ) {
-            Log.w(TAG, "Caught IOException: " + ioe.getMessage());
-        } catch( IllegalArgumentException iae ) {
-            // if e.g. one of the Profile fields contains a space
-            Log.w(TAG, "Caught IllegalArgumentException: " + iae.getMessage());
-        } catch ( DavException de ) {
-        	// MultiStatus
-        	Log.w(TAG, "Caught DavException: " + de.getMessage());
+        if( has_local == true && has_remote == false ) {
+        	Log.d("DAVNetwork::sync", "Uploading local file");
+        	return upload();
+        } else if( has_local == false && has_remote == true ) {
+        	Log.d("DAVNetwork::sync", "Downloading remote file");
+        	return download();
+        } else if( has_local == false && has_remote == false ) {
+        	// FIXME: create a new KDB file
+        	Log.d("DAVNetwork::sync", "New KDB file creation unimplemented");
+        	return false;
+        } else {
+        	MultiStatusResponse[] msr = pfm.getResponseBodyAsMultiStatus().getResponses();
+        	if( msr.length != 1 ) {
+        		// FIXME: how do we handle this?
+        		Log.d("DAVNetwork::sync", "Got " + msr.length + " MultiStatusResponse objects");
+        		return false;
+        	}
+        	
+        	String dateString = null;
+        	Iterator<? extends PropEntry> iter = msr[0].getProperties(HttpStatus.SC_OK).getContent().iterator();
+        	while( iter.hasNext() ) {
+        		DefaultDavProperty tmp = (DefaultDavProperty)iter.next();
+        		if( tmp.getName().toString().equals("{DAV:}getlastmodified") ) {
+        			dateString = tmp.getValue().toString();
+        			break;
+        		}
+        	}
+
+        	if( dateString == null ) {
+        		Log.d("DAVNetwork::sync", "Didn't get a last modified string");
+        		return false;
+        	}
+
+        	// FIXME: this doesn't work right now
+        	Date date_remote;
+        	try {
+        		SimpleDateFormat df = new SimpleDateFormat();
+        		date_remote = df.parse(dateString);
+        	} catch( ParseException pe ) {
+        		Log.d("DAVNetwork::sync", "Unable to parse remote timestamp: " + dateString);
+        		return false;
+        	}
+        	
+        	Date date_local = new Date(path.lastModified());
+        	
+        	int comparator = date_local.compareTo(date_remote);
+        	if( comparator < 0 ) {
+        		Log.d("DAVNetwork::sync", "Final decision: download");
+        		return download();
+        	} else if( comparator > 0 ) {
+        		Log.d("DAVNetwork::sync", "Final decision: upload");
+        		return upload();
+        	} else {
+        		// the files are already synced, we do nothing
+        		Log.d("DAVNetwork::sync", "Final decision: the files are equal");
+        		return true;
+        	}
         }
-        // we'll only get here in case of e.g. a network error or an invalid Profile
-        throw new IOException();
 	}
 	
-	public void upload() {
+	private boolean upload() {
+		int ret = -1;
 		final String TAG = "DAVNetwork::upload";
         
         PutMethod pm = new PutMethod(url);
 		pm.setRequestEntity(new FileRequestEntity(path, "binary/octet-stream"));
 		try {
-			int ret = client.executeMethod(pm);
-			if ( ret != HttpStatus.SC_NO_CONTENT ) {
-				Log.d(TAG, "Failed to execute Put method: " + ret);
-			} else {
-				Log.d(TAG, "Put method successfully completed");
-			}
+			ret = client.executeMethod(pm);
 		} catch (HttpException he) {
 			Log.w(TAG, "Caught HttpException: " + he.getMessage());
 		} catch (IOException ioe) {
@@ -101,20 +160,24 @@ public class DAVNetwork {
 		} finally {
 			pm.releaseConnection();
 		}
+		
+		if ( ret != HttpStatus.SC_NO_CONTENT ) {
+			Log.d(TAG, "Failed to execute Put method: " + ret);
+			return false;
+		} else {
+			Log.d(TAG, "Put method successfully completed");
+			return true;
+		}
 	}
 	
-	public void download() {
+	private boolean download() {
+		int ret = -1;
 		final String TAG = "DAVNetwork::upload";
-		
+		boolean fail = false;
 		GetMethod gm = new GetMethod(url);
 		gm.setFollowRedirects(true);
 		try {
-			int ret = client.executeMethod(gm);
-			if ( ret != HttpStatus.SC_OK ) {
-				Log.d(TAG, "Failed to execute Get method: " + ret);
-			} else {
-				Log.d(TAG, "Get method successfully completed");
-			}
+			ret = client.executeMethod(gm);
 			// http://www.eboga.org/java/open-source/httpclient-demo.html
 			InputStream input = gm.getResponseBodyAsStream();
 			FileOutputStream output = new FileOutputStream(path, false);
@@ -127,10 +190,20 @@ public class DAVNetwork {
 			output.close();
 		}catch (HttpException he) {
 			Log.w(TAG, "Caught HttpException: " + he.getMessage());
+			fail = true;
 		} catch (IOException ioe) {
 			Log.w(TAG, "Caught IOException: " + ioe.getMessage());
+			fail = true;
 		} finally {
 			gm.releaseConnection();
+		}
+		
+		if ( ret != HttpStatus.SC_OK || fail == true ) {
+			Log.d(TAG, "Failed to execute Get method: " + ret);
+			return false;
+		} else {
+			Log.d(TAG, "Get method successfully completed");
+			return true;
 		}
 	}
 }
