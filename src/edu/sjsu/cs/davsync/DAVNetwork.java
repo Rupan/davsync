@@ -11,7 +11,6 @@ import java.lang.IllegalArgumentException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Collection;
 import java.util.Date;
 import java.util.Iterator;
 
@@ -24,11 +23,8 @@ import org.apache.commons.httpclient.methods.PutMethod;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.methods.FileRequestEntity;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
-import org.apache.jackrabbit.webdav.MultiStatus;
 import org.apache.jackrabbit.webdav.MultiStatusResponse;
 import org.apache.jackrabbit.webdav.client.methods.PropFindMethod;
-import org.apache.jackrabbit.webdav.property.DavPropertyName;
-import org.apache.jackrabbit.webdav.property.DavPropertySet;
 import org.apache.jackrabbit.webdav.property.DefaultDavProperty;
 import org.apache.jackrabbit.webdav.property.PropEntry;
 import org.apache.jackrabbit.webdav.DavException;
@@ -118,11 +114,10 @@ public class DAVNetwork {
         		return false;
         	}
 
-        	// FIXME: this doesn't work right now
+        	DateFormat fmt = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss Z");
         	Date date_remote;
         	try {
-        		SimpleDateFormat df = new SimpleDateFormat();
-        		date_remote = df.parse(dateString);
+        		date_remote = (Date)fmt.parse(dateString);
         	} catch( ParseException pe ) {
         		Log.d("DAVNetwork::sync", "Unable to parse remote timestamp: " + dateString);
         		return false;
@@ -145,6 +140,7 @@ public class DAVNetwork {
         }
 	}
 	
+	// FIXME: set the date on the uploaded file
 	private boolean upload() {
 		int ret = -1;
 		final String TAG = "DAVNetwork::upload";
@@ -170,6 +166,7 @@ public class DAVNetwork {
 		}
 	}
 	
+	// FIXME: set the date on the downloaded file
 	private boolean download() {
 		int ret = -1;
 		final String TAG = "DAVNetwork::upload";
