@@ -37,6 +37,26 @@ public class DAVNetwork {
 		client.getState().setCredentials(AuthScope.ANY, creds);
 		client.getHttpConnectionManager().getParams().setConnectionTimeout(5000);
 	}
+
+	public boolean testRemote() {
+		try {
+			PropFindMethod pfm = new PropFindMethod(url);
+            int ret = client.executeMethod(pfm);
+            pfm.releaseConnection();
+            
+            if( ret == HttpStatus.SC_MULTI_STATUS && pfm.succeeded() ) {
+            	return true;
+            } else {
+            	return false;
+            }
+		} catch( IOException ioe ) {
+			// also handles HttpException from the client
+			return false;
+		} catch( IllegalArgumentException iae ) {
+			// from client, in case something is wrong with 'url'
+			return false;
+		}
+	}
 	
 	public MultiStatus propfind() throws IOException {
 		final String TAG = "DAVNetwork::propfind";

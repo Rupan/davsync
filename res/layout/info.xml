@@ -17,6 +17,7 @@
       <Button android:id="@+id/btnSave"  style="@style/DAVPrefsButton" android:background="@drawable/btn_red"    android:text="Save" />
       <Button android:id="@+id/btnClear" style="@style/DAVPrefsButton" android:background="@drawable/btn_green"  android:text="Clear" />
       <Button android:id="@+id/btnTest"  style="@style/DAVPrefsButton" android:background="@drawable/btn_yellow" android:text="Test" />
+      <Button android:id="@+id/btnSync"  style="@style/DAVPrefsButton" android:background="@drawable/btn_blue"   android:text="Sync" />
     </TableRow>
   </TableLayout>
 

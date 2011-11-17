@@ -7,32 +7,17 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.util.Log;
 import android.content.Context;
-
-// webdav code
-import java.io.IOException;
-import java.lang.IllegalArgumentException;
-import org.apache.commons.httpclient.HttpException;
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.Credentials;
-import org.apache.commons.httpclient.auth.AuthScope;
-import org.apache.commons.httpclient.HostConfiguration;
-import org.apache.commons.httpclient.HttpConnectionManager;
-import org.apache.commons.httpclient.UsernamePasswordCredentials;
-import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
-import org.apache.commons.httpclient.params.HttpConnectionManagerParams;
-import org.apache.jackrabbit.webdav.client.methods.PropFindMethod;
 
 public class davsync extends Activity {
 
     private Context context;
     private DSDatabase db;
     private EditText[] field = new EditText[4]; // hostname, resource, username, password
-    private Button[] button = new Button[3]; // save, clear, test
+    private Button[] button = new Button[4]; // save, clear, test, sync
 
     private enum ButtonType {
-        SAVE, CLEAR, TEST
+        SAVE, CLEAR, TEST, SYNC
     }
 
     private class ButtonListener implements OnClickListener {
@@ -41,7 +26,6 @@ public class davsync extends Activity {
         public ButtonListener(ButtonType type) {
             this.type = type;
         }
-        @Override
         public void onClick(View v) {
             switch( type ) {
             case SAVE:
@@ -64,6 +48,9 @@ public class davsync extends Activity {
             case TEST:
                 test();
                 break;
+            case SYNC:
+            	sync();
+            	break;
             }
         }
     }
@@ -71,86 +58,42 @@ public class davsync extends Activity {
     // TODO: add a dialog during the test
     // http://developer.android.com/guide/topics/ui/dialogs.html
     private void test() {
+    	Toast toast = Toast.makeText(context, "Unspecified failure", Toast.LENGTH_SHORT);
     	try {
 			DAVNetwork net = new DAVNetwork(getCurrentProfile());
-			net.download();
-			net.upload();
+			if( net.testRemote() ) {
+				toast = Toast.makeText(context, "Test succeeded", Toast.LENGTH_SHORT);
+			} else {
+				toast = Toast.makeText(context, "Test failed", Toast.LENGTH_SHORT);
+			}
 		} catch (ConfigurationException ce) {
-			Log.d("davsync/test", "failed to get a valid profile");
+			toast = Toast.makeText(context, ce.toString(), Toast.LENGTH_SHORT);
+		} finally {
+			toast.show();
 		}
-    	/*
-        Toast toast;
-        int ret = -1;
-        Log.d("davsync/test", "PROPFIND starting...");
-
-        Profile p;
-        try {
-                p = getCurrentProfile();
-        } catch( ConfigurationException ce ) {
-                toast = Toast.makeText(context, ce.toString(), Toast.LENGTH_SHORT);
-                toast.show();
-                return;
-        }
-
-        HostConfiguration hostConfig = new HostConfiguration();
-        hostConfig.setHost(p.getHostname(), 443, "https");
-
-        HttpConnectionManagerParams params = new HttpConnectionManagerParams();
-        params.setMaxConnectionsPerHost(hostConfig, 20);
-
-        HttpConnectionManager connectionManager = new MultiThreadedHttpConnectionManager();
-        connectionManager.setParams(params);
-
-        HttpClient client = new HttpClient(connectionManager);
-        Credentials creds = new UsernamePasswordCredentials(p.getUsername(), p.getPassword());
-        client.getState().setCredentials(AuthScope.ANY, creds);
-        PropFindMethod pfm;
-
-        try {
-            pfm = new PropFindMethod("https://" + p.getHostname() + p.getResource());
-            ret = client.executeMethod(pfm);
-        } catch( HttpException he ) {
-            Log.w("davsync/test", "Caught HttpException: " + he.getMessage());
-        } catch ( IOException ioe ) {
-            Log.w("davsync/test", "Caught IOException: " + ioe.getMessage());
-        } catch( IllegalArgumentException iae ) {
-            // if e.g. one of the Profile fields contains a space
-            Log.w("davsync/test", "Caught IllegalArgumentException: " + iae.getMessage());
-        }
-        if( ret == 207 ) { // ret will be 207 if the resource exists
-                toast = Toast.makeText(context, "Success", Toast.LENGTH_SHORT);
-                toast.show();
-        } else if( ret == 401 ) {
-                toast = Toast.makeText(context, "Bad username or password", Toast.LENGTH_SHORT);
-                toast.show();
-        } else if( ret == 404 ) {
-                toast = Toast.makeText(context, "Resource not found", Toast.LENGTH_SHORT);
-                toast.show();
-        } else {
-                toast = Toast.makeText(context, "Unspecified Failure", Toast.LENGTH_SHORT);
-                toast.show();
-        }
-        Log.d("davsync/test", "PROPFIND returned " + ret);
-        */
+    }
+    
+    private void sync() {
+    	// TODO
     }
 
     // read the state of all fields from memory and return a Profile object
     private Profile getCurrentProfile() throws ConfigurationException {
         String host = field[0].getText().toString();
         if( ! host.matches("[a-zA-Z0-9.]+") ) {
-        	throw new ConfigurationException("please input a hostname");
+        	throw new ConfigurationException("please input a valid hostname");
         }
         String rsrc = field[1].getText().toString();
         if( ! rsrc.matches("[a-zA-Z0-9./]+") ) {
-        	throw new ConfigurationException("please input a resource");
+        	throw new ConfigurationException("please input a valid resource");
         }
         String user = field[2].getText().toString();
         if( user.length() == 0 ) {
-        	throw new ConfigurationException("please input a username");
+        	throw new ConfigurationException("please input a valid username");
         }
         String pass = field[3].getText().toString();
         if( pass.length() == 0 ) {
-        	throw new ConfigurationException("please input a password");
+        	throw new ConfigurationException("please input a valid password");
         }
         return new Profile(host, rsrc, user, pass);
     }
@@ -172,9 +115,11 @@ public class davsync extends Activity {
         button[0] = (Button)this.findViewById(R.id.btnSave);
         button[1] = (Button)this.findViewById(R.id.btnClear);
         button[2] = (Button)this.findViewById(R.id.btnTest);
+        button[3] = (Button)this.findViewById(R.id.btnSync);
         button[0].setOnClickListener(new ButtonListener(ButtonType.SAVE));
         button[1].setOnClickListener(new ButtonListener(ButtonType.CLEAR));
         button[2].setOnClickListener(new ButtonListener(ButtonType.TEST));
+        button[3].setOnClickListener(new ButtonListener(ButtonType.SYNC));
 
         // access to text fields
         field[0] = (EditText)findViewById(R.id.hostname);
@@ -182,10 +127,10 @@ public class davsync extends Activity {
         field[2] = (EditText)findViewById(R.id.username);
         field[3] = (EditText)findViewById(R.id.password);
 
-	Profile p = db.getProfile();
-	field[0].setText(p.getHostname());
-	field[1].setText(p.getResource());
-	field[2].setText(p.getUsername());
-	field[3].setText(p.getPassword());
+        Profile p = db.getProfile();
+        field[0].setText(p.getHostname());
+        field[1].setText(p.getResource());
+        field[2].setText(p.getUsername());
+        field[3].setText(p.getPassword());
     }
 }
