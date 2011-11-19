@@ -3,6 +3,7 @@ package edu.sjsu.cs.davsync;
 import android.os.Environment;
 import android.util.Log;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.File;
@@ -11,6 +12,7 @@ import java.lang.IllegalArgumentException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 
@@ -70,78 +72,101 @@ public class DAVNetwork {
 	}
 	
 	public boolean sync() throws HttpException, IOException, IllegalArgumentException, DavException {
+		final String TAG = "DAVNetwork::sync";
+		Date date_remote, date_local;
 		boolean has_remote = false, has_local = false;
 		
-		// first check if the file exists
-        PropFindMethod pfm = new PropFindMethod(url);
-        int ret = client.executeMethod(pfm);
-        if( ret == HttpStatus.SC_MULTI_STATUS && pfm.succeeded() )
-        	has_remote = true;
-        pfm.releaseConnection();
-        if( path.exists() )
+		// get local & remote info
+		try {
+			date_remote = getRemoteTimestamp();
+			has_remote = true;
+		} catch( Exception e ) {
+			Log.d(TAG, "Unable to determine remote timestamp");
+			return false;
+		}
+        if( path.exists() ) {
+        	date_local = new Date(path.lastModified());
         	has_local = true;
+        } else {
+        	// to make the compiler happy...
+        	date_local = new Date(1900, 1, 1);
+        }
         
+        // do the sync
         if( has_local == true && has_remote == false ) {
-        	Log.d("DAVNetwork::sync", "Uploading local file");
-        	return upload();
+        	Log.d(TAG, "Uploading local file");
+        	return upload(date_local);
         } else if( has_local == false && has_remote == true ) {
-        	Log.d("DAVNetwork::sync", "Downloading remote file");
-        	return download();
+        	Log.d(TAG, "Downloading remote file");
+        	return download(date_remote);
         } else if( has_local == false && has_remote == false ) {
         	// FIXME: create a new KDB file
-        	Log.d("DAVNetwork::sync", "New KDB file creation unimplemented");
+        	Log.d(TAG, "New KDB file creation unimplemented");
         	return false;
-        } else {
-        	MultiStatusResponse[] msr = pfm.getResponseBodyAsMultiStatus().getResponses();
-        	if( msr.length != 1 ) {
-        		// FIXME: how do we handle this?
-        		Log.d("DAVNetwork::sync", "Got " + msr.length + " MultiStatusResponse objects");
-        		return false;
-        	}
-        	
-        	String dateString = null;
-        	Iterator<? extends PropEntry> iter = msr[0].getProperties(HttpStatus.SC_OK).getContent().iterator();
-        	while( iter.hasNext() ) {
-        		DefaultDavProperty tmp = (DefaultDavProperty)iter.next();
-        		if( tmp.getName().toString().equals("{DAV:}getlastmodified") ) {
-        			dateString = tmp.getValue().toString();
-        			break;
-        		}
-        	}
-
-        	if( dateString == null ) {
-        		Log.d("DAVNetwork::sync", "Didn't get a last modified string");
-        		return false;
-        	}
-
-        	DateFormat fmt = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss Z");
-        	Date date_remote;
-        	try {
-        		date_remote = (Date)fmt.parse(dateString);
-        	} catch( ParseException pe ) {
-        		Log.d("DAVNetwork::sync", "Unable to parse remote timestamp: " + dateString);
-        		return false;
-        	}
-        	
-        	Date date_local = new Date(path.lastModified());
+        } else {        	
+        	Log.d(TAG, date_remote.toString() + " <=> " + date_local.toString() );
         	
         	int comparator = date_local.compareTo(date_remote);
         	if( comparator < 0 ) {
-        		Log.d("DAVNetwork::sync", "Final decision: download");
-        		return download();
+        		Log.d(TAG, "Final sync decision: download");
+        		return download(date_remote);
         	} else if( comparator > 0 ) {
-        		Log.d("DAVNetwork::sync", "Final decision: upload");
-        		return upload();
+        		Log.d(TAG, "Final sync decision: upload");
+        		return upload(date_local);
         	} else {
         		// the files are already synced, we do nothing
-        		Log.d("DAVNetwork::sync", "Final decision: the files are equal");
+        		Log.d(TAG, "Final sync decision: the files are equal");
         		return true;
         	}
         }
 	}
 	
+	private Date getRemoteTimestamp() throws DavException, IOException {
+        PropFindMethod pfm = new PropFindMethod(url);
+        int ret = client.executeMethod(pfm);
+        if( ret == HttpStatus.SC_NOT_FOUND || ret != HttpStatus.SC_MULTI_STATUS || !pfm.succeeded() ) {
+        	throw new IOException();
+        }
+        
+        MultiStatusResponse[] msr;
+		msr = pfm.getResponseBodyAsMultiStatus().getResponses();
+        if( msr.length != 1 ) {
+    		// FIXME: how do we handle this?
+    		Log.d("DAVNetwork::sync", "Got " + msr.length + " MultiStatusResponse objects");
+    		throw new FileNotFoundException();
+    	}
+        
+        String dateString = null;
+        Iterator<? extends PropEntry> iter = msr[0].getProperties(HttpStatus.SC_OK).getContent().iterator();
+        while( iter.hasNext() ) {
+    		DefaultDavProperty tmp = (DefaultDavProperty)iter.next();
+    		if( tmp.getName().toString().equals("{DAV:}getlastmodified") ) {
+    			dateString = tmp.getValue().toString();
+    			break;
+    		}
+    	}
+        if( dateString == null ) {
+        	// FIXME: is there a better exception class?
+        	throw new IOException();
+        }
+        
+        DateFormat fmt = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss Z");
+    	Date date_remote;
+    	try {
+    		date_remote = (Date)fmt.parse(dateString);
+    	} catch( ParseException pe ) {
+    		// FIXME: is there a better exception class?
+    		Log.d("DAVNetwork::sync", "Unable to parse remote timestamp: " + dateString);
+    		throw new IOException();
+    	}
+    	
+    	pfm.releaseConnection();
+        
+        return date_remote;
+	}
+	
 	// FIXME: set the date on the uploaded file
-	private boolean upload() {
+	private boolean upload(Date modified) {
 		int ret = -1;
 		final String TAG = "DAVNetwork::upload";
         
@@ -167,7 +192,7 @@ public class DAVNetwork {
 	}
 	
 	// FIXME: set the date on the downloaded file
-	private boolean download() {
+	private boolean download(Date modified) {
 		int ret = -1;
 		final String TAG = "DAVNetwork::upload";
 		boolean fail = false;
@@ -185,6 +210,9 @@ public class DAVNetwork {
 			}
 			output.flush();
 			output.close();
+			if( ! path.setLastModified(modified.getTime()) ) {
+				Log.w(TAG, "Failed to set local last-modified time equal to remote");
+			}
 		}catch (HttpException he) {
 			Log.w(TAG, "Caught HttpException: " + he.getMessage());
 			fail = true;
