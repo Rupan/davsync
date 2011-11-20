@@ -74,22 +74,22 @@ public class DAVNetwork {
 	public boolean sync() throws HttpException, IOException, IllegalArgumentException, DavException {
 		final String TAG = "DAVNetwork::sync";
 		Date date_remote, date_local;
-		boolean has_remote = false, has_local = false;
+		boolean has_remote, has_local;
 		
 		// get local & remote info
 		try {
 			date_remote = getRemoteTimestamp();
 			has_remote = true;
 		} catch( Exception e ) {
-			Log.d(TAG, "Unable to determine remote timestamp");
-			return false;
+			date_remote = new Date(1900, 1, 1);
+			has_remote = false;
 		}
         if( path.exists() ) {
         	date_local = new Date(path.lastModified());
         	has_local = true;
         } else {
-        	// to make the compiler happy...
         	date_local = new Date(1900, 1, 1);
+        	has_local = false;
         }
         
         // do the sync
@@ -182,7 +182,8 @@ public class DAVNetwork {
 			pm.releaseConnection();
 		}
 		
-		if ( ret != HttpStatus.SC_NO_CONTENT ) {
+		// common: HttpStatus.SC_NO_CONTENT HttpStatus.SC_CREATED HttpStatus.SC_OK
+		if ( ret < 200 || ret > 226 ) {
 			Log.d(TAG, "Failed to execute Put method: " + ret);
 			return false;
 		} else {
@@ -191,7 +192,6 @@ public class DAVNetwork {
 		}
 	}
 	
-	// FIXME: set the date on the downloaded file
 	private boolean download(Date modified) {
 		int ret = -1;
 		final String TAG = "DAVNetwork::upload";
