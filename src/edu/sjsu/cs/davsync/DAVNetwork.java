@@ -16,6 +16,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 
+import org.apache.commons.httpclient.Header;
 import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.Credentials;
@@ -27,8 +28,10 @@ import org.apache.commons.httpclient.methods.FileRequestEntity;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
 import org.apache.jackrabbit.webdav.MultiStatusResponse;
 import org.apache.jackrabbit.webdav.client.methods.PropFindMethod;
+import org.apache.jackrabbit.webdav.property.DavPropertySet;
 import org.apache.jackrabbit.webdav.property.DefaultDavProperty;
 import org.apache.jackrabbit.webdav.property.PropEntry;
+import org.apache.jackrabbit.webdav.util.HttpDateFormat;
 import org.apache.jackrabbit.webdav.DavException;
 
 public class DAVNetwork {
@@ -172,6 +175,13 @@ public class DAVNetwork {
         
         PutMethod pm = new PutMethod(url);
 		pm.setRequestEntity(new FileRequestEntity(path, "binary/octet-stream"));
+		
+		/*
+		String lastModStr = HttpDateFormat.modificationDateFormat().format(modified);
+		pm.setRequestHeader(new Header("Date", lastModStr));
+		Log.d(TAG, "Set Date header to: " + lastModStr);
+		*/
+		
 		try {
 			ret = client.executeMethod(pm);
 		} catch (HttpException he) {
@@ -188,6 +198,14 @@ public class DAVNetwork {
 			return false;
 		} else {
 			Log.d(TAG, "Put method successfully completed");
+			/* hack, hack, hack: set the local file's modification date equal to the remote's */
+			try {
+				Date d = getRemoteTimestamp();
+				if( ! path.setLastModified( d.getTime() ) )
+						Log.d(TAG, "Could not set local timestamp [1]");
+			} catch( Exception e ) {
+				Log.d(TAG, "Could not set local timestamp [2]");
+			}
 			return true;
 		}
 	}
